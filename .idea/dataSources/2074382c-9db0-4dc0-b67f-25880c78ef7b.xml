@@ -16,25 +16,97 @@
     <schema id="10" parent="1" name="work"/>
     <schema id="11" parent="1" name="xj1711"/>
     <table id="12" parent="2" name="manager"/>
-    <column id="13" parent="12" name="m_id">
+    <table id="13" parent="2" name="user"/>
+    <column id="14" parent="12" name="m_id">
       <Position>1</Position>
       <DataType>int(8)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="14" parent="12" name="m_name">
+    <column id="15" parent="12" name="m_name">
       <Position>2</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="15" parent="12" name="m_pass">
+    <column id="16" parent="12" name="m_pass">
       <Position>3</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="16" parent="12" name="PRIMARY">
+    <key id="17" parent="12" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>m_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="18" parent="13" name="u_id">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="19" parent="13" name="u_name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="13" name="u_pass">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="13" name="u_sex">
+      <Position>4</Position>
+      <DataType>varchar(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="13" name="u_birth">
+      <Position>5</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="13" name="u_nativePlace">
+      <Position>6</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="13" name="u_qualification">
+      <Position>7</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="13" name="u_specialty">
+      <Position>8</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="26" parent="13" name="u_serviceYear">
+      <Position>9</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="27" parent="13" name="u_tel">
+      <Position>10</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="13" name="u_email">
+      <Position>11</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="13" name="u_willSpot">
+      <Position>12</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="30" parent="13" name="u_adsumDate">
+      <Position>13</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="31" parent="13" name="u_promisingDustry">
+      <Position>14</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="32" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>u_id</ColNames>
       <Primary>1</Primary>
     </key>
   </database-model>

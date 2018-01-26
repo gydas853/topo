@@ -12,8 +12,10 @@ import javax.annotation.Resource;
  */
 @Service("ManagerService")
 public class ManagerServiceImpl implements ManagerService{
+
     @Resource
     private ManagerMapper managerMapper;
+
     @Override
     public Manager getManager(Manager manager) {
         return managerMapper.getManager(manager);

@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: nero0
-  Date: 2018-01-25
-  Time: 23:07
+  Date: 2018-01-26
+  Time: 15:36
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -14,12 +14,11 @@
 <head>
     <base href="<%=basePath%>"/>
     <title>标题</title>
-    <link type="text/css" rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <%--进入系统 a标签--%>
     <div>
-        <a href="forSystem"><input type="button" value="进入系统"></a>
+        <a href="forMain"><input type="button" value="游客登录"></a>
+        <a href="forLogin"><input type="button" value="员工登录"></a>
     </div>
 </body>
 </html>

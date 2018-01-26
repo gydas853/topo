@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: nero0
-  Date: 2018-01-25
-  Time: 23:07
+  Date: 2018-01-26
+  Time: 16:52
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -14,12 +14,29 @@
 <head>
     <base href="<%=basePath%>"/>
     <title>标题</title>
-    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.1.0.js"></script>
 </head>
 <body>
-    <%--进入系统 a标签--%>
     <div>
-        <a href="forSystem"><input type="button" value="进入系统"></a>
+        <table>
+            <tr>
+                <td></td>
+            </tr>
+        </table>
     </div>
+    <div>
+        <table>
+            <tr>
+                <td><input id="i1" type="button" value="注册"></td>
+            </tr>
+        </table>
+    </div>
+<script>
+    $(document).ready(function () {
+        $("#i1").click(function () {
+
+        })
+    })
+</script>
 </body>
 </html>
