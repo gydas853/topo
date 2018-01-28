@@ -6,6 +6,7 @@ import java.io.Serializable;
  * Created by nero0 on 2018-01-26.
  */
 public class Manager implements Serializable{
+
     private int m_id;
     private String m_name;
     private String m_pass;

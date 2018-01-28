@@ -36,7 +36,7 @@
                         <input type="submit" value="确认登录">
                     </td>
                     <td>
-                        <input type="button" value="忘记密码？">
+                        <a><input type="button" value="忘记密码？"></a>
                     </td>
                 </tr>
             </table>

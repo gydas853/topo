@@ -20,14 +20,12 @@
     <p>欢迎${manager.m_name}登录</p>
     <table>
         <tr>
-            <td></td>
-        </tr>
-        <tr>
-            <td>
-
-            </td>
+            <td><input type="button" value="发布招聘信息"></td>
         </tr>
     </table>
+        <div style="display: none;">
+
+        </div>
     <script>
 
     </script>

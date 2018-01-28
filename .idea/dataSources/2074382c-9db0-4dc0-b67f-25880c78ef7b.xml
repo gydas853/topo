@@ -15,98 +15,297 @@
     <schema id="9" parent="1" name="test"/>
     <schema id="10" parent="1" name="work"/>
     <schema id="11" parent="1" name="xj1711"/>
-    <table id="12" parent="2" name="manager"/>
-    <table id="13" parent="2" name="user"/>
-    <column id="14" parent="12" name="m_id">
+    <table id="12" parent="2" name="company"/>
+    <table id="13" parent="2" name="department"/>
+    <table id="14" parent="2" name="employee"/>
+    <table id="15" parent="2" name="guest"/>
+    <table id="16" parent="2" name="interview"/>
+    <table id="17" parent="2" name="manager"/>
+    <table id="18" parent="2" name="position"/>
+    <table id="19" parent="2" name="recruit"/>
+    <table id="20" parent="2" name="vitae"/>
+    <column id="21" parent="12" name="c_id">
       <Position>1</Position>
       <DataType>int(8)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="15" parent="12" name="m_name">
+    <column id="22" parent="12" name="c_name">
       <Position>2</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="16" parent="12" name="m_pass">
+    <column id="23" parent="12" name="c_companyScale">
       <Position>3</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="17" parent="12" name="PRIMARY">
+    <column id="24" parent="12" name="c_summary">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="12" name="c_address">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="12" name="c_phone">
+      <Position>6</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="27" parent="12" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>m_id</ColNames>
+      <ColNames>c_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="18" parent="13" name="u_id">
+    <column id="28" parent="13" name="d_id">
       <Position>1</Position>
       <DataType>int(8)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="19" parent="13" name="u_name">
+    <column id="29" parent="13" name="d_name">
       <Position>2</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="20" parent="13" name="u_pass">
+    <key id="30" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>d_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="31" parent="14" name="e_id">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="32" parent="14" name="e_u_id">
+      <Position>2</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="14" name="e_d_id">
+      <Position>3</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="14" name="e_p_id">
+      <Position>4</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="35" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>e_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="36" parent="15" name="g_id">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="37" parent="15" name="g_name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="15" name="g_pass">
       <Position>3</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="21" parent="13" name="u_sex">
-      <Position>4</Position>
-      <DataType>varchar(6)|0</DataType>
+    <key id="39" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>g_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="40" parent="16" name="i_id">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="41" parent="16" name="i_c_id">
+      <Position>2</Position>
+      <DataType>int(8)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="22" parent="13" name="u_birth">
+    <column id="42" parent="16" name="i_g_id">
+      <Position>3</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="16" name="i_interviewTime">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="16" name="i_interviewAddress">
       <Position>5</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="23" parent="13" name="u_nativePlace">
+    <column id="45" parent="16" name="i_r_id">
+      <Position>6</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="16" name="i_g_status">
+      <Position>7</Position>
+      <DataType>int(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="16" name="i_result">
+      <Position>8</Position>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="48" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>i_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="49" parent="17" name="m_id">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="50" parent="17" name="m_name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="17" name="m_pass">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="52" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>m_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="53" parent="18" name="p_id">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="54" parent="18" name="p_name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="55" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>p_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="56" parent="19" name="r_id">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="57" parent="19" name="r_name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="19" name="r_c_id">
+      <Position>3</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="59" parent="19" name="r_d_id">
+      <Position>4</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="60" parent="19" name="r_p_id">
+      <Position>5</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="61" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>r_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="62" parent="20" name="v_id">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="63" parent="20" name="v_g_id">
+      <Position>2</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="20" name="v_sex">
+      <Position>3</Position>
+      <DataType>varchar(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="65" parent="20" name="v_birth">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="66" parent="20" name="v_ethnicity">
+      <Position>5</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="67" parent="20" name="v_nativePlace">
       <Position>6</Position>
       <DataType>varchar(10)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="24" parent="13" name="u_qualification">
+    <column id="68" parent="20" name="v_qualification">
       <Position>7</Position>
       <DataType>varchar(10)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="25" parent="13" name="u_specialty">
+    <column id="69" parent="20" name="v_tel">
       <Position>8</Position>
-      <DataType>varchar(10)|0</DataType>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="26" parent="13" name="u_serviceYear">
+    <column id="70" parent="20" name="v_email">
       <Position>9</Position>
-      <DataType>varchar(10)|0</DataType>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="27" parent="13" name="u_tel">
+    <column id="71" parent="20" name="v_specialty">
       <Position>10</Position>
       <DataType>varchar(20)|0</DataType>
-      <NotNull>1</NotNull>
     </column>
-    <column id="28" parent="13" name="u_email">
+    <column id="72" parent="20" name="v_serviceYear">
       <Position>11</Position>
       <DataType>varchar(20)|0</DataType>
-      <NotNull>1</NotNull>
     </column>
-    <column id="29" parent="13" name="u_willSpot">
+    <column id="73" parent="20" name="v_willSpot">
       <Position>12</Position>
-      <DataType>varchar(10)|0</DataType>
+      <DataType>varchar(20)|0</DataType>
     </column>
-    <column id="30" parent="13" name="u_adsumDate">
+    <column id="74" parent="20" name="v_adsumDate">
       <Position>13</Position>
-      <DataType>varchar(10)|0</DataType>
+      <DataType>varchar(20)|0</DataType>
     </column>
-    <column id="31" parent="13" name="u_promisingDustry">
+    <column id="75" parent="20" name="v_promisingIndustry">
       <Position>14</Position>
       <DataType>varchar(10)|0</DataType>
     </column>
-    <key id="32" parent="13" name="PRIMARY">
+    <key id="76" parent="20" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>u_id</ColNames>
+      <ColNames>v_id</ColNames>
       <Primary>1</Primary>
     </key>
   </database-model>

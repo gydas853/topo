@@ -17,6 +17,7 @@
     <script src="js/jquery-3.1.0.js"></script>
 </head>
 <body>
+<p>欢迎${guest.g_name}</p>
     <div>
         <table>
             <tr>
@@ -27,15 +28,12 @@
     <div>
         <table>
             <tr>
-                <td><input id="i1" type="button" value="注册"></td>
             </tr>
         </table>
     </div>
 <script>
     $(document).ready(function () {
-        $("#i1").click(function () {
 
-        })
     })
 </script>
 </body>
