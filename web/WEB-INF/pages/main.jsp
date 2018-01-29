@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: nero0
@@ -72,14 +73,17 @@
         </form>
     </div>
     <div style="display: none;" id="div3">
-
+        <c:forEach var="recruit" items="${recruits}">
+            ${recruit}<br>
+        </c:forEach>
     </div>
 <script>
     $(document).ready(function () {
         $("#div1").hide();
         $("#i1").click(function () {
             $("#div1").show();
-            $("#div2").hide()
+            $("#div2").hide();
+            $("#div3").hide()
         });
         $("#i3").click(function () {
             $("#div1").hide();
@@ -88,12 +92,18 @@
         $("#div2").hide();
         $("#i2").click(function () {
             $("#div2").show();
-            $("#div1").hide()
+            $("#div1").hide();
+            $("#div3").hide()
         });
         $("#i4").click(function () {
             $("#div2").hide();
+        });
+        $("#div3").hide();
+        $("#in1").click(function () {
+            $("#div3").show();
+            $("#div1").hide();
+            $("#div2").hide()
         })
-
     })
 </script>
 </body>

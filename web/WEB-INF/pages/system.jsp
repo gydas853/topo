@@ -18,7 +18,8 @@
 <body>
     <div>
         <a href="forMain"><input type="button" value="游客登录"></a>
-        <a href="forLogin"><input type="button" value="员工登录"></a>
+        <a href="forEmployeeLogin"><input type="button" value="员工登录"></a>
+        <a href="forManagerLogin"><input type="button" value="管理员登录"></a>
     </div>
 </body>
 </html>

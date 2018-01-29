@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: nero0
-  Date: 2018-01-29
-  Time: 14:26
+  Date: 2018-01-26
+  Time: 09:15
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -17,7 +17,7 @@
 </head>
 <body>
     <div>
-        <form action="employeeLogin" method="post">
+        <form action="managerLogin" method="post">
             <table>
                 <tr>
                     <td>用户名：</td>

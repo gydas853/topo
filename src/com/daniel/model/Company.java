@@ -12,6 +12,7 @@ public class Company implements Serializable{
     private String c_summary;
     private String c_address;
     private String c_phone;
+    private Recruit recruit;
 
     public Company() {
     }
@@ -23,6 +24,16 @@ public class Company implements Serializable{
         this.c_summary = c_summary;
         this.c_address = c_address;
         this.c_phone = c_phone;
+    }
+
+    public Company(int c_id, String c_name, String c_companyScale, String c_summary, String c_address, String c_phone, Recruit recruit) {
+        this.c_id = c_id;
+        this.c_name = c_name;
+        this.c_companyScale = c_companyScale;
+        this.c_summary = c_summary;
+        this.c_address = c_address;
+        this.c_phone = c_phone;
+        this.recruit = recruit;
     }
 
     public int getC_id() {
@@ -71,6 +82,14 @@ public class Company implements Serializable{
 
     public void setC_phone(String c_phone) {
         this.c_phone = c_phone;
+    }
+
+    public Recruit getRecruit() {
+        return recruit;
+    }
+
+    public void setRecruit(Recruit recruit) {
+        this.recruit = recruit;
     }
 
     @Override

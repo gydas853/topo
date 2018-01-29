@@ -1,10 +1,15 @@
 package com.daniel.controller;
 
+import com.daniel.model.Recruit;
 import com.daniel.service.CompanyService;
+import com.daniel.service.RecruitService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
+import java.util.List;
 
 /**
  * Created by nero0 on 2018-01-26.
@@ -14,7 +19,7 @@ import javax.annotation.Resource;
 public class MyController {
 
     @Resource
-    private CompanyService companyService;
+    private RecruitService recruitService;
 
 
     /*跳转到系统界面*/
@@ -26,15 +31,24 @@ public class MyController {
 
     /*使游客访问网页*/
     @RequestMapping(value = "/forMain")
-    public String forMain() throws Exception{
+    public ModelAndView forMain() throws Exception{
+        ModelAndView modelAndView = new ModelAndView();
+        List<Recruit> recruits = recruitService.listAll();
+        modelAndView.addObject("recruits",recruits);
+        modelAndView.setViewName("main");
         /*进入main.jsp*/
-        return "main";
+        return modelAndView;
     }
 
-    /*使员工与管理员登录系统*/
-    @RequestMapping(value = "/forLogin")
+    /*管理员登录系统*/
+    @RequestMapping(value = "/forManagerLogin")
     public String forLogin() throws Exception{
-        /*进入员工登录界面 employeeLogin.jsp*/
+        /*进入管理员登录界面*/
+        return "managerLogin";
+    }
+
+    @RequestMapping(value = "/forEmployeeLogin")
+    public String forEmployeeLogin() throws Exception{
         return "employeeLogin";
     }
 }

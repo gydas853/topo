@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: nero0
@@ -17,17 +18,6 @@
     <script src="js/jquery-3.1.0.js"></script>
 </head>
 <body>
-    <p>欢迎${manager.m_name}登录</p>
-    <table>
-        <tr>
-            <td><input type="button" value="发布招聘信息"></td>
-        </tr>
-    </table>
-        <div style="display: none;">
 
-        </div>
-    <script>
-
-    </script>
 </body>
 </html>

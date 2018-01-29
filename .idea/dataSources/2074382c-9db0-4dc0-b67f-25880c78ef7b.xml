@@ -243,9 +243,9 @@
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="63" parent="20" name="v_g_id">
+    <column id="63" parent="20" name="v_name">
       <Position>2</Position>
-      <DataType>int(8)|0</DataType>
+      <DataType>varchar(10)|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="64" parent="20" name="v_sex">
@@ -303,7 +303,12 @@
       <Position>14</Position>
       <DataType>varchar(10)|0</DataType>
     </column>
-    <key id="76" parent="20" name="PRIMARY">
+    <column id="76" parent="20" name="v_g_id">
+      <Position>15</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="77" parent="20" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>v_id</ColNames>
       <Primary>1</Primary>
