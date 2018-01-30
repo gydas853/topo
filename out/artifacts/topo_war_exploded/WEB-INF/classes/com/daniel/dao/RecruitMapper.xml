@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.daniel.dao.RecruitMapper">
+
+    <resultMap id="r_c_d_pMap" type="com.daniel.model.Recruit">
+        <id property="r_id" column="r_id"/>
+        <result property="r_name" column="r_name"/>
+        <result property="r_c_id" column="r_c_id"/>
+        <result property="r_d_id" column="r_d_id"/>
+        <result property="r_p_id" column="r_p_id"/>
+        <result property="r_money" column="r_money"/>
+        <association property="company" javaType="com.daniel.model.Company">
+            <id property="c_id" column="c_id"/>
+            <result property="c_name" column="c_name"/>
+            <result property="c_companyScale" column="c_companyScale"/>
+            <result property="c_summary" column="c_summary"/>
+            <result property="c_address" column="c_address"/>
+            <result property="c_phone" column="c_phone"/>
+        </association>
+        <association property="department" javaType="com.daniel.model.Department">
+            <id property="d_id" column="d_id"/>
+            <result property="d_name" column="d_name"/>
+        </association>
+        <association property="position" javaType="com.daniel.model.Position">
+            <id property="p_id" column="p_id"/>
+            <result property="p_name" column="p_name"/>
+        </association>
+    </resultMap>
+    <insert id="addRecruit">
+        insert into recruit (r_name, r_c_id, r_d_id, r_p_id,r_money)
+        values (#{r_name},#{r_c_id},#{r_d_id},#{r_p_id},#{r_money});
+    </insert>
+    <update id="updateRecruit">
+        update recruit
+        set r_name = #{r_name},r_c_id = #{r_c_id},r_d_id = #{r_d_id},r_p_id = #{r_p_id},r_money = #{r_money}
+        where r_id = #{r_id};
+    </update>
+    <delete id="deleteRecruit">
+        delete from recruit where r_id = #{r_id};
+    </delete>
+    <select id="listAll" resultMap="r_c_d_pMap">
+        select * from recruit,company,department,position where r_c_id = c_id and r_d_id = d_id and r_p_id = p_id;
+    </select>
+    <select id="getRecruitById" resultMap="r_c_d_pMap">
+        select * from recruit,company,department,position where r_c_id = c_id and r_d_id = d_id and r_p_id = p_id and r_id = #{r_id};
+    </select>
+</mapper>
