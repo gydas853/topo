@@ -43,7 +43,7 @@
     <select id="listAll" resultMap="r_c_d_pMap">
         select * from recruit,company,department,position where r_c_id = c_id and r_d_id = d_id and r_p_id = p_id;
     </select>
-    <select id="getRecruit" resultMap="r_c_d_pMap">
+    <select id="getRecruitById" resultMap="r_c_d_pMap">
         select * from recruit,company,department,position where r_c_id = c_id and r_d_id = d_id and r_p_id = p_id and r_id = #{r_id};
     </select>
 </mapper>

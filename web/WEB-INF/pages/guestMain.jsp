@@ -24,15 +24,17 @@
             <tr>
                 <td><input id="in1" type="button" value="查看招聘信息"></td>
                 <td><input id="in2" type="button" value="创建简历"></td>
-                <td><input id="in3" type="button" value="我的所有简历"></td>
+                <td><input id="in3" type="button" value="查看我的简历"></td>
             </tr>
         </table>
     </div>
+    <%--查看招聘信息  尚未优化--%>
     <div style="display: none;" id="div1">
         <c:forEach var="recruit" items="${recruits}">
             ${recruit}
         </c:forEach>
     </div>
+    <%--创建简历--%>
     <div style="display: none;" id="div2">
         <form action="addVitae" method="post">
             <table>
@@ -85,8 +87,116 @@
             </table>
         </form>
     </div>
+    <%--查看我的简历--%>
     <div style="display: none" id="div3">
-        ${vitaes}
+        <c:forEach var="vitae" items="${vitaes}">
+            <table>
+                <tr>
+                    <td>姓名：</td>
+                    <td>${vitae.v_name}</td>
+                    <td>性别：</td>
+                    <td>${vitae.v_sex}</td>
+                </tr>
+                <tr>
+                    <td>生日：</td>
+                    <td>${vitae.v_birth}</td>
+                    <td>民族：</td>
+                    <td>${vitae.v_ethnicity}</td>
+                </tr>
+                <tr>
+                    <td>籍贯：</td>
+                    <td>${vitae.v_nativePlace}</td>
+                    <td>学历：</td>
+                    <td>${vitae.v_qualification}</td>
+                </tr>
+                <tr>
+                    <td>联系电话：</td>
+                    <td>${vitae.v_tel}</td>
+                </tr>
+                <tr>
+                    <td>邮箱地址：</td>
+                    <td>${vitae.v_email}</td>
+                </tr>
+                <tr>
+                    <td>专业：</td>
+                    <td>${vitae.v_specialty}</td>
+                    <td>工作经验：</td>
+                    <td>${vitae.v_serviceYear}</td>
+                </tr>
+                <tr>
+                    <td>意向工作地点：</td>
+                    <td>${vitae.v_willSpot}</td>
+                    <td>到岗时间：</td>
+                    <td>${vitae.v_adsumDate}</td>
+                </tr>
+                <tr>
+                    <td>希望从事的行业：</td>
+                    <td>${vitae.v_promisingIndustry}</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="in4" type="button" value="修改简历">
+                        <input type="button" value="删除简历">
+                    </td>
+                </tr>
+            </table>
+        </c:forEach>
+    </div>
+    <%--修改我的简历--%>
+    <div style="display: none;" id="div4">
+        <form action="changeVitae" method="post">
+            <c:forEach var="vitae" items="${vitaes}">
+                <table>
+                    <tr>
+                        <td>姓名：</td>
+                        <td><input type="text" name="v_name" value="${vitae.v_name}"></td>
+                        <td>性别：</td>
+                        <td><input type="text" name="v_sex" value="${vitae.v_sex}"></td>
+                    </tr>
+                    <tr>
+                        <td>生日：</td>
+                        <td><input type="text" name="v_birth" value="${vitae.v_birth}"></td>
+                        <td>民族：</td>
+                        <td><input type="text" name="v_ethnicity" value="${vitae.v_ethnicity}"></td>
+                    </tr>
+                    <tr>
+                        <td>籍贯：</td>
+                        <td><input type="text" name="v_nativePlace" value="${vitae.v_nativePlace}"></td>
+                        <td>学历：</td>
+                        <td><input type="text" name="v_qualification" value="${vitae.v_qualification}"></td>
+                    </tr>
+                    <tr>
+                        <td>联系电话：</td>
+                        <td><input type="text" name="v_tel" value="${vitae.v_tel}"></td>
+                    </tr>
+                    <tr>
+                        <td>邮箱地址：</td>
+                        <td><input type="text" name="v_email" value="${vitae.v_email}"></td>
+                    </tr>
+                    <tr>
+                        <td>专业：</td>
+                        <td><input type="text" name="v_specialty" value="${vitae.v_specialty}"></td>
+                        <td>工作经验：</td>
+                        <td><input type="text" name="v_serviceYear" value="${vitae.v_serviceYear}"></td>
+                    </tr>
+                    <tr>
+                        <td>意向工作地点：</td>
+                        <td><input type="text" name="v_willSpot" value="${vitae.v_willSpot}"></td>
+                        <td>到岗时间：</td>
+                        <td><input type="text" name="v_adsumDate" value="${vitae.v_adsumDate}"></td>
+                    </tr>
+                    <tr>
+                        <td>希望从事的行业：</td>
+                        <td><input type="text" name="v_promisingIndustry" value="${vitae.v_promisingIndustry}"></td>
+                        <td>
+                            <input type="hidden" value="${vitae.v_id}" name="v_id">
+                            <input id="in6" type="submit" value="确认修改">
+                            <input id="in5" type="button" value="取消修改">
+                        </td>
+                    </tr>
+                </table>
+            </c:forEach>
+        </form>
     </div>
     <script>
         $(document).ready(function () {
@@ -94,19 +204,44 @@
             $("#in1").click(function () {
                 $("#div1").show();
                 $("#div2").hide();
-                $("#div3").hide()
+                $("#div3").hide();
+                $("#div4").hide()
             });
             $("#div2").hide();
             $("#in2").click(function () {
                 $("#div2").show();
                 $("#div1").hide();
-                $("#div3").hide()
-            })
+                $("#div3").hide();
+                $("#div4").hide()
+            });
             $("#div3").hide();
             $("#in3").click(function () {
                 $("#div3").show();
                 $("#div1").hide();
-                $("#div2").hide()
+                $("#div2").hide();
+                $("#div4").hide()
+            });
+            $("#div4").hide();
+            $("#in4").click(function () {
+                $("#div4").show();
+                $("#div1").hide();
+                $("#div2").hide();
+                $("#div3").hide()
+            });
+            $("#in5").click(function () {
+               /* location.reload();*/
+                $("#div1").hide();
+                $("#div2").hide();
+                $("#div3").hide();
+                $("#div4").hide()
+            });
+            $("#in6").click(function () {
+                var i = confirm("修改信息需要重新登录");
+                if(i==true){
+
+                }else {
+
+                }
             })
         })
     </script>

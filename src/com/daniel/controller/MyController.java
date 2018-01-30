@@ -47,6 +47,7 @@ public class MyController {
         return "managerLogin";
     }
 
+    /*Ô±¹¤µÇÂ¼*/
     @RequestMapping(value = "/forEmployeeLogin")
     public String forEmployeeLogin() throws Exception{
         return "employeeLogin";

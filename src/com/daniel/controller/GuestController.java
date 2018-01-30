@@ -1,6 +1,7 @@
 package com.daniel.controller;
 
 import com.daniel.model.Guest;
+import com.daniel.model.Page;
 import com.daniel.model.Recruit;
 import com.daniel.model.Vitae;
 import com.daniel.service.GuestService;
@@ -8,6 +9,7 @@ import com.daniel.service.RecruitService;
 import com.daniel.service.VitaeService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
@@ -29,8 +31,8 @@ public class GuestController {
     @Resource
     private VitaeService vitaeService;
 
-    /*游客登录*/
-    @RequestMapping(value = "/guestLogin")
+    /*游客登录*//*需要优化*/
+    @RequestMapping(value = "/guestLogin",method = RequestMethod.POST)
     public ModelAndView guestLogin(HttpServletRequest request) throws Exception{
         ModelAndView modelAndView = new ModelAndView();
 
@@ -45,10 +47,13 @@ public class GuestController {
         if(null != guest1){
             Vitae vitae = new Vitae();
             vitae.setV_g_id(guest1.getG_id());
+            /*查到此游客所有的简历*/
             List<Vitae> vitaes = vitaeService.getVitaeByG_id(vitae);
             modelAndView.addObject("vitaes",vitaes);
+            /*查到网站上的所有招聘信息*/
             List<Recruit> recruits = recruitService.listAll();
             modelAndView.addObject("recruits",recruits);
+            /*用户信息存到model*/
             modelAndView.addObject("guest",guest1);
             modelAndView.setViewName("guestMain");
             return modelAndView;
@@ -59,7 +64,7 @@ public class GuestController {
 
     }
 
-    /*游客注册成为会员*/
+    /*游客注册成为会员*//*需要优化*/
     @RequestMapping(value = "/register")
     public ModelAndView register(HttpServletRequest request) throws Exception{
         ModelAndView modelAndView = new ModelAndView();
@@ -76,9 +81,17 @@ public class GuestController {
         return modelAndView;
     }
 
+    /*游客添加简历*/
     @RequestMapping(value = "/addVitae")
     public String addVitae(Vitae vitae) throws Exception{
         vitaeService.addVitae(vitae);
-        return "guestMain";
+        return "main";
+    }
+
+    /*游客修改简历*/
+    @RequestMapping(value = "/changeVitae")
+    public String changeVitae(Vitae vitae) throws Exception{
+        vitaeService.updateVitae(vitae);
+        return "main";
     }
 }

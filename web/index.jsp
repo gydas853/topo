@@ -17,7 +17,7 @@
     <link type="text/css" rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <%--进入系统 a标签--%>
+    <%--进入系统--%>
     <div>
         <a href="forSystem"><input type="button" value="进入系统"></a>
     </div>

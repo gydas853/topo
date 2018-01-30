@@ -32,6 +32,9 @@ public class ManagerController {
 
     @Resource
     private RecruitService recruitService;
+
+    @Resource
+    private VitaeService vitaeService;
     /*管理员登录*/
     @RequestMapping(value = "/managerLogin",method = RequestMethod.POST)
     public ModelAndView managerLogin(HttpServletRequest request) throws Exception{
@@ -46,15 +49,23 @@ public class ManagerController {
         Manager manager1 = managerService.getManager(manager);
         if(null != manager1){
 
+            /*全部公司信息*/
             List<Company> companies = companyService.listAll();
             modelAndView.addObject("companies",companies);
 
+            /*全部部门信息*/
             List<Department> departments = departmentService.listAll();
             modelAndView.addObject("departments",departments);
 
+            /*全部职位信息*/
             List<Position> positions = positionService.listAll();
             modelAndView.addObject("positions",positions);
 
+            /*全部招聘信息*/
+            List<Recruit> recruits = recruitService.listAll();
+            modelAndView.addObject("recruits",recruits);
+
+            /*管理员信息*/
             modelAndView.addObject("manager",manager1);
             modelAndView.setViewName("managerMain");
             return modelAndView;
@@ -64,7 +75,7 @@ public class ManagerController {
         }
     }
 
-    /*管理员发布招聘信息*/
+    /*管理员发布招聘信息*//*需要优化*/
     @RequestMapping(value = "/addRecruit",method = RequestMethod.POST)
     public String addRecruit(HttpServletRequest request) throws Exception{
         String r_name = request.getParameter("r_name");

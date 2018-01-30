@@ -46,4 +46,5 @@ public class VitaeServiceImpl implements VitaeService{
     public List<Vitae> getVitaeByG_id(Vitae vitae) {
         return vitaeMapper.getVitaeByG_id(vitae);
     }
+
 }

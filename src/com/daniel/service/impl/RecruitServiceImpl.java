@@ -38,7 +38,7 @@ public class RecruitServiceImpl implements RecruitService{
     }
 
     @Override
-    public Recruit getRecruit(Recruit recruit) {
-        return recruitMapper.getRecruit(recruit);
+    public Recruit getRecruitById(Recruit recruit) {
+        return recruitMapper.getRecruitById(recruit);
     }
 }

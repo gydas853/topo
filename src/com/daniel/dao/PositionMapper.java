@@ -12,5 +12,5 @@ public interface PositionMapper {
     boolean updatePosition(Position position);
     boolean deletePosition(Position position);
     List<Position> listAll();
-    Position getPosition(Position position);
+    Position getPositionById(Position position);
 }

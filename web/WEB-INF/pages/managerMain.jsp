@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: nero0
@@ -21,6 +22,7 @@
     <table>
         <tr>
             <td><input id="i1" type="button" value="发布招聘信息"></td>
+            <td><input id="i2" type="button" value="所有招聘信息"></td>
         </tr>
     </table>
     <div style="display: none;" id="div1">
@@ -47,12 +49,43 @@
             <input type="submit" value="确认发布">
         </form>
     </div>
+    <div style="display: none" id="div2">
+            <table border="1" cellpadding="10" cellspacing="0">
+                <tr>
+                    <td>招聘岗位</td>
+                    <td>招聘公司</td>
+                    <td>招聘部门</td>
+                    <td>招聘职位</td>
+                    <td>招聘</td>
+                    <td>操作</td>
+
+                </tr>
+                <c:forEach var="recruit" items="${recruits}">
+                    <tr>
+                        <td>${recruit.r_name}</td>
+                        <td>${recruit.company.c_name}</td>
+                        <td>${recruit.department.d_name}</td>
+                        <td>${recruit.position.p_name}</td>
+                        <td>
+                            <input type="button" value="修改招聘信息">
+                            <input type="button" value="删除招聘信息">
+                        </td>
+                    </tr>
+                </c:forEach>
+            </table>
+    </div>
     <a href="forSystem"><input type="button" value="返回主界面"></a>
     <script>
         $(document).ready(function () {
             $("#div1").hide();
             $("#i1").click(function () {
-                $("#div1").show()
+                $("#div1").show();
+                $("#div2").hide()
+            });
+            $("#div2").hide();
+            $("#i2").click(function () {
+                $("#div2").show();
+                $("#div1").hide()
             })
         })
     </script>

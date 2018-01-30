@@ -74,7 +74,7 @@
     </div>
     <div style="display: none;" id="div3">
         <c:forEach var="recruit" items="${recruits}">
-            ${recruit}<br>
+            ${recruit}
         </c:forEach>
     </div>
 <script>
