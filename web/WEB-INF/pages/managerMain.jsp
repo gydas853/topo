@@ -46,6 +46,7 @@
                 <option value="${position.p_id}">${position.p_name}</option>
             </c:forEach>
         </select><br>
+            月薪：<input type="text" name="r_money"><br>
             <input type="submit" value="确认发布">
         </form>
     </div>
@@ -56,7 +57,7 @@
                     <td>招聘公司</td>
                     <td>招聘部门</td>
                     <td>招聘职位</td>
-                    <td>招聘</td>
+                    <td>月薪</td>
                     <td>操作</td>
 
                 </tr>
@@ -66,6 +67,7 @@
                         <td>${recruit.company.c_name}</td>
                         <td>${recruit.department.d_name}</td>
                         <td>${recruit.position.p_name}</td>
+                        <td>${recruit.r_money}</td>
                         <td>
                             <input type="button" value="修改招聘信息">
                             <input type="button" value="删除招聘信息">

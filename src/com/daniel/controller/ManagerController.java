@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -82,14 +83,20 @@ public class ManagerController {
         int r_c_id = Integer.parseInt(request.getParameter("r_c_id"));
         int r_d_id = Integer.parseInt(request.getParameter("r_d_id"));
         int r_p_id = Integer.parseInt(request.getParameter("r_p_id"));
+        String r_money = request.getParameter("r_money");
 
         Recruit recruit = new Recruit();
         recruit.setR_name(r_name);
         recruit.setR_c_id(r_c_id);
         recruit.setR_d_id(r_d_id);
         recruit.setR_p_id(r_p_id);
+        recruit.setR_money(r_money);
 
         recruitService.addRecruit(recruit);
-        return "employeeMain";
+
+        List<Recruit> recruits = recruitService.listAll();
+        HttpSession session = request.getSession();
+        session.setAttribute("recruits",recruits);
+        return "managerMain";
     }
 }

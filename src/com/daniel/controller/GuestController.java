@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -54,6 +55,10 @@ public class GuestController {
             List<Recruit> recruits = recruitService.listAll();
             modelAndView.addObject("recruits",recruits);
             /*用户信息存到model*/
+            HttpSession session = request.getSession();
+            session.setAttribute("guest",guest1);
+            session.setAttribute("vitaes",vitaes);
+            session.setAttribute("recruits",recruits);
             modelAndView.addObject("guest",guest1);
             modelAndView.setViewName("guestMain");
             return modelAndView;
@@ -90,8 +95,29 @@ public class GuestController {
 
     /*游客修改简历*/
     @RequestMapping(value = "/changeVitae")
-    public String changeVitae(Vitae vitae) throws Exception{
+    public String changeVitae(HttpSession session,Vitae vitae) throws Exception{
         vitaeService.updateVitae(vitae);
-        return "main";
+
+        Guest guest = (Guest) session.getAttribute("guest");
+        Vitae vitae1 = new Vitae();
+        vitae1.setV_g_id(guest.getG_id());
+
+        List<Vitae> vitaes = vitaeService.getVitaeByG_id(vitae1);
+        session.setAttribute("vitaes",vitaes);
+        return "guestMain";
+    }
+
+    /*游客删除简历*/
+    @RequestMapping(value = "/deleteVitae")
+    public String deleteVitae(HttpSession session,Vitae vitae)throws Exception{
+        vitaeService.deleteVitae(vitae);
+
+        Guest guest = (Guest) session.getAttribute("guest");
+        Vitae vitae1 = new Vitae();
+        vitae1.setV_g_id(guest.getG_id());
+
+        List<Vitae> vitaes = vitaeService.getVitaeByG_id(vitae1);
+        session.setAttribute("vitaes",vitaes);
+        return "guestMain";
     }
 }

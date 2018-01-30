@@ -136,13 +136,13 @@
                 <tr>
                     <td>
                         <input id="in4" type="button" value="修改简历">
-                        <input type="button" value="删除简历">
+                        <a href="deleteVitae?v_id=${vitae.v_id}"><input type="button" value="删除简历"></a>
                     </td>
                 </tr>
             </table>
         </c:forEach>
     </div>
-    <%--修改我的简历--%>
+    <%--修改我的简历--%><%--这里可以改的更好点--%>
     <div style="display: none;" id="div4">
         <form action="changeVitae" method="post">
             <c:forEach var="vitae" items="${vitaes}">
@@ -198,6 +198,7 @@
             </c:forEach>
         </form>
     </div>
+    <a href="forSystem"><input type="button" value="返回主界面"></a>
     <script>
         $(document).ready(function () {
             $("#div1").hide();
@@ -229,19 +230,14 @@
                 $("#div3").hide()
             });
             $("#in5").click(function () {
-               /* location.reload();*/
+
                 $("#div1").hide();
                 $("#div2").hide();
                 $("#div3").hide();
                 $("#div4").hide()
             });
             $("#in6").click(function () {
-                var i = confirm("修改信息需要重新登录");
-                if(i==true){
-
-                }else {
-
-                }
+                confirm("确定修改吗");
             })
         })
     </script>

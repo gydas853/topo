@@ -11,6 +11,7 @@
         <result property="r_c_id" column="r_c_id"/>
         <result property="r_d_id" column="r_d_id"/>
         <result property="r_p_id" column="r_p_id"/>
+        <result property="r_money" column="r_money"/>
         <association property="company" javaType="com.daniel.model.Company">
             <id property="c_id" column="c_id"/>
             <result property="c_name" column="c_name"/>
@@ -29,12 +30,12 @@
         </association>
     </resultMap>
     <insert id="addRecruit">
-        insert into recruit (r_name, r_c_id, r_d_id, r_p_id)
-        values (#{r_name},#{r_c_id},#{r_d_id},#{r_p_id});
+        insert into recruit (r_name, r_c_id, r_d_id, r_p_id,r_money)
+        values (#{r_name},#{r_c_id},#{r_d_id},#{r_p_id},#{r_money});
     </insert>
     <update id="updateRecruit">
         update recruit
-        set r_name = #{r_name},r_c_id = #{r_c_id},r_d_id = #{r_d_id},r_p_id = #{r_p_id}
+        set r_name = #{r_name},r_c_id = #{r_c_id},r_d_id = #{r_d_id},r_p_id = #{r_p_id},r_money = #{r_money}
         where r_id = #{r_id};
     </update>
     <delete id="deleteRecruit">

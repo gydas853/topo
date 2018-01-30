@@ -14,6 +14,7 @@ public class Recruit implements Serializable{
     private Company company;
     private Department department;
     private Position position;
+    private String r_money;
 
     public Recruit() {
     }
@@ -35,6 +36,18 @@ public class Recruit implements Serializable{
         this.company = company;
         this.department = department;
         this.position = position;
+    }
+
+    public Recruit(int r_id, String r_name, int r_c_id, int r_d_id, int r_p_id, Company company, Department department, Position position, String r_money) {
+        this.r_id = r_id;
+        this.r_name = r_name;
+        this.r_c_id = r_c_id;
+        this.r_d_id = r_d_id;
+        this.r_p_id = r_p_id;
+        this.company = company;
+        this.department = department;
+        this.position = position;
+        this.r_money = r_money;
     }
 
     public int getR_id() {
@@ -101,6 +114,14 @@ public class Recruit implements Serializable{
         this.position = position;
     }
 
+    public String getR_money() {
+        return r_money;
+    }
+
+    public void setR_money(String r_money) {
+        this.r_money = r_money;
+    }
+
     @Override
     public String toString() {
         return "Recruit{" +
@@ -112,6 +133,7 @@ public class Recruit implements Serializable{
                 ", company=" + company +
                 ", department=" + department +
                 ", position=" + position +
+                ", r_money='" + r_money + '\'' +
                 '}';
     }
 }
