@@ -90,6 +90,7 @@
                 $("#div1").hide()
             })
         })
+
     </script>
 </body>
 </html>
