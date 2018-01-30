@@ -67,6 +67,8 @@ public class ManagerController {
             modelAndView.addObject("recruits",recruits);
 
             /*管理员信息*/
+            HttpSession session = request.getSession();
+            session.setAttribute("manager",manager1);
             modelAndView.addObject("manager",manager1);
             modelAndView.setViewName("managerMain");
             return modelAndView;
@@ -98,5 +100,58 @@ public class ManagerController {
         HttpSession session = request.getSession();
         session.setAttribute("recruits",recruits);
         return "managerMain";
+    }
+
+    /*管理员修改招聘信息*/
+    @RequestMapping(value = "/changeRecruit",method = RequestMethod.POST)
+    public ModelAndView changeRecruit(Recruit recruit) throws Exception{
+        ModelAndView modelAndView = new ModelAndView();
+
+        recruitService.updateRecruit(recruit);
+        /*全部公司信息*/
+        List<Company> companies = companyService.listAll();
+        modelAndView.addObject("companies",companies);
+
+            /*全部部门信息*/
+        List<Department> departments = departmentService.listAll();
+        modelAndView.addObject("departments",departments);
+
+            /*全部职位信息*/
+        List<Position> positions = positionService.listAll();
+        modelAndView.addObject("positions",positions);
+
+            /*全部招聘信息*/
+        List<Recruit> recruits = recruitService.listAll();
+        modelAndView.addObject("recruits",recruits);
+
+        modelAndView.setViewName("managerMain");
+        return modelAndView;
+    }
+    /*管理员删除招聘信息*/
+    @RequestMapping(value = "/deleteRecruit")
+    public ModelAndView deleteRecruit(Recruit recruit) throws Exception{
+
+        ModelAndView modelAndView = new ModelAndView();
+
+        recruitService.deleteRecruit(recruit);
+
+         /*全部公司信息*/
+        List<Company> companies = companyService.listAll();
+        modelAndView.addObject("companies",companies);
+
+            /*全部部门信息*/
+        List<Department> departments = departmentService.listAll();
+        modelAndView.addObject("departments",departments);
+
+            /*全部职位信息*/
+        List<Position> positions = positionService.listAll();
+        modelAndView.addObject("positions",positions);
+
+            /*全部招聘信息*/
+        List<Recruit> recruits = recruitService.listAll();
+        modelAndView.addObject("recruits",recruits);
+
+        modelAndView.setViewName("managerMain");
+        return modelAndView;
     }
 }

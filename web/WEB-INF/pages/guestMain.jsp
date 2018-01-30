@@ -31,6 +31,33 @@
     <%--查看招聘信息  尚未优化--%>
     <div style="display: none;" id="div1">
         <c:forEach var="recruit" items="${recruits}">
+            <form>
+                <table>
+                    <tr>
+                        <td>招聘岗位</td>
+                        <td>招聘公司</td>
+                        <td>招聘部门</td>
+                        <td>招聘职位</td>
+                        <td>月薪</td>
+                        <td>操作</td>
+                    </tr>
+                    <c:forEach var="recruit" items="${recruits}">
+                        <tr  id="tr${recruit.r_id}">
+                            <td>${recruit.r_name}</td>
+                            <td>${recruit.company.c_name}</td>
+                            <td>${recruit.department.d_name}</td>
+                            <td>${recruit.position.p_name}</td>
+                            <td>${recruit.r_money}</td>
+                            <td>
+                                <form>
+                                    <input type="hidden" name="" value="${}">
+                                    <input type="button" value="选择应聘">
+                                </form>
+                            </td>
+                        </tr>
+                    </c:forEach>
+                </table>
+            </form>
             ${recruit}
         </c:forEach>
     </div>

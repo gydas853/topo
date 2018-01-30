@@ -23,8 +23,10 @@
         <tr>
             <td><input id="i1" type="button" value="发布招聘信息"></td>
             <td><input id="i2" type="button" value="所有招聘信息"></td>
+            <td><a href="forSystem"><input type="button" value="返回主界面"></a></td>
         </tr>
     </table>
+    <%--发布招聘信息--%>
     <div style="display: none;" id="div1">
         <form action="addRecruit" method="post">
             职位：<input type="text" name="r_name"><br>
@@ -50,45 +52,47 @@
             <input type="submit" value="确认发布">
         </form>
     </div>
+    <%--查看所有招聘信息--%>
     <div style="display: none" id="div2">
-            <table border="1" cellpadding="10" cellspacing="0">
-                <tr>
-                    <td>招聘岗位</td>
-                    <td>招聘公司</td>
-                    <td>招聘部门</td>
-                    <td>招聘职位</td>
-                    <td>月薪</td>
-                    <td>操作</td>
+        <table border="1" cellpadding="10" cellspacing="0">
+            <tr>
+                <td>招聘岗位</td>
+                <td>招聘公司</td>
+                <td>招聘部门</td>
+                <td>招聘职位</td>
+                <td>月薪</td>
+                <td>操作</td>
 
+            </tr>
+            <c:forEach var="recruit" items="${recruits}">
+                <tr  id="tr${recruit.r_id}">
+                    <td>${recruit.r_name}</td>
+                    <td>${recruit.company.c_name}</td>
+                    <td>${recruit.department.d_name}</td>
+                    <td>${recruit.position.p_name}</td>
+                    <td>${recruit.r_money}</td>
+                    <td>
+                        <a href="forChangeRecruit?r_id=${recruit.r_id}"><input type="button" value="修改招聘信息"></a>
+                        <a href="deleteRecruit?r_id=${recruit.r_id}"><input type="button" value="删除招聘信息"></a>
+                    </td>
                 </tr>
-                <c:forEach var="recruit" items="${recruits}">
-                    <tr>
-                        <td>${recruit.r_name}</td>
-                        <td>${recruit.company.c_name}</td>
-                        <td>${recruit.department.d_name}</td>
-                        <td>${recruit.position.p_name}</td>
-                        <td>${recruit.r_money}</td>
-                        <td>
-                            <input type="button" value="修改招聘信息">
-                            <input type="button" value="删除招聘信息">
-                        </td>
-                    </tr>
-                </c:forEach>
-            </table>
+            </c:forEach>
+        </table>
     </div>
-    <a href="forSystem"><input type="button" value="返回主界面"></a>
     <script>
         $(document).ready(function () {
             $("#div1").hide();
             $("#i1").click(function () {
                 $("#div1").show();
-                $("#div2").hide()
+                $("#div2").hide();
+                $("#div3").hide()
             });
             $("#div2").hide();
             $("#i2").click(function () {
                 $("#div2").show();
-                $("#div1").hide()
-            })
+                $("#div1").hide();
+                $("#div3").hide()
+            });
         })
     </script>
 </body>
