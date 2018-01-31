@@ -1,10 +1,11 @@
 package com.daniel.controller;
 
 import com.daniel.model.Guest;
-import com.daniel.model.Page;
+import com.daniel.model.Offer;
 import com.daniel.model.Recruit;
 import com.daniel.model.Vitae;
 import com.daniel.service.GuestService;
+import com.daniel.service.OfferService;
 import com.daniel.service.RecruitService;
 import com.daniel.service.VitaeService;
 import org.springframework.stereotype.Controller;
@@ -32,6 +33,9 @@ public class GuestController {
     @Resource
     private VitaeService vitaeService;
 
+    @Resource
+    private OfferService offerService;
+
     /*游客登录*//*需要优化*/
     @RequestMapping(value = "/guestLogin",method = RequestMethod.POST)
     public ModelAndView guestLogin(HttpServletRequest request) throws Exception{
@@ -48,16 +52,16 @@ public class GuestController {
         if(null != guest1){
             Vitae vitae = new Vitae();
             vitae.setV_g_id(guest1.getG_id());
-            /*查到此游客所有的简历*/
-            List<Vitae> vitaes = vitaeService.getVitaeByG_id(vitae);
-            modelAndView.addObject("vitaes",vitaes);
+            /*查到此游客的简历*/
+            Vitae vitae1 = vitaeService.getVitaeByG_id(vitae);
+            modelAndView.addObject("vitae",vitae1);
             /*查到网站上的所有招聘信息*/
             List<Recruit> recruits = recruitService.listAll();
             modelAndView.addObject("recruits",recruits);
             /*用户信息存到model*/
             HttpSession session = request.getSession();
             session.setAttribute("guest",guest1);
-            session.setAttribute("vitaes",vitaes);
+            session.setAttribute("vitae",vitae1);
             session.setAttribute("recruits",recruits);
             modelAndView.addObject("guest",guest1);
             modelAndView.setViewName("guestMain");
@@ -102,8 +106,8 @@ public class GuestController {
         Vitae vitae1 = new Vitae();
         vitae1.setV_g_id(guest.getG_id());
 
-        List<Vitae> vitaes = vitaeService.getVitaeByG_id(vitae1);
-        session.setAttribute("vitaes",vitaes);
+        Vitae vitae2 = vitaeService.getVitaeByG_id(vitae1);
+        session.setAttribute("vitae",vitae2);
         return "guestMain";
     }
 
@@ -116,8 +120,28 @@ public class GuestController {
         Vitae vitae1 = new Vitae();
         vitae1.setV_g_id(guest.getG_id());
 
-        List<Vitae> vitaes = vitaeService.getVitaeByG_id(vitae1);
-        session.setAttribute("vitaes",vitaes);
+        Vitae vitae2 = vitaeService.getVitaeByG_id(vitae1);
+        session.setAttribute("vitae",vitae2);
         return "guestMain";
+    }
+
+    /*游客投简历*/
+    @RequestMapping(value = "/offerToJob")
+    public ModelAndView offerJob(Vitae vitae,Recruit recruit) throws Exception{
+        ModelAndView modelAndView = new ModelAndView();
+
+        Vitae vitae1 = vitaeService.getVitaeByV_id(vitae);
+        Recruit recruit1 = recruitService.getRecruitById(recruit);
+        Offer offer = new Offer();
+        offer.setO_r_id(recruit1.getR_id());
+        offer.setO_v_id(vitae1.getV_id());
+
+        offerService.addOffer(offer);
+
+        Offer offer1 = offerService.getOfferByR_V_id(offer);
+
+        modelAndView.addObject("offer",offer1);
+        modelAndView.setViewName("managerMain");
+        return modelAndView;
     }
 }

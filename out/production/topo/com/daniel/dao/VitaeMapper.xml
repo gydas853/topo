@@ -21,15 +21,12 @@
         delete from vitae where v_id = #{v_id};
     </delete>
 
-    <select id="listAll" resultType="com.daniel.model.Vitae">
-        select * from vitae;
-    </select>
-
-    <select id="getVitaeById" resultType="com.daniel.model.Vitae">
+    <select id="getVitaeByV_id" resultType="com.daniel.model.Vitae">
         select * from vitae where v_id = #{v_id};
     </select>
 
     <select id="getVitaeByG_id" resultType="com.daniel.model.Vitae">
         select * from vitae where v_g_id = #{v_g_id};
     </select>
+
 </mapper>

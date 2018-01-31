@@ -29,21 +29,26 @@
             <result property="p_name" column="p_name"/>
         </association>
     </resultMap>
+
     <insert id="addRecruit">
         insert into recruit (r_name, r_c_id, r_d_id, r_p_id,r_money)
         values (#{r_name},#{r_c_id},#{r_d_id},#{r_p_id},#{r_money});
     </insert>
+
     <update id="updateRecruit">
         update recruit
         set r_name = #{r_name},r_c_id = #{r_c_id},r_d_id = #{r_d_id},r_p_id = #{r_p_id},r_money = #{r_money}
         where r_id = #{r_id};
     </update>
+
     <delete id="deleteRecruit">
         delete from recruit where r_id = #{r_id};
     </delete>
+
     <select id="listAll" resultMap="r_c_d_pMap">
         select * from recruit,company,department,position where r_c_id = c_id and r_d_id = d_id and r_p_id = p_id;
     </select>
+
     <select id="getRecruitById" resultMap="r_c_d_pMap">
         select * from recruit,company,department,position where r_c_id = c_id and r_d_id = d_id and r_p_id = p_id and r_id = #{r_id};
     </select>

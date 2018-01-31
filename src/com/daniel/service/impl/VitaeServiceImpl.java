@@ -33,18 +33,14 @@ public class VitaeServiceImpl implements VitaeService{
     }
 
     @Override
-    public List<Vitae> listAll() {
-        return vitaeMapper.listAll();
+    public Vitae getVitaeByV_id(Vitae vitae) {
+        return vitaeMapper.getVitaeByV_id(vitae);
     }
 
     @Override
-    public Vitae getVitaeById(Vitae vitae) {
-        return vitaeMapper.getVitaeById(vitae);
-    }
-
-    @Override
-    public List<Vitae> getVitaeByG_id(Vitae vitae) {
+    public Vitae getVitaeByG_id(Vitae vitae) {
         return vitaeMapper.getVitaeByG_id(vitae);
     }
+
 
 }

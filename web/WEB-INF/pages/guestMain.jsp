@@ -30,36 +30,34 @@
     </div>
     <%--查看招聘信息  尚未优化--%>
     <div style="display: none;" id="div1">
-        <c:forEach var="recruit" items="${recruits}">
-            <form>
-                <table>
+        <form>
+            <table>
+                <tr>
+                    <td>招聘岗位</td>
+                    <td>招聘公司</td>
+                    <td>招聘部门</td>
+                    <td>招聘职位</td>
+                    <td>月薪</td>
+                    <td>操作</td>
+                </tr>
+                <c:forEach var="recruit" items="${recruits}">
                     <tr>
-                        <td>招聘岗位</td>
-                        <td>招聘公司</td>
-                        <td>招聘部门</td>
-                        <td>招聘职位</td>
-                        <td>月薪</td>
-                        <td>操作</td>
+                        <td>${recruit.r_name}</td>
+                        <td>${recruit.company.c_name}</td>
+                        <td>${recruit.department.d_name}</td>
+                        <td>${recruit.position.p_name}</td>
+                        <td>${recruit.r_money}</td>
+                        <td>
+                            <form action="offerToJob" method="post">
+                                <input type="hidden" name="r_id" value="${recruit.r_id}">
+                                <input type="hidden" name="v_id" value="${vitae.v_id}">
+                                <input type="button" id="input${recruit.r_id}" value="应聘这份工作">
+                            </form>
+                        </td>
                     </tr>
-                    <c:forEach var="recruit" items="${recruits}">
-                        <tr  id="tr${recruit.r_id}">
-                            <td>${recruit.r_name}</td>
-                            <td>${recruit.company.c_name}</td>
-                            <td>${recruit.department.d_name}</td>
-                            <td>${recruit.position.p_name}</td>
-                            <td>${recruit.r_money}</td>
-                            <td>
-                                <form>
-                                    <input type="hidden" name="" value="${}">
-                                    <input type="button" value="选择应聘">
-                                </form>
-                            </td>
-                        </tr>
-                    </c:forEach>
-                </table>
-            </form>
-            ${recruit}
-        </c:forEach>
+                </c:forEach>
+            </table>
+        </form>
     </div>
     <%--创建简历--%>
     <div style="display: none;" id="div2">
@@ -116,7 +114,6 @@
     </div>
     <%--查看我的简历--%>
     <div style="display: none" id="div3">
-        <c:forEach var="vitae" items="${vitaes}">
             <table>
                 <tr>
                     <td>姓名：</td>
@@ -167,12 +164,10 @@
                     </td>
                 </tr>
             </table>
-        </c:forEach>
     </div>
     <%--修改我的简历--%><%--这里可以改的更好点--%>
     <div style="display: none;" id="div4">
         <form action="changeVitae" method="post">
-            <c:forEach var="vitae" items="${vitaes}">
                 <table>
                     <tr>
                         <td>姓名：</td>
@@ -217,12 +212,11 @@
                         <td><input type="text" name="v_promisingIndustry" value="${vitae.v_promisingIndustry}"></td>
                         <td>
                             <input type="hidden" value="${vitae.v_id}" name="v_id">
-                            <input id="in6" type="submit" value="确认修改">
+                            <input id="in6" type="button" value="确认修改">
                             <input id="in5" type="button" value="取消修改">
                         </td>
                     </tr>
                 </table>
-            </c:forEach>
         </form>
     </div>
     <a href="forSystem"><input type="button" value="返回主界面"></a>
@@ -264,8 +258,19 @@
                 $("#div4").hide()
             });
             $("#in6").click(function () {
-                confirm("确定修改吗");
-            })
+                var v = confirm("确定修改吗?");
+                if(v == true){
+                    $("#in6").attr("type","submit");
+                }
+            });
+            <c:forEach var="re" items="${recruits}">
+                $("#input${re.r_id}").click(function () {
+                    var v = confirm("确定应聘吗？");
+                    if(v == true){
+                        $("#input${re.r_id}").attr("type","submit");
+                    }
+                });
+            </c:forEach>
         })
     </script>
 </body>

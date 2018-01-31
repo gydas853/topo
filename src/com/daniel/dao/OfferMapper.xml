@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.daniel.dao.OfferMapper">
+
+    <insert id="addOffer">
+        insert into offer (o_r_id, o_v_id) values (#{o_r_id},#{o_v_id});
+    </insert>
+    <update id="updateOffer">
+        update offer set o_r_id = #{o_r_id},o_v_id = #{o_v_id} where o_id = #{o_id};
+    </update>
+    <delete id="deleteOffer">
+        delete from offer where o_id = #{o_id};
+    </delete>
+    <select id="getOfferById" resultType="com.daniel.model.Offer">
+        select * from offer where o_id = #{o_id};
+    </select>
+    <select id="getOfferByR_V_id" resultType="com.daniel.model.Offer">
+        select * from offer where o_r_id = #{o_r_id} and o_v_id = #{o_v_id};
+    </select>
+</mapper>

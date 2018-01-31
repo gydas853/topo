@@ -8,15 +8,19 @@
     <insert id="addPosition">
         insert into position (p_name) values (#{p_name});
     </insert>
+
     <update id="updatePosition">
         update position set p_name = #{p_name} where p_id = #{p_id};
     </update>
+
     <delete id="deletePosition">
         delete from position where p_id = #{p_id};
     </delete>
+
     <select id="listAll" resultType="com.daniel.model.Position">
         select * from position;
     </select>
+
     <select id="getPositionById" resultType="com.daniel.model.Position">
         select * from position where p_id = #{p_id};
     </select>

@@ -8,7 +8,9 @@
     <insert id="addGuest">
         insert into guest (g_name,g_pass) values (#{g_name},#{g_pass});
     </insert>
+
     <select id="getGuest" resultType="com.daniel.model.Guest">
         select * from guest where g_name=#{g_name} and g_pass=#{g_pass};
     </select>
+
 </mapper>

@@ -23,6 +23,9 @@
         <tr>
             <td><input id="i1" type="button" value="发布招聘信息"></td>
             <td><input id="i2" type="button" value="所有招聘信息"></td>
+            <td><input id="i3" type="button" value="公司信息管理"></td>
+            <td><input id="i4" type="button" value="部门信息管理"></td>
+            <td><input id="i5" type="button" value="职位信息管理"></td>
             <td><a href="forSystem"><input type="button" value="返回主界面"></a></td>
         </tr>
     </table>
@@ -62,7 +65,6 @@
                 <td>招聘职位</td>
                 <td>月薪</td>
                 <td>操作</td>
-
             </tr>
             <c:forEach var="recruit" items="${recruits}">
                 <tr  id="tr${recruit.r_id}">
@@ -79,20 +81,66 @@
             </c:forEach>
         </table>
     </div>
+    <%--管理公司信息--%><%--尚未完善--%>
+    <div style="display: none;" id="div3">
+        <table>
+            <tr>
+                <td>公司名称</td>
+                <td>公司规模</td>
+                <td>公司简介</td>
+                <td>公司地址</td>
+                <td>联系电话</td>
+                <td>操作</td>
+            </tr>
+            <c:forEach var="company" items="${companies}">
+                <tr>
+                    <td>${company.c_name}</td>
+                    <td>${company.c_companyScale}</td>
+                    <td>${company.c_summary}</td>
+                    <td>${company.c_address}</td>
+                    <td>${company.c_phone}</td>
+                    <td>
+                        <input type="button" value="修改信息">
+                        <a><input type="button" value="删除信息"></a>
+                    </td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+    <%--管理部门信息--%><%--尚未完善--%>
+    <div style="display: none" id="div4">
+
+    </div>
+    <%--管理职位信息--%><%--尚未完善--%>
+    <div style="display: none;" id="div5">
+
+    </div>
     <script>
         $(document).ready(function () {
             $("#div1").hide();
             $("#i1").click(function () {
                 $("#div1").show();
                 $("#div2").hide();
-                $("#div3").hide()
+                $("#div3").hide();
+                $("#div4").hide();
+                $("#div5").hide()
             });
             $("#div2").hide();
             $("#i2").click(function () {
                 $("#div2").show();
                 $("#div1").hide();
-                $("#div3").hide()
+                $("#div3").hide();
+                $("#div4").hide();
+                $("#div5").hide()
             });
+            $("#div3").hide();
+            $("#i3").click(function () {
+                $("#div3").show();
+                $("#div1").hide();
+                $("#div2").hide();
+                $("#div4").hide();
+                $("#div5").hide()
+            })
         })
     </script>
 </body>

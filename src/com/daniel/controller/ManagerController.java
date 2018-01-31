@@ -105,22 +105,25 @@ public class ManagerController {
     /*管理员修改招聘信息*/
     @RequestMapping(value = "/changeRecruit",method = RequestMethod.POST)
     public ModelAndView changeRecruit(Recruit recruit) throws Exception{
+
         ModelAndView modelAndView = new ModelAndView();
 
+        /*更新数据库*/
         recruitService.updateRecruit(recruit);
+
         /*全部公司信息*/
         List<Company> companies = companyService.listAll();
         modelAndView.addObject("companies",companies);
 
-            /*全部部门信息*/
+        /*全部部门信息*/
         List<Department> departments = departmentService.listAll();
         modelAndView.addObject("departments",departments);
 
-            /*全部职位信息*/
+        /*全部职位信息*/
         List<Position> positions = positionService.listAll();
         modelAndView.addObject("positions",positions);
 
-            /*全部招聘信息*/
+        /*全部招聘信息*/
         List<Recruit> recruits = recruitService.listAll();
         modelAndView.addObject("recruits",recruits);
 
@@ -133,21 +136,22 @@ public class ManagerController {
 
         ModelAndView modelAndView = new ModelAndView();
 
+        /*删除一个招聘信息*/
         recruitService.deleteRecruit(recruit);
 
          /*全部公司信息*/
         List<Company> companies = companyService.listAll();
         modelAndView.addObject("companies",companies);
 
-            /*全部部门信息*/
+        /*全部部门信息*/
         List<Department> departments = departmentService.listAll();
         modelAndView.addObject("departments",departments);
 
-            /*全部职位信息*/
+        /*全部职位信息*/
         List<Position> positions = positionService.listAll();
         modelAndView.addObject("positions",positions);
 
-            /*全部招聘信息*/
+        /*全部招聘信息*/
         List<Recruit> recruits = recruitService.listAll();
         modelAndView.addObject("recruits",recruits);
 

@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -50,7 +48,7 @@ public class MyController {
         List<Recruit> recruits = recruitService.listAll();
         modelAndView.addObject("recruits",recruits);
         modelAndView.setViewName("main");
-        /*进入main.jsp*/
+
         return modelAndView;
     }
 
@@ -67,6 +65,7 @@ public class MyController {
         return "employeeLogin";
     }
 
+    /*使管理员前往修改招聘信息页面*/
     @RequestMapping(value = "/forChangeRecruit")
     public ModelAndView forChangeRecruit(Recruit recruit) throws Exception{
         ModelAndView modelAndView = new ModelAndView();
