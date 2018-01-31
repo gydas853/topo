@@ -12,5 +12,5 @@ public interface CompanyMapper {
     boolean updateCompany(Company company);//更新公司信息
     boolean deleteCompany(Company company);//删除一个公司
     List<Company> listAll();//列出所有公司
-    Company getCompany(Company company);//找到一个公司
+    Company getCompanyByC_id(Company company);//找到一个公司
 }

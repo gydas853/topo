@@ -25,6 +25,7 @@
                 <td><input id="in1" type="button" value="查看招聘信息"></td>
                 <td><input id="in2" type="button" value="创建简历"></td>
                 <td><input id="in3" type="button" value="查看我的简历"></td>
+                <td><a href="forSystem"><input type="button" value="返回主界面"></a></td>
             </tr>
         </table>
     </div>
@@ -219,7 +220,6 @@
                 </table>
         </form>
     </div>
-    <a href="forSystem"><input type="button" value="返回主界面"></a>
     <script>
         $(document).ready(function () {
             $("#div1").hide();

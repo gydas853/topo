@@ -16,7 +16,6 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.List;
 
 /**
  * Created by nero0 on 2018-01-27.
@@ -36,40 +35,25 @@ public class GuestController {
     @Resource
     private OfferService offerService;
 
-    /*游客登录*//*需要优化*/
+    /*游客登录*//*优化结束*/
     @RequestMapping(value = "/guestLogin",method = RequestMethod.POST)
-    public ModelAndView guestLogin(HttpServletRequest request) throws Exception{
-        ModelAndView modelAndView = new ModelAndView();
-
-        String name = request.getParameter("name");
-        String pass = request.getParameter("pass");
-
-        Guest guest = new Guest();
-        guest.setG_name(name);
-        guest.setG_pass(pass);
-
+    public String guestLogin(HttpSession session,Guest guest) throws Exception{
+        /*找到游客信息*/
         Guest guest1 = guestService.getGuest(guest);
         if(null != guest1){
             Vitae vitae = new Vitae();
             vitae.setV_g_id(guest1.getG_id());
             /*查到此游客的简历*/
             Vitae vitae1 = vitaeService.getVitaeByG_id(vitae);
-            modelAndView.addObject("vitae",vitae1);
-            /*查到网站上的所有招聘信息*/
-            List<Recruit> recruits = recruitService.listAll();
-            modelAndView.addObject("recruits",recruits);
-            /*用户信息存到model*/
-            HttpSession session = request.getSession();
-            session.setAttribute("guest",guest1);
+            /*用户的简历存到session里*/
             session.setAttribute("vitae",vitae1);
-            session.setAttribute("recruits",recruits);
-            modelAndView.addObject("guest",guest1);
-            modelAndView.setViewName("guestMain");
-            return modelAndView;
-        }else {
-            modelAndView.setViewName("main");
-            return modelAndView;
+
+            /*用户信息存到model*/
+            session.setAttribute("guest",guest1);
+
+            return "guestMain";
         }
+        return "main";
 
     }
 
@@ -127,8 +111,7 @@ public class GuestController {
 
     /*游客投简历*/
     @RequestMapping(value = "/offerToJob")
-    public ModelAndView offerJob(Vitae vitae,Recruit recruit) throws Exception{
-        ModelAndView modelAndView = new ModelAndView();
+    public String offerJob(,Vitae vitae,Recruit recruit) throws Exception{
 
         Vitae vitae1 = vitaeService.getVitaeByV_id(vitae);
         Recruit recruit1 = recruitService.getRecruitById(recruit);
@@ -138,10 +121,6 @@ public class GuestController {
 
         offerService.addOffer(offer);
 
-        Offer offer1 = offerService.getOfferByR_V_id(offer);
-
-        modelAndView.addObject("offer",offer1);
-        modelAndView.setViewName("managerMain");
-        return modelAndView;
+        return "main";
     }
 }

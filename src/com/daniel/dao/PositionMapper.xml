@@ -21,7 +21,7 @@
         select * from position;
     </select>
 
-    <select id="getPositionById" resultType="com.daniel.model.Position">
+    <select id="getPositionByP_Id" resultType="com.daniel.model.Position">
         select * from position where p_id = #{p_id};
     </select>
 </mapper>

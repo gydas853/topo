@@ -12,5 +12,5 @@ public interface DepartmentService {
     boolean updateDepartment(Department department);//更新部门信息
     boolean deleteDepartment(Department department);//删除一个部门
     List<Department> listAll();//列出所有部门
-    Department getDepartment(Department department);//找到一个部门
+    Department getDepartmentByD_id(Department department);//找到一个部门
 }

@@ -18,7 +18,7 @@
     <script src="js/jquery-3.1.0.js"></script>
 </head>
 <body>
-    <p>欢迎${manager.m_name}登录</p>
+    <p>管理员${manager.m_name}登录</p>
     <table>
         <tr>
             <td><input id="i1" type="button" value="发布招聘信息"></td>
@@ -26,6 +26,7 @@
             <td><input id="i3" type="button" value="公司信息管理"></td>
             <td><input id="i4" type="button" value="部门信息管理"></td>
             <td><input id="i5" type="button" value="职位信息管理"></td>
+            <td><input id="i6" type="button" value="查看应聘消息"></td>
             <td><a href="forSystem"><input type="button" value="返回主界面"></a></td>
         </tr>
     </table>
@@ -115,6 +116,88 @@
     <div style="display: none;" id="div5">
 
     </div>
+    <%--查看应聘信息--%>
+    <div style="display: none;" id="div6">
+        <table>
+            <tr>
+                <td>应聘者编号</td>
+                <td>操作</td>
+            </tr>
+            <c:forEach var="offer" items="${offers}">
+                <tr>
+                    <td>${offer.o_id}</td>
+                    <td><input id="show${offer.o_id}" type="button" value="详细信息"></td>
+                </tr>
+            </c:forEach>
+        </table>
+        <c:forEach var="vitae1" items="${vitaes}">
+            <div style="display: none; float: left" id="d1">
+                <table>
+                    <tr>
+                        <td>姓名：</td>
+                        <td>${vitae1.v_name}</td>
+                        <td>性别：</td>
+                        <td>${vitae1.v_sex}</td>
+                    </tr>
+                    <tr>
+                        <td>生日：</td>
+                        <td>${vitae1.v_birth}</td>
+                        <td>民族：</td>
+                        <td>${vitae1.v_ethnicity}</td>
+                    </tr>
+                    <tr>
+                        <td>籍贯：</td>
+                        <td>${vitae1.v_nativePlace}</td>
+                        <td>学历：</td>
+                        <td>${vitae1.v_qualification}</td>
+                    </tr>
+                    <tr>
+                        <td>联系电话：</td>
+                        <td>${vitae1.v_tel}</td>
+                    </tr>
+                    <tr>
+                        <td>邮箱地址：</td>
+                        <td>${vitae1.v_email}</td>
+                    </tr>
+                    <tr>
+                        <td>专业：</td>
+                        <td>${vitae1.v_specialty}</td>
+                        <td>工作经验：</td>
+                        <td>${vitae1.v_serviceYear}</td>
+                    </tr>
+                    <tr>
+                        <td>意向工作地点：</td>
+                        <td>${vitae1.v_willSpot}</td>
+                        <td>到岗时间：</td>
+                        <td>${vitae1.v_adsumDate}</td>
+                    </tr>
+                    <tr>
+                        <td>希望从事的行业：</td>
+                        <td>${vitae1.v_promisingIndustry}</td>
+                    </tr>
+                    <c:forEach var="recruit1" items="${recruits1}">
+                        <tr>
+                            <td>应聘的公司：</td>
+                            <td>${recruit1.company.c_name}</td>
+                            <td>应聘的部门：</td>
+                            <td>${recruit1.department.d_name}</td>
+                            <td>应聘的职位：</td>
+                            <td>${recruit1.position.p_name}</td>
+                        </tr>
+                    </c:forEach>
+                    <c:forEach var="offer" items="${offers}">
+                        <tr>
+                            <td>
+                                <a href="forInterview"><input id="interview${offer.o_id}" type="button" value="确认面试"></a>
+                                <input id="hide${offer.o_id}" type="button" value="最小化此窗口">
+                            </td>
+                        </tr>
+                    </c:forEach>
+
+                </table>
+            </div>
+        </c:forEach>
+    </div>
     <script>
         $(document).ready(function () {
             $("#div1").hide();
@@ -123,7 +206,8 @@
                 $("#div2").hide();
                 $("#div3").hide();
                 $("#div4").hide();
-                $("#div5").hide()
+                $("#div5").hide();
+                $("#div6").hide()
             });
             $("#div2").hide();
             $("#i2").click(function () {
@@ -131,7 +215,8 @@
                 $("#div1").hide();
                 $("#div3").hide();
                 $("#div4").hide();
-                $("#div5").hide()
+                $("#div5").hide();
+                $("#div6").hide()
             });
             $("#div3").hide();
             $("#i3").click(function () {
@@ -139,8 +224,33 @@
                 $("#div1").hide();
                 $("#div2").hide();
                 $("#div4").hide();
+                $("#div5").hide();
+                $("#div6").hide()
+            });
+            $("#div6").hide();
+            $("#i6").click(function () {
+                $("#div6").show();
+                $("#div1").hide();
+                $("#div2").hide();
+                $("#div3").hide();
+                $("#div4").hide();
                 $("#div5").hide()
-            })
+            });
+            <c:forEach var="offer" items="${offers}">
+                $("#d${offer.o_id}").hide();
+                $("#show${offer.o_id}").click(function () {
+                    $("#d${offer.o_id}").show()
+                });
+                $("#hide${offer.o_id}").click(function () {
+                    $("#d${offer.o_id}").hide()
+                });
+                $("#interview${offer.o_id}").click(function () {
+                    var v = confirm("确认发送面试邀请吗？");
+                    if(v == true){
+                        $("#interview${offer.o_id}").attr("type","submit")
+                    }
+                });
+            </c:forEach>
         })
     </script>
 </body>

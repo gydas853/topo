@@ -14,7 +14,7 @@
 <html>
 <head>
     <base href="<%=basePath%>"/>
-    <title>标题</title>
+    <title>主界面</title>
     <script src="js/jquery-3.1.0.js"></script>
 </head>
 <body>
@@ -25,6 +25,7 @@
                 <td><input id="i1" type="button" value="登录账号"></td>
                 <td><input id="i2" type="button" value="成为会员"></td>
                 <td><input id="in1" type="button" value="查看招聘信息"></td>
+                <td><a href="forSystem"><input type="button" value="返回主界面"></a></td>
             </tr>
         </table>
     </div>
@@ -33,11 +34,11 @@
             <table>
                 <tr>
                     <td>用户名：</td>
-                    <td><input type="text" name="name"></td>
+                    <td><input type="text" name="g_name"></td>
                 </tr>
                 <tr>
                     <td>密码：</td>
-                    <td><input type="password" name="pass"></td>
+                    <td><input type="password" name="g_pass"></td>
                 </tr>
                 <tr>
                     <td colspan="2">

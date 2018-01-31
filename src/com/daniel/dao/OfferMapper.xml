@@ -20,4 +20,7 @@
     <select id="getOfferByR_V_id" resultType="com.daniel.model.Offer">
         select * from offer where o_r_id = #{o_r_id} and o_v_id = #{o_v_id};
     </select>
+    <select id="listAll" resultType="com.daniel.model.Offer">
+        select * from offer;
+    </select>
 </mapper>

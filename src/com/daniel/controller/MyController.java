@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -43,13 +44,14 @@ public class MyController {
 
     /*使游客访问网页*/
     @RequestMapping(value = "/forMain")
-    public ModelAndView forMain() throws Exception{
-        ModelAndView modelAndView = new ModelAndView();
+    public String forMain(HttpSession session) throws Exception{
+        /*查到所有的招聘信息*/
         List<Recruit> recruits = recruitService.listAll();
-        modelAndView.addObject("recruits",recruits);
-        modelAndView.setViewName("main");
+        /*session里存所有的招聘信息*/
+        session.setAttribute("recruits",recruits);
 
-        return modelAndView;
+        /*跳转到main页面*/
+        return "main";
     }
 
     /*管理员登录系统*/

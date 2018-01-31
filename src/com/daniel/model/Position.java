@@ -8,7 +8,6 @@ import java.io.Serializable;
 public class Position implements Serializable{
     private int p_id;
     private String p_name;
-    private Recruit recruit;
 
     public Position() {
     }
@@ -16,12 +15,6 @@ public class Position implements Serializable{
     public Position(int p_id, String p_name) {
         this.p_id = p_id;
         this.p_name = p_name;
-    }
-
-    public Position(int p_id, String p_name, Recruit recruit) {
-        this.p_id = p_id;
-        this.p_name = p_name;
-        this.recruit = recruit;
     }
 
     public int getP_id() {
@@ -38,14 +31,6 @@ public class Position implements Serializable{
 
     public void setP_name(String p_name) {
         this.p_name = p_name;
-    }
-
-    public Recruit getRecruit() {
-        return recruit;
-    }
-
-    public void setRecruit(Recruit recruit) {
-        this.recruit = recruit;
     }
 
     @Override

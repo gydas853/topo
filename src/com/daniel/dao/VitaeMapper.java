@@ -2,8 +2,6 @@ package com.daniel.dao;
 
 import com.daniel.model.Vitae;
 
-import java.util.List;
-
 /**
  * Created by nero0 on 2018-01-29.
  */

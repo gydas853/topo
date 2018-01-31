@@ -12,5 +12,5 @@ public interface RecruitService {
     boolean updateRecruit(Recruit recruit);//更新招聘信息数据
     boolean deleteRecruit(Recruit recruit);//删除一个招聘信息
     List<Recruit> listAll();//列出所有招聘信息
-    Recruit getRecruitById(Recruit recruit);//找到一个招聘信息
+    Recruit getRecruitByR_id(Recruit recruit);//找到一个招聘信息
 }

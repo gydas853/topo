@@ -5,13 +5,11 @@
 
 <mapper namespace="com.daniel.dao.RecruitMapper">
 
-    <resultMap id="r_c_d_pMap" type="com.daniel.model.Recruit">
+    <resultMap id="r_cMap" type="com.daniel.model.Recruit">
         <id property="r_id" column="r_id"/>
         <result property="r_name" column="r_name"/>
-        <result property="r_c_id" column="r_c_id"/>
-        <result property="r_d_id" column="r_d_id"/>
-        <result property="r_p_id" column="r_p_id"/>
         <result property="r_money" column="r_money"/>
+        <result property="r_c_id" column="r_c_id"/>
         <association property="company" javaType="com.daniel.model.Company">
             <id property="c_id" column="c_id"/>
             <result property="c_name" column="c_name"/>
@@ -19,14 +17,7 @@
             <result property="c_summary" column="c_summary"/>
             <result property="c_address" column="c_address"/>
             <result property="c_phone" column="c_phone"/>
-        </association>
-        <association property="department" javaType="com.daniel.model.Department">
-            <id property="d_id" column="d_id"/>
-            <result property="d_name" column="d_name"/>
-        </association>
-        <association property="position" javaType="com.daniel.model.Position">
-            <id property="p_id" column="p_id"/>
-            <result property="p_name" column="p_name"/>
+            <result property="c_d_id" column="c_d_id"/>
         </association>
     </resultMap>
 
@@ -45,11 +36,11 @@
         delete from recruit where r_id = #{r_id};
     </delete>
 
-    <select id="listAll" resultMap="r_c_d_pMap">
-        select * from recruit,company,department,position where r_c_id = c_id and r_d_id = d_id and r_p_id = p_id;
+    <select id="listAll" resultMap="r_cMap">
+        select * from recruit,company where r_c_id = c_id;
     </select>
 
-    <select id="getRecruitById" resultMap="r_c_d_pMap">
-        select * from recruit,company,department,position where r_c_id = c_id and r_d_id = d_id and r_p_id = p_id and r_id = #{r_id};
+    <select id="getRecruitByR_id" resultMap="r_cMap">
+        select * from recruit,company where r_c_id = c_id and r_id = #{r_id};
     </select>
 </mapper>

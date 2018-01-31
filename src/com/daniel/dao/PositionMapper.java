@@ -12,5 +12,5 @@ public interface PositionMapper {
     boolean updatePosition(Position position);//更新职位信息
     boolean deletePosition(Position position);//删除一个职位
     List<Position> listAll();//列出所有职位
-    Position getPositionById(Position position);//拿到一个职位信息
+    Position getPositionByP_Id(Position position);//拿到一个职位信息
 }
