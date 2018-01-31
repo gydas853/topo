@@ -2,68 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eca08062-f16f-45e0-94dc-cd1f7b12a4ae" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/daniel/dao/OfferMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/daniel/dao/OfferMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/daniel/model/Offer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/daniel/service/OfferService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/daniel/service/impl/OfferServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/controller/GuestController.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/controller/GuestController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/controller/ManagerController.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/controller/ManagerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/controller/MyController.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/controller/MyController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/VitaeMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/VitaeMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/service/VitaeService.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/service/VitaeService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/service/impl/VitaeServiceImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/service/impl/VitaeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/controller/GuestController.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/controller/GuestController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/controller/ManagerController.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/controller/ManagerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/controller/MyController.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/controller/MyController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/VitaeMapper.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/VitaeMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/service/VitaeService.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/service/VitaeService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/service/impl/VitaeServiceImpl.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/service/impl/VitaeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/2074382c-9db0-4dc0-b67f-25880c78ef7b.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/2074382c-9db0-4dc0-b67f-25880c78ef7b.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/CompanyMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/CompanyMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/DepartmentMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/DepartmentMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/GuestMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/GuestMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/ManagerMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/ManagerMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/PositionMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/PositionMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/RecruitMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/RecruitMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/VitaeMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/VitaeMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/pages/guestMain.jsp" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/pages/guestMain.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/pages/managerMain.jsp" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/pages/managerMain.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/CompanyMapper.xml" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/CompanyMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/DepartmentMapper.xml" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/DepartmentMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/GuestMapper.xml" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/GuestMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/ManagerMapper.xml" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/ManagerMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/PositionMapper.xml" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/PositionMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/RecruitMapper.xml" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/RecruitMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/VitaeMapper.xml" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/VitaeMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/controller/GuestController.java" afterPath="$PROJECT_DIR$/src/com/daniel/controller/GuestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/controller/ManagerController.java" afterPath="$PROJECT_DIR$/src/com/daniel/controller/ManagerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/controller/MyController.java" afterPath="$PROJECT_DIR$/src/com/daniel/controller/MyController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/CompanyMapper.java" afterPath="$PROJECT_DIR$/src/com/daniel/dao/CompanyMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/CompanyMapper.xml" afterPath="$PROJECT_DIR$/src/com/daniel/dao/CompanyMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/DepartmentMapper.java" afterPath="$PROJECT_DIR$/src/com/daniel/dao/DepartmentMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/DepartmentMapper.xml" afterPath="$PROJECT_DIR$/src/com/daniel/dao/DepartmentMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/GuestMapper.java" afterPath="$PROJECT_DIR$/src/com/daniel/dao/GuestMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/GuestMapper.xml" afterPath="$PROJECT_DIR$/src/com/daniel/dao/GuestMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/ManagerMapper.java" afterPath="$PROJECT_DIR$/src/com/daniel/dao/ManagerMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/ManagerMapper.xml" afterPath="$PROJECT_DIR$/src/com/daniel/dao/ManagerMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/PositionMapper.java" afterPath="$PROJECT_DIR$/src/com/daniel/dao/PositionMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/PositionMapper.xml" afterPath="$PROJECT_DIR$/src/com/daniel/dao/PositionMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/RecruitMapper.java" afterPath="$PROJECT_DIR$/src/com/daniel/dao/RecruitMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/RecruitMapper.xml" afterPath="$PROJECT_DIR$/src/com/daniel/dao/RecruitMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/VitaeMapper.java" afterPath="$PROJECT_DIR$/src/com/daniel/dao/VitaeMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/VitaeMapper.xml" afterPath="$PROJECT_DIR$/src/com/daniel/dao/VitaeMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/service/CompanyService.java" afterPath="$PROJECT_DIR$/src/com/daniel/service/CompanyService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/service/DepartmentService.java" afterPath="$PROJECT_DIR$/src/com/daniel/service/DepartmentService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/service/GuestService.java" afterPath="$PROJECT_DIR$/src/com/daniel/service/GuestService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/service/ManagerService.java" afterPath="$PROJECT_DIR$/src/com/daniel/service/ManagerService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/service/PositionService.java" afterPath="$PROJECT_DIR$/src/com/daniel/service/PositionService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/service/RecruitService.java" afterPath="$PROJECT_DIR$/src/com/daniel/service/RecruitService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/service/VitaeService.java" afterPath="$PROJECT_DIR$/src/com/daniel/service/VitaeService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/service/impl/VitaeServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/daniel/service/impl/VitaeServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/guestMain.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/guestMain.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/managerMain.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/managerMain.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -940,7 +879,7 @@
       <workItem from="1517232842026" duration="11209000" />
       <workItem from="1517274000273" duration="18246000" />
       <workItem from="1517314807094" duration="11594000" />
-      <workItem from="1517360336752" duration="14000" />
+      <workItem from="1517360336752" duration="143000" />
     </task>
     <task id="LOCAL-00001" summary="开发环境搭建 基本完成 经过测试暂未发现问题">
       <created>1516896722487</created>
@@ -998,11 +937,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517302557182</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="投简历 正在进行中&#10;管理员部分 同上">
+      <created>1517360408618</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1517360408618</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112029000" />
+    <option name="totallyTimeSpent" value="112158000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1064,7 +1010,8 @@
     <MESSAGE value="游客-登录、注册 简历建好了 也可以查（简历的删改未写完）&#10;管理员-登录、发布招聘信息可以了 也可以查（招聘信息的删改未写完）" />
     <MESSAGE value="删改写是差不多写完了 但没做到自己想要得效果 上午问同学 投递简历未完" />
     <MESSAGE value="完成 招聘信息、简历的增删改查&#10;正在写 投简历" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成 招聘信息、简历的增删改查&#10;正在写 投简历" />
+    <MESSAGE value="投简历 正在进行中&#10;管理员部分 同上" />
+    <option name="LAST_COMMIT_MESSAGE" value="投简历 正在进行中&#10;管理员部分 同上" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1088,6 +1035,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="972">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1095,6 +1043,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="method#forSystem#0;class#MyController#0" expanded="false" />
+            <element signature="method#forMain#0;class#MyController#0" expanded="false" />
+            <element signature="method#forLogin#0;class#MyController#0" expanded="false" />
+            <element signature="method#forEmployeeLogin#0;class#MyController#0" expanded="false" />
+            <element signature="method#forChangeRecruit#0;class#MyController#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1183,6 +1138,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1197,6 +1153,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <element signature="method#Guest#0;class#Guest#0" expanded="false" />
+            <element signature="method#Guest#1;class#Guest#0" expanded="false" />
+            <element signature="method#toString#0;class#Guest#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1204,6 +1165,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-298">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="method#Manager#0;class#Manager#0" expanded="false" />
+            <element signature="method#Manager#1;class#Manager#0" expanded="false" />
+            <element signature="method#toString#0;class#Manager#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1218,6 +1184,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3060">
           <caret line="183" column="29" lean-forward="false" selection-start-line="183" selection-start-column="29" selection-end-line="183" selection-end-column="29" />
+          <folding>
+            <element signature="method#Vitae#0;class#Vitae#0" expanded="false" />
+            <element signature="method#Vitae#1;class#Vitae#0" expanded="false" />
+            <element signature="method#Vitae#2;class#Vitae#0" expanded="false" />
+            <element signature="method#toString#0;class#Vitae#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1225,6 +1197,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="14" column="57" lean-forward="true" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1232,6 +1205,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="14" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1239,6 +1213,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="14" column="54" lean-forward="true" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1246,6 +1221,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="14" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1253,6 +1229,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="14" column="58" lean-forward="true" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1260,6 +1237,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1267,6 +1245,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1274,6 +1253,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="9" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1281,6 +1261,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1307,6 +1288,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="14" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1314,6 +1296,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="13" column="39" lean-forward="true" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1321,6 +1304,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="14" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1328,6 +1312,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="12" column="51" lean-forward="true" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1335,6 +1320,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="71">
           <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1342,6 +1328,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1002">
           <caret line="42" column="5" lean-forward="false" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="e#973#974#0" expanded="false" />
+            <element signature="e#1033#1034#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1349,6 +1339,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1356,6 +1347,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1363,6 +1355,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1370,6 +1363,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="509">
           <caret line="42" column="5" lean-forward="false" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="e#969#970#0" expanded="false" />
+            <element signature="e#1025#1026#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1391,6 +1388,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
           <caret line="78" column="24" lean-forward="false" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1405,6 +1403,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3096">
           <caret line="125" column="29" lean-forward="false" selection-start-line="125" selection-start-column="29" selection-end-line="125" selection-end-column="29" />
+          <folding>
+            <element signature="method#toString#0;class#Recruit#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
