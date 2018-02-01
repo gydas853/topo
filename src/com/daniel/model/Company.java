@@ -12,21 +12,8 @@ public class Company implements Serializable{
     private String c_summary;
     private String c_address;
     private String c_phone;
-    private int c_d_id;
-    private Department department;
 
     public Company() {
-    }
-
-    public Company(int c_id, String c_name, String c_companyScale, String c_summary, String c_address, String c_phone, int c_d_id, Department department) {
-        this.c_id = c_id;
-        this.c_name = c_name;
-        this.c_companyScale = c_companyScale;
-        this.c_summary = c_summary;
-        this.c_address = c_address;
-        this.c_phone = c_phone;
-        this.c_d_id = c_d_id;
-        this.department = department;
     }
 
     public int getC_id() {
@@ -77,22 +64,6 @@ public class Company implements Serializable{
         this.c_phone = c_phone;
     }
 
-    public int getC_d_id() {
-        return c_d_id;
-    }
-
-    public void setC_d_id(int c_d_id) {
-        this.c_d_id = c_d_id;
-    }
-
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
-    }
-
     @Override
     public String toString() {
         return "Company{" +
@@ -102,8 +73,6 @@ public class Company implements Serializable{
                 ", c_summary='" + c_summary + '\'' +
                 ", c_address='" + c_address + '\'' +
                 ", c_phone='" + c_phone + '\'' +
-                ", c_d_id=" + c_d_id +
-                ", department=" + department +
                 '}';
     }
 }

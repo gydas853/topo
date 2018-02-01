@@ -86,7 +86,7 @@ public class ManagerController {
                 int r_id = offers.get(i).getO_r_id();
                 Recruit recruit = new Recruit();
                 recruit.setR_id(r_id);
-                Recruit recruit1 = recruitService.getRecruitById(recruit);
+                Recruit recruit1 = recruitService.getRecruitByR_id(recruit);
                 recruits1.add(recruit1);
             }
 
@@ -111,15 +111,11 @@ public class ManagerController {
     public String addRecruit(HttpServletRequest request) throws Exception{
         String r_name = request.getParameter("r_name");
         int r_c_id = Integer.parseInt(request.getParameter("r_c_id"));
-        int r_d_id = Integer.parseInt(request.getParameter("r_d_id"));
-        int r_p_id = Integer.parseInt(request.getParameter("r_p_id"));
         String r_money = request.getParameter("r_money");
 
         Recruit recruit = new Recruit();
         recruit.setR_name(r_name);
         recruit.setR_c_id(r_c_id);
-        recruit.setR_d_id(r_d_id);
-        recruit.setR_p_id(r_p_id);
         recruit.setR_money(r_money);
 
         recruitService.addRecruit(recruit);

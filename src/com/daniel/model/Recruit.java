@@ -10,17 +10,14 @@ public class Recruit implements Serializable{
     private String r_name;
     private String r_money;
     private int r_c_id;
+    private int r_d_id;
+    private int r_p_id;
+    /*四表联合查询*/
     private Company company;
+    private Department department;
+    private Position position;
 
     public Recruit() {
-    }
-
-    public Recruit(int r_id, String r_name, String r_money, int r_c_id, Company company) {
-        this.r_id = r_id;
-        this.r_name = r_name;
-        this.r_money = r_money;
-        this.r_c_id = r_c_id;
-        this.company = company;
     }
 
     public int getR_id() {
@@ -55,12 +52,44 @@ public class Recruit implements Serializable{
         this.r_c_id = r_c_id;
     }
 
+    public int getR_d_id() {
+        return r_d_id;
+    }
+
+    public void setR_d_id(int r_d_id) {
+        this.r_d_id = r_d_id;
+    }
+
+    public int getR_p_id() {
+        return r_p_id;
+    }
+
+    public void setR_p_id(int r_p_id) {
+        this.r_p_id = r_p_id;
+    }
+
     public Company getCompany() {
         return company;
     }
 
     public void setCompany(Company company) {
         this.company = company;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
     }
 
     @Override
@@ -70,7 +99,11 @@ public class Recruit implements Serializable{
                 ", r_name='" + r_name + '\'' +
                 ", r_money='" + r_money + '\'' +
                 ", r_c_id=" + r_c_id +
+                ", r_d_id=" + r_d_id +
+                ", r_p_id=" + r_p_id +
                 ", company=" + company +
+                ", department=" + department +
+                ", position=" + position +
                 '}';
     }
 }

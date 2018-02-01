@@ -16,12 +16,12 @@
     <delete id="deleteDepartment">
         delete from department where d_id = #{d_id};
     </delete>
-
     <select id="listAll" resultType="com.daniel.model.Department">
         select * from department;
     </select>
 
-    <select id="getDepartment" resultType="com.daniel.model.Department">
+    <select id="getDepartmentByD_id" resultType="com.daniel.model.Department">
         select * from department where d_id = #{d_id};
     </select>
+
 </mapper>

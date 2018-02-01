@@ -29,6 +29,7 @@
             </tr>
         </table>
     </div>
+    <%--登录账号--%><%--经测试目前可以正常登录--%>
     <div style="display: none;" id="div1">
         <form action="guestLogin" method="post">
             <table>
@@ -49,6 +50,7 @@
             </table>
         </form>
     </div>
+    <%--注册成为会员--%><%--暂未进行测试--%>
     <div style="display: none;" id="div2">
         <form action="register" method="post">
             <table>
@@ -73,15 +75,39 @@
             </table>
         </form>
     </div>
+    <%--显示session里存的所有招聘信息--%><%--目前功能无效--%>
     <div style="display: none;" id="div3">
-        <c:forEach var="recruit" items="${recruits}">
-            <table>
-                <tr>
-                    <td></td>
-                </tr>
-            </table>
-            ${recruit}
-        </c:forEach>
+        <c:choose>
+            <c:when test="${recruits != null}">
+                <table border="1" cellpadding="10" cellspacing="0">
+                    <tr>
+                        <td>招聘岗位</td>
+                        <td>招聘公司</td>
+                        <td>招聘部门</td>
+                        <td>招聘职位</td>
+                        <td>月薪</td>
+                        <td>公司地址</td>
+                        <td>公司规模</td>
+                        <td>联系方式</td>
+                    </tr>
+                    <c:forEach var="recruit" items="${recruits}">
+                        <tr  id="tr${recruit.r_id}">
+                            <td>${recruit.r_name}</td>
+                            <td>${recruit.company.c_name}</td>
+                            <td>${recruit.department.d_name}</td>
+                            <td>${recruit.position.p_name}</td>
+                            <td>${recruit.r_money}</td>
+                            <td>${recruit.company.c_address}</td>
+                            <td>${recruit.company.c_companyScale}</td>
+                            <td>${recruit.company.c_phone}</td>
+                        </tr>
+                    </c:forEach>
+                </table>
+            </c:when>
+            <c:otherwise>
+                暂无招聘信息
+            </c:otherwise>
+        </c:choose>
     </div>
 <script>
     $(document).ready(function () {

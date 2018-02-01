@@ -5,15 +5,6 @@
 
 <mapper namespace="com.daniel.dao.DepartmentMapper">
 
-    <resultMap id="d_pMap" type="com.daniel.model.Department">
-        <id property="d_id" column="d_id"/>
-        <result property="d_name" column="d_name"/>
-        <result property="d_p_id" column="d_p_id"/>
-        <association property="position" javaType="com.daniel.model.Position">
-            <id property="p_id" column="p_id"/>
-            <result property="p_name" column="p_name"/>
-        </association>
-    </resultMap>
     <insert id="addDepartment">
         insert into department (d_name) values (#{d_name});
     </insert>
@@ -25,12 +16,12 @@
     <delete id="deleteDepartment">
         delete from department where d_id = #{d_id};
     </delete>
-
-    <select id="listAll" resultMap="d_pMap">
-        select * from department,position where d_p_id = p_id;
+    <select id="listAll" resultType="com.daniel.model.Department">
+        select * from department;
     </select>
 
-    <select id="getDepartmentByD_id" resultMap="d_pMap">
-        select * from department where d_p_id = p_id and d_id = #{d_id};
+    <select id="getDepartmentByD_id" resultType="com.daniel.model.Department">
+        select * from department where d_id = #{d_id};
     </select>
+
 </mapper>

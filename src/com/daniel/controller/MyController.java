@@ -47,9 +47,8 @@ public class MyController {
     public String forMain(HttpSession session) throws Exception{
         /*查到所有的招聘信息*/
         List<Recruit> recruits = recruitService.listAll();
-        /*session里存所有的招聘信息*/
+        /*session里存查到的招聘信息*/
         session.setAttribute("recruits",recruits);
-
         /*跳转到main页面*/
         return "main";
     }
@@ -72,7 +71,7 @@ public class MyController {
     public ModelAndView forChangeRecruit(Recruit recruit) throws Exception{
         ModelAndView modelAndView = new ModelAndView();
 
-        Recruit recruit1 = recruitService.getRecruitById(recruit);
+        Recruit recruit1 = recruitService.getRecruitByR_id(recruit);
 
          /*全部公司信息*/
         List<Company> companies = companyService.listAll();

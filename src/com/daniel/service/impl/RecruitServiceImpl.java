@@ -34,11 +34,19 @@ public class RecruitServiceImpl implements RecruitService{
 
     @Override
     public List<Recruit> listAll() {
-        return recruitMapper.listAll();
+        List<Recruit> recruits = recruitMapper.listAll();
+        if(null != recruits){
+            return recruits;
+        }
+        return null;
     }
 
     @Override
-    public Recruit getRecruitById(Recruit recruit) {
-        return recruitMapper.getRecruitById(recruit);
+    public Recruit getRecruitByR_id(Recruit recruit) {
+        Recruit recruit1 = recruitMapper.getRecruitByR_id(recruit);
+        if(null != recruit1){
+            return recruit1;
+        }
+        return null;
     }
 }

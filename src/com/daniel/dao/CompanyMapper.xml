@@ -5,21 +5,6 @@
 
 <mapper namespace="com.daniel.dao.CompanyMapper">
 
-    <resultMap id="c_dMap" type="com.daniel.model.Company">
-        <id property="c_id" column="c_id"/>
-        <result property="c_name" column="c_name"/>
-        <result property="c_companyScale" column="c_companyScale"/>
-        <result property="c_summary" column="c_summary"/>
-        <result property="c_address" column="c_address"/>
-        <result property="c_phone" column="c_phone"/>
-        <result property="c_d_id" column="c_d_id"/>
-        <association property="department" javaType="com.daniel.model.Department">
-            <id property="d_id" column="d_id"/>
-            <result property="d_name" column="d_name"/>
-            <result property="d_p_id" column="d_p_id"/>
-        </association>
-    </resultMap>
-
     <insert id="addCompany">
         insert into company (c_name, c_companyScale, c_summary, c_address, c_phone)
         values (#{c_name},#{c_companyScale},#{c_summary},#{c_address},#{c_phone});
@@ -35,11 +20,12 @@
         delete from company where c_id=#{c_id};
     </delete>
 
-    <select id="getCompanyByC_id" resultMap="c_dMap">
-        select * from company,department where c_d_id = d_id and c_id = #{c_id};
+    <select id="listAll" resultType="com.daniel.model.Company">
+        select * from company;
     </select>
 
-    <select id="listAll" resultMap="c_dMap">
-        select * from company,department where c_d_id = d_id;
+    <select id="getCompanyByC_id" resultType="com.daniel.model.Company">
+        select * from company where c_id = #{c_id};
     </select>
+
 </mapper>

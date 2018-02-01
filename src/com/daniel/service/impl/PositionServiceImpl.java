@@ -38,7 +38,7 @@ public class PositionServiceImpl implements PositionService{
     }
 
     @Override
-    public Position getPositionById(Position position) {
-        return positionMapper.getPositionById(position);
+    public Position getPositionByP_Id(Position position) {
+        return positionMapper.getPositionByP_Id(position);
     }
 }

@@ -19,6 +19,7 @@
 </head>
 <body>
     <p>欢迎${guest.g_name}</p>
+    ${guest}
     <div>
         <table>
             <tr>
@@ -29,36 +30,40 @@
             </tr>
         </table>
     </div>
-    <%--查看招聘信息  尚未优化--%>
+    <%--查看招聘信息  尚未完善--%>
     <div style="display: none;" id="div1">
-        <form>
-            <table>
+        <table>
+            <tr>
+                <td>招聘岗位</td>
+                <td>招聘公司</td>
+                <td>招聘部门</td>
+                <td>招聘职位</td>
+                <td>月薪</td>
+                <td>公司地址</td>
+                <td>公司规模</td>
+                <td>联系方式</td>
+                <td>操作</td>
+            </tr>
+            <c:forEach var="recruit" items="${recruits}">
                 <tr>
-                    <td>招聘岗位</td>
-                    <td>招聘公司</td>
-                    <td>招聘部门</td>
-                    <td>招聘职位</td>
-                    <td>月薪</td>
-                    <td>操作</td>
+                    <td>${recruit.r_name}</td>
+                    <td>${recruit.company.c_name}</td>
+                    <td>${recruit.department.d_name}</td>
+                    <td>${recruit.position.p_name}</td>
+                    <td>${recruit.r_money}</td>
+                    <td>${recruit.company.c_address}</td>
+                    <td>${recruit.company.c_companyScale}</td>
+                    <td>${recruit.company.c_phone}</td>
+                    <td>
+                        <form action="offerToJob" method="post">
+                            <input type="hidden" name="r_id" value="${recruit.r_id}">
+                            <input type="hidden" name="v_id" value="${vitae.v_id}">
+                            <input type="button" id="input${recruit.r_id}" value="应聘这份工作">
+                        </form>
+                    </td>
                 </tr>
-                <c:forEach var="recruit" items="${recruits}">
-                    <tr>
-                        <td>${recruit.r_name}</td>
-                        <td>${recruit.company.c_name}</td>
-                        <td>${recruit.department.d_name}</td>
-                        <td>${recruit.position.p_name}</td>
-                        <td>${recruit.r_money}</td>
-                        <td>
-                            <form action="offerToJob" method="post">
-                                <input type="hidden" name="r_id" value="${recruit.r_id}">
-                                <input type="hidden" name="v_id" value="${vitae.v_id}">
-                                <input type="button" id="input${recruit.r_id}" value="应聘这份工作">
-                            </form>
-                        </td>
-                    </tr>
-                </c:forEach>
-            </table>
-        </form>
+            </c:forEach>
+        </table>
     </div>
     <%--创建简历--%>
     <div style="display: none;" id="div2">
@@ -107,13 +112,13 @@
                     <td><input type="text" name="v_promisingIndustry"></td>
                     <td>
                         <input type="hidden" value="${guest.g_id}" name="v_g_id">
-                        <input type="submit" value="确认创建简历">
+                        <input id="check1" type="button" value="确认创建简历">
                     </td>
                 </tr>
             </table>
         </form>
     </div>
-    <%--查看我的简历--%>
+    <%--查看我的简历--%><%--这里也没问题了，美化没做--%>
     <div style="display: none" id="div3">
             <table>
                 <tr>
@@ -271,6 +276,13 @@
                     }
                 });
             </c:forEach>
+        });
+        $("#check1").click(function () {
+            if(${vitae != null}){
+                alert("已有简历，不可新建简历");
+                alert("请更改已有简历或删除已有简历")
+            }
+            $("#check1").attr("type","submit")
         })
     </script>
 </body>

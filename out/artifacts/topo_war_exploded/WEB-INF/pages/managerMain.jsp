@@ -65,6 +65,9 @@
                 <td>招聘部门</td>
                 <td>招聘职位</td>
                 <td>月薪</td>
+                <td>公司地址</td>
+                <td>公司规模</td>
+                <td>联系方式</td>
                 <td>操作</td>
             </tr>
             <c:forEach var="recruit" items="${recruits}">
@@ -74,6 +77,9 @@
                     <td>${recruit.department.d_name}</td>
                     <td>${recruit.position.p_name}</td>
                     <td>${recruit.r_money}</td>
+                    <td>${recruit.company.c_address}</td>
+                    <td>${recruit.company.c_companyScale}</td>
+                    <td>${recruit.company.c_phone}</td>
                     <td>
                         <a href="forChangeRecruit?r_id=${recruit.r_id}"><input type="button" value="修改招聘信息"></a>
                         <a href="deleteRecruit?r_id=${recruit.r_id}"><input type="button" value="删除招聘信息"></a>

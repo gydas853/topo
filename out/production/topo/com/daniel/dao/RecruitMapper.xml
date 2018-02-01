@@ -5,13 +5,14 @@
 
 <mapper namespace="com.daniel.dao.RecruitMapper">
 
+    <!--四表联合查询 recruit、company、department、position-->
     <resultMap id="r_c_d_pMap" type="com.daniel.model.Recruit">
         <id property="r_id" column="r_id"/>
         <result property="r_name" column="r_name"/>
+        <result property="r_money" column="r_money"/>
         <result property="r_c_id" column="r_c_id"/>
         <result property="r_d_id" column="r_d_id"/>
         <result property="r_p_id" column="r_p_id"/>
-        <result property="r_money" column="r_money"/>
         <association property="company" javaType="com.daniel.model.Company">
             <id property="c_id" column="c_id"/>
             <result property="c_name" column="c_name"/>
@@ -31,13 +32,13 @@
     </resultMap>
 
     <insert id="addRecruit">
-        insert into recruit (r_name, r_c_id, r_d_id, r_p_id,r_money)
-        values (#{r_name},#{r_c_id},#{r_d_id},#{r_p_id},#{r_money});
+        insert into recruit (r_name, r_money, r_c_id, r_d_id, r_p_id)
+        values (#{r_name},#{r_money},#{r_c_id},#{r_d_id},#{r_p_id});
     </insert>
 
     <update id="updateRecruit">
         update recruit
-        set r_name = #{r_name},r_c_id = #{r_c_id},r_d_id = #{r_d_id},r_p_id = #{r_p_id},r_money = #{r_money}
+        set r_name = #{r_name},r_money = #{r_money},r_c_id = #{r_c_id},r_d_id = #{r_d_id},r_p_id = #{r_p_id}
         where r_id = #{r_id};
     </update>
 
@@ -49,7 +50,7 @@
         select * from recruit,company,department,position where r_c_id = c_id and r_d_id = d_id and r_p_id = p_id;
     </select>
 
-    <select id="getRecruitById" resultMap="r_c_d_pMap">
-        select * from recruit,company,department,position where r_c_id = c_id and r_d_id = d_id and r_p_id = p_id and r_id = #{r_id};
+    <select id="getRecruitByR_id" resultMap="r_c_d_pMap">
+        select * from recruit where r_c_id = c_id and r_d_id = d_id and r_p_id = p_id and r_id = #{r_id};
     </select>
 </mapper>

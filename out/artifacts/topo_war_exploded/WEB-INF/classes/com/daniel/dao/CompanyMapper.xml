@@ -20,11 +20,12 @@
         delete from company where c_id=#{c_id};
     </delete>
 
-    <select id="getCompany" resultType="com.daniel.model.Company">
-        select * from company where c_id = #{c_id};
-    </select>
-
     <select id="listAll" resultType="com.daniel.model.Company">
         select * from company;
     </select>
+
+    <select id="getCompanyByC_id" resultType="com.daniel.model.Company">
+        select * from company where c_id = #{c_id};
+    </select>
+
 </mapper>

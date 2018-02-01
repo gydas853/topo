@@ -48,7 +48,7 @@ public class GuestController {
             /*用户的简历存到session里*/
             session.setAttribute("vitae",vitae1);
 
-            /*用户信息存到model*/
+            /*用户信息存到session*/
             session.setAttribute("guest",guest1);
 
             return "guestMain";
@@ -77,6 +77,8 @@ public class GuestController {
     /*游客添加简历*/
     @RequestMapping(value = "/addVitae")
     public String addVitae(Vitae vitae) throws Exception{
+        System.out.println("((((((((((())))))))))))))");
+        System.out.println(vitae.getV_g_id());
         vitaeService.addVitae(vitae);
         return "main";
     }
@@ -111,10 +113,10 @@ public class GuestController {
 
     /*游客投简历*/
     @RequestMapping(value = "/offerToJob")
-    public String offerJob(,Vitae vitae,Recruit recruit) throws Exception{
+    public String offerJob(Vitae vitae,Recruit recruit) throws Exception{
 
         Vitae vitae1 = vitaeService.getVitaeByV_id(vitae);
-        Recruit recruit1 = recruitService.getRecruitById(recruit);
+        Recruit recruit1 = recruitService.getRecruitByR_id(recruit);
         Offer offer = new Offer();
         offer.setO_r_id(recruit1.getR_id());
         offer.setO_v_id(vitae1.getV_id());

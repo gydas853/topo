@@ -38,7 +38,7 @@ public class CompanyServiceImpl implements CompanyService{
     }
 
     @Override
-    public Company getCompany(Company company) {
-        return companyMapper.getCompany(company);
+    public Company getCompanyByC_id(Company company) {
+        return companyMapper.getCompanyByC_id(company);
     }
 }
