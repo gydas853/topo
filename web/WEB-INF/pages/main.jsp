@@ -50,7 +50,7 @@
             </table>
         </form>
     </div>
-    <%--注册成为会员--%><%--暂未进行测试--%>
+    <%--注册成为会员--%><%--未发现问题--%>
     <div style="display: none;" id="div2">
         <form action="register" method="post">
             <table>
@@ -75,10 +75,10 @@
             </table>
         </form>
     </div>
-    <%--显示session里存的所有招聘信息--%><%--目前功能无效--%>
+    <%--显示session里存的所有招聘信息--%><%--目前已实现功能--%>
     <div style="display: none;" id="div3">
         <c:choose>
-            <c:when test="${recruits != null}">
+            <c:when test="${!empty sessionScope.recruits}">
                 <table border="1" cellpadding="10" cellspacing="0">
                     <tr>
                         <td>招聘岗位</td>
@@ -90,7 +90,7 @@
                         <td>公司规模</td>
                         <td>联系方式</td>
                     </tr>
-                    <c:forEach var="recruit" items="${recruits}">
+                    <c:forEach var="recruit" items="${sessionScope.recruits}">
                         <tr  id="tr${recruit.r_id}">
                             <td>${recruit.r_name}</td>
                             <td>${recruit.company.c_name}</td>
@@ -105,7 +105,7 @@
                 </table>
             </c:when>
             <c:otherwise>
-                暂无招聘信息
+                SORRY，暂无招聘信息
             </c:otherwise>
         </c:choose>
     </div>

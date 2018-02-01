@@ -77,8 +77,6 @@ public class GuestController {
     /*游客添加简历*/
     @RequestMapping(value = "/addVitae")
     public String addVitae(Vitae vitae) throws Exception{
-        System.out.println("((((((((((())))))))))))))");
-        System.out.println(vitae.getV_g_id());
         vitaeService.addVitae(vitae);
         return "main";
     }
