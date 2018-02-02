@@ -71,29 +71,6 @@ public class ManagerController {
             List<Recruit> recruits = recruitService.listAll();
             modelAndView.addObject("recruits",recruits);
 
-            /*所有的应聘信息与简历*/
-            List<Offer> offers = offerService.listAll();
-            List<Vitae> vitaes = new ArrayList<Vitae>();
-            for(int i = 0;i < offers.size();i++){
-                int v_id = offers.get(i).getO_v_id();
-                Vitae vitae = new Vitae();
-                vitae.setV_id(v_id);
-                Vitae vitae1 = vitaeService.getVitaeByV_id(vitae);
-                vitaes.add(vitae1);
-            }
-            List<Recruit> recruits1 = new ArrayList<Recruit>();
-            for(int i = 0;i < offers.size();i++){
-                int r_id = offers.get(i).getO_r_id();
-                Recruit recruit = new Recruit();
-                recruit.setR_id(r_id);
-                Recruit recruit1 = recruitService.getRecruitByR_id(recruit);
-                recruits1.add(recruit1);
-            }
-
-            modelAndView.addObject("recruits1",recruits1);
-            modelAndView.addObject("offers",offers);
-            modelAndView.addObject("vitaes",vitaes);
-
             /*管理员信息*/
             HttpSession session = request.getSession();
             session.setAttribute("manager",manager1);
