@@ -13,7 +13,7 @@
 <html>
 <head>
     <base href="<%=basePath%>"/>
-    <title>标题</title>
+    <title>管理员登录</title>
 </head>
 <body>
     <div>
@@ -22,13 +22,13 @@
                 <tr>
                     <td>用户名：</td>
                     <td>
-                        <input type="text" name="name" required="" placeholder="username">
+                        <input type="text" name="m_name" required="" placeholder="username">
                     </td>
                 </tr>
                 <tr>
                     <td>密码：</td>
                     <td>
-                        <input type="password" name="pass" required="" placeholder="password">
+                        <input type="password" name="m_pass" required="" placeholder="password">
                     </td>
                 </tr>
                 <tr>

@@ -274,7 +274,6 @@
             });
 
             $("#inp1").click(function () {
-                alert("dslfsaoidfuosadfasfd");
                 if(${empty sessionScope.vitae}){
                     $("#input1").attr("type","submit")
                 }else {

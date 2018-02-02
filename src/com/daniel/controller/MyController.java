@@ -26,15 +26,6 @@ public class MyController {
     @Resource
     private RecruitService recruitService;
 
-    @Resource
-    private CompanyService companyService;
-
-    @Resource
-    private DepartmentService departmentService;
-
-    @Resource
-    private PositionService positionService;
-
     /*跳转到系统界面*/
     @RequestMapping(value = "/forSystem")
     public String forSystem() throws Exception{
@@ -68,25 +59,11 @@ public class MyController {
 
     /*使管理员前往修改招聘信息页面*/
     @RequestMapping(value = "/forChangeRecruit")
-    public ModelAndView forChangeRecruit(Recruit recruit) throws Exception{
-        ModelAndView modelAndView = new ModelAndView();
+    public String forChangeRecruit(HttpSession session,Recruit recruit) throws Exception{
 
         Recruit recruit1 = recruitService.getRecruitByR_id(recruit);
+        session.setAttribute("recruit",recruit1);
 
-         /*全部公司信息*/
-        List<Company> companies = companyService.listAll();
-        modelAndView.addObject("companies",companies);
-
-        /*全部部门信息*/
-        List<Department> departments = departmentService.listAll();
-        modelAndView.addObject("departments",departments);
-
-        /*全部职位信息*/
-        List<Position> positions = positionService.listAll();
-        modelAndView.addObject("positions",positions);
-
-        modelAndView.addObject("recruit",recruit1);
-        modelAndView.setViewName("changeRecruit");
-        return modelAndView;
+        return "changeRecruit";
     }
 }

@@ -1,9 +1,6 @@
 package com.daniel.controller;
 
-import com.daniel.model.Guest;
-import com.daniel.model.Offer;
-import com.daniel.model.Recruit;
-import com.daniel.model.Vitae;
+import com.daniel.model.*;
 import com.daniel.service.GuestService;
 import com.daniel.service.OfferService;
 import com.daniel.service.RecruitService;
@@ -57,21 +54,13 @@ public class GuestController {
 
     }
 
-    /*游客注册成为会员*//*需要优化*/
+    /*游客注册成为会员*//*无问题*/
     @RequestMapping(value = "/register")
-    public ModelAndView register(HttpServletRequest request) throws Exception{
-        ModelAndView modelAndView = new ModelAndView();
-
-        String name = request.getParameter("name");
-        String pass = request.getParameter("pass");
-
-        Guest guest = new Guest();
-        guest.setG_name(name);
-        guest.setG_pass(pass);
+    public String register(Guest guest) throws Exception{
 
         guestService.addGuest(guest);
-        modelAndView.setViewName("main");
-        return modelAndView;
+
+        return "main";
     }
 
     /*游客添加简历*/

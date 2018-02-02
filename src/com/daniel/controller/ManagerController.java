@@ -43,120 +43,68 @@ public class ManagerController {
 
     /*管理员登录*/
     @RequestMapping(value = "/managerLogin",method = RequestMethod.POST)
-    public ModelAndView managerLogin(HttpServletRequest request) throws Exception{
-        ModelAndView modelAndView = new ModelAndView();
-        String name = request.getParameter("name");
-        String pass = request.getParameter("pass");
-
-        Manager manager = new Manager();
-        manager.setM_name(name);
-        manager.setM_pass(pass);
+    public String managerLogin(HttpSession session,Manager manager) throws Exception{
 
         Manager manager1 = managerService.getManager(manager);
         if(null != manager1){
 
             /*全部公司信息*/
             List<Company> companies = companyService.listAll();
-            modelAndView.addObject("companies",companies);
+            session.setAttribute("companies",companies);
 
             /*全部部门信息*/
             List<Department> departments = departmentService.listAll();
-            modelAndView.addObject("departments",departments);
+            session.setAttribute("departments",departments);
 
             /*全部职位信息*/
             List<Position> positions = positionService.listAll();
-            modelAndView.addObject("positions",positions);
+            session.setAttribute("positions",positions);
 
             /*全部招聘信息*/
             List<Recruit> recruits = recruitService.listAll();
-            modelAndView.addObject("recruits",recruits);
+            session.setAttribute("recruits",recruits);
 
             /*管理员信息*/
-            HttpSession session = request.getSession();
             session.setAttribute("manager",manager1);
-            modelAndView.addObject("manager",manager1);
-            modelAndView.setViewName("managerMain");
-            return modelAndView;
+            return "managerMain";
         }else {
-            modelAndView.setViewName("managerLogin");
-            return modelAndView;
+            return "managerLogin";
         }
     }
 
     /*管理员发布招聘信息*//*需要优化*/
     @RequestMapping(value = "/addRecruit",method = RequestMethod.POST)
-    public String addRecruit(HttpServletRequest request) throws Exception{
-        String r_name = request.getParameter("r_name");
-        int r_c_id = Integer.parseInt(request.getParameter("r_c_id"));
-        String r_money = request.getParameter("r_money");
-
-        Recruit recruit = new Recruit();
-        recruit.setR_name(r_name);
-        recruit.setR_c_id(r_c_id);
-        recruit.setR_money(r_money);
+    public String addRecruit(HttpSession session,Recruit recruit) throws Exception{
 
         recruitService.addRecruit(recruit);
 
         List<Recruit> recruits = recruitService.listAll();
-        HttpSession session = request.getSession();
+
         session.setAttribute("recruits",recruits);
         return "managerMain";
     }
 
     /*管理员修改招聘信息*/
     @RequestMapping(value = "/changeRecruit",method = RequestMethod.POST)
-    public ModelAndView changeRecruit(Recruit recruit) throws Exception{
-
-        ModelAndView modelAndView = new ModelAndView();
+    public String changeRecruit(HttpSession session,Recruit recruit) throws Exception{
 
         /*更新数据库*/
         recruitService.updateRecruit(recruit);
-
-        /*全部公司信息*/
-        List<Company> companies = companyService.listAll();
-        modelAndView.addObject("companies",companies);
-
-        /*全部部门信息*/
-        List<Department> departments = departmentService.listAll();
-        modelAndView.addObject("departments",departments);
-
-        /*全部职位信息*/
-        List<Position> positions = positionService.listAll();
-        modelAndView.addObject("positions",positions);
-
-        /*全部招聘信息*/
+        /*更新session*/
         List<Recruit> recruits = recruitService.listAll();
-        modelAndView.addObject("recruits",recruits);
-
-        modelAndView.setViewName("managerMain");
-        return modelAndView;
+        session.setAttribute("recruits",recruits);
+        return "managerMain";
     }
+
     /*管理员删除招聘信息*/
     @RequestMapping(value = "/deleteRecruit")
-    public ModelAndView deleteRecruit(Recruit recruit) throws Exception{
-
-        ModelAndView modelAndView = new ModelAndView();
-
+    public String deleteRecruit(HttpSession session,Recruit recruit) throws Exception{
         /*删除一个招聘信息*/
         recruitService.deleteRecruit(recruit);
 
-         /*全部公司信息*/
-        List<Company> companies = companyService.listAll();
-        modelAndView.addObject("companies",companies);
-
-        /*全部部门信息*/
-        List<Department> departments = departmentService.listAll();
-        modelAndView.addObject("departments",departments);
-
-        /*全部职位信息*/
-        List<Position> positions = positionService.listAll();
-        modelAndView.addObject("positions",positions);
-
-        /*全部招聘信息*/
         List<Recruit> recruits = recruitService.listAll();
-        modelAndView.addObject("recruits",recruits);
+        session.setAttribute("recruits",recruits);
 
-        modelAndView.setViewName("managerMain");
-        return modelAndView;
+        return "managerMain";
     }
 }

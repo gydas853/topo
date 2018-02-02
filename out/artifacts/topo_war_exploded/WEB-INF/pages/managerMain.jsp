@@ -18,7 +18,7 @@
     <script src="js/jquery-3.1.0.js"></script>
 </head>
 <body>
-    <p>管理员${manager.m_name}登录</p>
+    <p>管理员${sessionScope.manager.m_name}登录</p>
     <table>
         <tr>
             <td><input id="i1" type="button" value="发布招聘信息"></td>
@@ -30,25 +30,25 @@
             <td><a href="forSystem"><input type="button" value="返回主界面"></a></td>
         </tr>
     </table>
-    <%--发布招聘信息--%>
+    <%--发布招聘信息--%><%--可以发布 暂未找到bug--%>
     <div style="display: none;" id="div1">
         <form action="addRecruit" method="post">
             职位：<input type="text" name="r_name"><br>
             公司：<select name="r_c_id">
             <option value="0" selected>请选择：</option>
-            <c:forEach var="company" items="${companies}" >
+            <c:forEach var="company" items="${sessionScope.companies}" >
                 <option value="${company.c_id}">${company.c_name}</option>
             </c:forEach>
         </select><br>
             部门：<select name="r_d_id">
             <option value="0" selected>请选择：</option>
-            <c:forEach var="department" items="${departments}">
+            <c:forEach var="department" items="${sessionScope.departments}">
                 <option value="${department.d_id}">${department.d_name}</option>
             </c:forEach>
         </select><br>
             职位：<select name="r_p_id">
             <option value="0" selected>请选择：</option>
-            <c:forEach var="position" items="${positions}">
+            <c:forEach var="position" items="${sessionScope.positions}">
                 <option value="${position.p_id}">${position.p_name}</option>
             </c:forEach>
         </select><br>
@@ -56,37 +56,44 @@
             <input type="submit" value="确认发布">
         </form>
     </div>
-    <%--查看所有招聘信息--%>
+    <%--查看所有招聘信息--%><%--可以了--%>
     <div style="display: none" id="div2">
-        <table border="1" cellpadding="10" cellspacing="0">
-            <tr>
-                <td>招聘岗位</td>
-                <td>招聘公司</td>
-                <td>招聘部门</td>
-                <td>招聘职位</td>
-                <td>月薪</td>
-                <td>公司地址</td>
-                <td>公司规模</td>
-                <td>联系方式</td>
-                <td>操作</td>
-            </tr>
-            <c:forEach var="recruit" items="${recruits}">
-                <tr  id="tr${recruit.r_id}">
-                    <td>${recruit.r_name}</td>
-                    <td>${recruit.company.c_name}</td>
-                    <td>${recruit.department.d_name}</td>
-                    <td>${recruit.position.p_name}</td>
-                    <td>${recruit.r_money}</td>
-                    <td>${recruit.company.c_address}</td>
-                    <td>${recruit.company.c_companyScale}</td>
-                    <td>${recruit.company.c_phone}</td>
-                    <td>
-                        <a href="forChangeRecruit?r_id=${recruit.r_id}"><input type="button" value="修改招聘信息"></a>
-                        <a href="deleteRecruit?r_id=${recruit.r_id}"><input type="button" value="删除招聘信息"></a>
-                    </td>
-                </tr>
-            </c:forEach>
-        </table>
+        <c:choose>
+            <c:when test="${!empty sessionScope.recruits}">
+                <table border="1" cellpadding="10" cellspacing="0">
+                    <tr>
+                        <td>招聘岗位</td>
+                        <td>招聘公司</td>
+                        <td>招聘部门</td>
+                        <td>招聘职位</td>
+                        <td>月薪</td>
+                        <td>公司地址</td>
+                        <td>公司规模</td>
+                        <td>联系方式</td>
+                        <td>操作</td>
+                    </tr>
+                    <c:forEach var="recruit" items="${sessionScope.recruits}">
+                        <tr  id="tr${recruit.r_id}">
+                            <td>${recruit.r_name}</td>
+                            <td>${recruit.company.c_name}</td>
+                            <td>${recruit.department.d_name}</td>
+                            <td>${recruit.position.p_name}</td>
+                            <td>${recruit.r_money}</td>
+                            <td>${recruit.company.c_address}</td>
+                            <td>${recruit.company.c_companyScale}</td>
+                            <td>${recruit.company.c_phone}</td>
+                            <td>
+                                <a href="forChangeRecruit?r_id=${recruit.r_id}"><input type="button" value="修改招聘信息"></a>
+                                <a href="deleteRecruit?r_id=${recruit.r_id}"><input type="button" value="删除招聘信息"></a>
+                            </td>
+                        </tr>
+                    </c:forEach>
+                </table>
+            </c:when>
+            <c:otherwise>
+                SORRY，暂未发布任何招聘
+            </c:otherwise>
+        </c:choose>
     </div>
     <%--管理公司信息--%><%--尚未完善--%>
     <div style="display: none;" id="div3">
@@ -99,7 +106,7 @@
                 <td>联系电话</td>
                 <td>操作</td>
             </tr>
-            <c:forEach var="company" items="${companies}">
+            <c:forEach var="company" items="${sessionScope.companies}">
                 <tr>
                     <td>${company.c_name}</td>
                     <td>${company.c_companyScale}</td>
@@ -116,7 +123,24 @@
     </div>
     <%--管理部门信息--%><%--尚未完善--%>
     <div style="display: none" id="div4">
-
+        <table>
+            <tr>
+                <td>部门名称</td>
+                <td>操作</td>
+            </tr>
+            <c:forEach var="department" items="${sessionScope.departments}">
+                <tr>
+                    <td>${department.d_name}</td>
+                    <td>
+                        <input type="button" value="修改信息">
+                        <a><input type="button" value="删除信息"></a>
+                    </td>
+                </tr>
+            </c:forEach>
+            <tr>
+                <td></td>
+            </tr>
+        </table>
     </div>
     <%--管理职位信息--%><%--尚未完善--%>
     <div style="display: none;" id="div5">

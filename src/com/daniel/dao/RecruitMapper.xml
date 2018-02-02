@@ -51,6 +51,6 @@
     </select>
 
     <select id="getRecruitByR_id" resultMap="r_c_d_pMap">
-        select * from recruit where r_c_id = c_id and r_d_id = d_id and r_p_id = p_id and r_id = #{r_id};
+        select * from recruit,company,department,position where r_c_id = c_id and r_d_id = d_id and r_p_id = p_id and r_id = #{r_id};
     </select>
 </mapper>
