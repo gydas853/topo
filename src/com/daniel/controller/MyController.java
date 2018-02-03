@@ -27,6 +27,12 @@ public class MyController {
     @Resource
     private RecruitService recruitService;
 
+    @Resource
+    private CompanyService companyService;
+
+    @Resource
+    private DepartmentService departmentService;
+
     /*跳转到系统界面*/
     @RequestMapping(value = "/forSystem")
     public String forSystem() throws Exception{
@@ -76,7 +82,21 @@ public class MyController {
 
     /*使管理员前往修改公司信息页面*/
     @RequestMapping(value = "/forChangeCompany")
-    public String forChangeCompany() throws Exception{
+    public String forChangeCompany(HttpSession session,Company company) throws Exception{
+
+        Company company1 = companyService.getCompanyByC_id(company);
+        session.setAttribute("company",company1);
+
         return "changeCompany";
+    }
+
+    /*使管理员前往修改公司部门信息界面*/
+    @RequestMapping(value = "/forChangeDepartment")
+    public String forChangeDepartment(HttpSession session,Department department) throws Exception{
+
+        Department department1 = departmentService.getDepartmentByD_id(department);
+        session.setAttribute("department",department1);
+
+        return "changeDepartment";
     }
 }

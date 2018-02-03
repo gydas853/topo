@@ -30,7 +30,8 @@
             <td><a href="forSystem"><input type="button" value="返回主界面"></a></td>
         </tr>
     </table>
-    <%--发布招聘信息--%><%--可以发布 暂未找到bug--%>
+
+    <%--发布招聘信息--%><%--写完，可以发布 暂未发现bug--%>
     <div style="display: none;" id="div1">
         <form action="addRecruit" method="post">
             职位：<input type="text" name="r_name"><br>
@@ -56,7 +57,8 @@
             <input type="submit" value="确认发布">
         </form>
     </div>
-    <%--查看所有招聘信息--%><%--暂未发现问题--%>
+
+    <%--查看所有招聘信息--%><%--写完，暂未发现bug--%>
     <div style="display: none" id="div2">
         <c:choose>
             <c:when test="${!empty sessionScope.recruits}">
@@ -101,9 +103,12 @@
             </c:otherwise>
         </c:choose>
     </div>
-    <%--管理公司信息--%><%--尚未完善--%>
+
+    <%--管理公司信息--%><%--写完，暂未发现bug--%>
     <div style="display: none;" id="div3">
-        <table border="1" cellpadding="10" cellspacing="0">
+        <c:choose>
+            <c:when test="${!empty sessionScope.companies}">
+        <table border="1" cellpadding="10" cellspacing="0" style="text-align: center">
             <tr>
                 <td>公司名称</td>
                 <td>公司规模</td>
@@ -120,11 +125,11 @@
                     <td>${company.c_address}</td>
                     <td>${company.c_phone}</td>
                     <td>
-                        <form action="forChangeCompany" method="post">
+                        <form action="forChangeCompany" method="post" style="float: left">
                             <input type="hidden" value="${company.c_id}" name="c_id">
                             <input type="submit" value="修改公司信息">
                         </form>
-                        <form action="" method="post">
+                        <form action="deleteCompany" method="post" style="float: left">
                             <input type="hidden" value="${company.c_id}" name="c_id">
                             <input  id="d${company.c_id}" type="button" value="删除公司信息">
                         </form>
@@ -132,11 +137,18 @@
                 </tr>
             </c:forEach>
         </table>
+            </c:when>
+            <c:otherwise>
+                SORRY，未找到公司信息
+            </c:otherwise>
+        </c:choose>
         <input id="i7" type="button" value="添加一个公司信息">
     </div>
+
+    <%--管理员增加一个公司信息--%><%--写完，暂未发现bug--%>
     <div style="display: none;" id="div7">
         <form action="addCompany" method="post">
-            <table>
+            <table border="1" cellpadding="10" cellspacing="0">
                 <tr>
                     <td>公司名称：</td>
                     <td><input type="text" name="c_name"></td>
@@ -161,34 +173,47 @@
             <input type="submit" value="添加公司">
         </form>
     </div>
-    <%--管理部门信息--%><%--尚未完善--%>
+
+    <%--管理部门信息--%><%--尚未写完--%>
     <div style="display: none" id="div4">
-        <table>
-            <tr>
-                <td>部门名称</td>
-                <td>操作</td>
-            </tr>
-            <c:forEach var="department" items="${sessionScope.departments}">
-                <tr>
-                    <td>${department.d_name}</td>
-                    <td>
-                        <input type="button" value="修改信息">
-                        <a><input type="button" value="删除信息"></a>
-                    </td>
-                </tr>
-            </c:forEach>
-            <tr>
-                <td></td>
-            </tr>
-        </table>
+        <c:choose>
+            <c:when test="${!empty sessionScope.departments}">
+                <table border="1" cellpadding="10" cellspacing="0" style="text-align: center">
+                    <tr>
+                        <td>部门名称</td>
+                        <td>操作</td>
+                    </tr>
+                    <c:forEach var="department" items="${sessionScope.departments}">
+                        <tr>
+                            <td>${department.d_name}</td>
+                            <td>
+                                <form action="forChangeDepartment" method="post">
+                                    <input type="hidden" name="d_id" value="${department.d_id}">
+                                    <input type="submit" value="修改信息">
+                                </form>
+                                <form>
+                                    <input type="hidden" name="d_id" value="${department.d_id}">
+                                    <input id="de${department.d_id}" type="button" value="删除信息">
+                                </form>
+                            </td>
+                        </tr>
+                    </c:forEach>
+                </table>
+            </c:when>
+            <c:otherwise>
+                SORRY，未找到部门信息
+            </c:otherwise>
+        </c:choose>
     </div>
+
     <%--管理职位信息--%><%--尚未完善--%>
     <div style="display: none;" id="div5">
 
     </div>
+
     <%--查看应聘信息--%>
     <div style="display: none;" id="div6">
-        <table>
+        <table border="1" cellpadding="10" cellspacing="0">
             <tr>
                 <td>应聘者编号</td>
                 <td>操作</td>
@@ -300,6 +325,16 @@
                 $("#div6").hide();
                 $("#div7").hide()
             });
+            $("#div4").hide();
+            $("#i4").click(function () {
+                $("#div4").show();
+                $("#div1").hide();
+                $("#div2").hide();
+                $("#div3").hide();
+                $("#div5").hide();
+                $("#div6").hide();
+                $("#div7").hide()
+            });
             $("#div6").hide();
             $("#i6").click(function () {
                 $("#div6").show();
@@ -336,7 +371,15 @@
                     }
                 });
             </c:forEach>
-            <c:forEach var="offer" items="${offers}">
+            <c:forEach var="de" items="${sessionScope.departments}">
+                $("#de${de.d_id}").click(function () {
+                    var v = confirm("确定要删除吗");
+                    if(v == true){
+                        $("#de${de.d_id}").attr("type","submit");
+                    }
+                });
+            </c:forEach>
+            <%--<c:forEach var="offer" items="${offers}">
                 $("#d${offer.o_id}").hide();
                 $("#show${offer.o_id}").click(function () {
                     $("#d${offer.o_id}").show()
@@ -350,7 +393,7 @@
                         $("#interview${offer.o_id}").attr("type","submit")
                     }
                 });
-            </c:forEach>
+            </c:forEach>--%>
         })
     </script>
 </body>

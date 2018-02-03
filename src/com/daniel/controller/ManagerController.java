@@ -107,4 +107,40 @@ public class ManagerController {
 
         return "managerMain";
     }
+
+    /*管理员增加一个公司*/
+    @RequestMapping(value = "/addCompany")
+    public String addCompany(HttpSession session,Company company) throws Exception{
+
+        companyService.addCompany(company);
+
+        List<Company> companies = companyService.listAll();
+        session.setAttribute("companies",companies);
+
+        return "managerMain";
+    }
+
+    /*管理员更新一个公司信息*/
+    @RequestMapping(value = "/changeCompany")
+    public String changeCompany(HttpSession session,Company company) throws Exception{
+
+        companyService.updateCompany(company);
+
+        List<Company> companies = companyService.listAll();
+        session.setAttribute("companies",companies);
+
+        return "managerMain";
+    }
+
+    /*管理员删除一个公司信息*/
+    @RequestMapping(value = "/deleteCompany")
+    public String deleteCompany(HttpSession session,Company company) throws Exception{
+
+        companyService.deleteCompany(company);
+
+        List<Company> companies = companyService.listAll();
+        session.setAttribute("companies",companies);
+
+        return "managerMain";
+    }
 }

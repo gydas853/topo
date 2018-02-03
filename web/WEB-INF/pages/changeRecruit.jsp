@@ -15,6 +15,7 @@
 <head>
     <base href="<%=basePath%>"/>
     <title>更新招聘信息</title>
+    <script src="js/jquery-3.1.0.js"></script>
 </head>
 <body>
     <%--修改招聘信息--%>
@@ -40,9 +41,20 @@
     </select><br>
         月薪：<input type="text" name="r_money" value="${sessionScope.recruit.r_money}"><br>
         <input type="hidden" name="r_id" value="${sessionScope.recruit.r_id}">
-        <input type="submit" value="确认修改">
+        <input id="input1" type="button" value="确认修改">
     </form>
     <%--返回管理员界面--%>
     <a href="forManagerMain"><input type="button" value="返回"></a>
+
+    <script>
+        $(document).ready(function () {
+            $("#input1").click(function () {
+                var v = confirm("确认修改");
+                if(v == true){
+                    $("#input1").attr("type","submit");
+                }
+            })
+        })
+    </script>
 </body>
 </html>
