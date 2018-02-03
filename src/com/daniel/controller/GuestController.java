@@ -32,7 +32,7 @@ public class GuestController {
     @Resource
     private OfferService offerService;
 
-    /*游客登录*//*优化结束*/
+    /*游客登录*//*暂未发现问题*/
     @RequestMapping(value = "/guestLogin",method = RequestMethod.POST)
     public String guestLogin(HttpSession session,Guest guest) throws Exception{
         /*找到游客信息*/
@@ -54,7 +54,7 @@ public class GuestController {
 
     }
 
-    /*游客注册成为会员*//*无问题*/
+    /*游客注册成为会员*//*暂未发现问题*/
     @RequestMapping(value = "/register")
     public String register(Guest guest) throws Exception{
 
@@ -63,38 +63,36 @@ public class GuestController {
         return "main";
     }
 
-    /*游客添加简历*/
+    /*游客添加简历*//*暂未发现问题*/
     @RequestMapping(value = "/addVitae")
-    public String addVitae(Vitae vitae) throws Exception{
+    public String addVitae(HttpSession session,Vitae vitae) throws Exception{
+
         vitaeService.addVitae(vitae);
-        return "main";
+
+        Vitae vitae1 = vitaeService.getVitaeByG_id(vitae);
+        session.setAttribute("vitae",vitae1);
+
+        return "guestMain";
     }
 
-    /*游客修改简历*/
+    /*游客修改简历*//*暂未发现问题*/
     @RequestMapping(value = "/changeVitae")
     public String changeVitae(HttpSession session,Vitae vitae) throws Exception{
         vitaeService.updateVitae(vitae);
 
-        Guest guest = (Guest) session.getAttribute("guest");
-        Vitae vitae1 = new Vitae();
-        vitae1.setV_g_id(guest.getG_id());
-
-        Vitae vitae2 = vitaeService.getVitaeByG_id(vitae1);
-        session.setAttribute("vitae",vitae2);
+        Vitae vitae1 = vitaeService.getVitaeByV_id(vitae);
+        session.setAttribute("vitae",vitae1);
         return "guestMain";
     }
 
-    /*游客删除简历*/
-    @RequestMapping(value = "/deleteVitae")
+    /*游客删除简历*//*暂未发现问题*/
+    @RequestMapping(value = "/deleteVitae",method = RequestMethod.POST)
     public String deleteVitae(HttpSession session,Vitae vitae)throws Exception{
         vitaeService.deleteVitae(vitae);
 
-        Guest guest = (Guest) session.getAttribute("guest");
-        Vitae vitae1 = new Vitae();
-        vitae1.setV_g_id(guest.getG_id());
+        Vitae vitae1 = vitaeService.getVitaeByG_id(vitae);
+        session.setAttribute("vitae",vitae1);
 
-        Vitae vitae2 = vitaeService.getVitaeByG_id(vitae1);
-        session.setAttribute("vitae",vitae2);
         return "guestMain";
     }
 

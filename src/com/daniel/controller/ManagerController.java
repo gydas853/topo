@@ -97,7 +97,7 @@ public class ManagerController {
     }
 
     /*管理员删除招聘信息*/
-    @RequestMapping(value = "/deleteRecruit")
+    @RequestMapping(value = "/deleteRecruit",method = RequestMethod.POST)
     public String deleteRecruit(HttpSession session,Recruit recruit) throws Exception{
         /*删除一个招聘信息*/
         recruitService.deleteRecruit(recruit);

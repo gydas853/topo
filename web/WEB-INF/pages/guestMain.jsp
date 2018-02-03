@@ -124,104 +124,116 @@
             </table>
         </form>
     </div>
-    <%--查看我的简历--%><%--这里也没问题了，美化没做--%>
+    <%--查看我的简历--%><%--这里也没问题了--%>
     <div style="display: none" id="div3">
-            <table>
-                <tr>
-                    <td>姓名：</td>
-                    <td>${vitae.v_name}</td>
-                    <td>性别：</td>
-                    <td>${vitae.v_sex}</td>
-                </tr>
-                <tr>
-                    <td>生日：</td>
-                    <td>${vitae.v_birth}</td>
-                    <td>民族：</td>
-                    <td>${vitae.v_ethnicity}</td>
-                </tr>
-                <tr>
-                    <td>籍贯：</td>
-                    <td>${vitae.v_nativePlace}</td>
-                    <td>学历：</td>
-                    <td>${vitae.v_qualification}</td>
-                </tr>
-                <tr>
-                    <td>联系电话：</td>
-                    <td>${vitae.v_tel}</td>
-                </tr>
-                <tr>
-                    <td>邮箱地址：</td>
-                    <td>${vitae.v_email}</td>
-                    <td>专业：</td>
-                    <td>${vitae.v_specialty}</td>
-                </tr>
-                <tr>
-                    <td>工作经验：</td>
-                    <td>${vitae.v_serviceYear}</td>
-                    <td>意向工作地点：</td>
-                    <td>${vitae.v_willSpot}</td>
-                </tr>
-                <tr>
-                    <td>到岗时间：</td>
-                    <td>${vitae.v_adsumDate}</td>
-                    <td>希望从事的行业：</td>
-                    <td>${vitae.v_promisingIndustry}</td>
-                </tr>
-                <tr>
-                    <td>
-                        <input id="in4" type="button" value="修改简历">
-                        <a href="deleteVitae?v_id=${sessionScope.vitae.v_id}"><input type="button" value="删除简历"></a>
-                    </td>
-                </tr>
-            </table>
+        <c:choose>
+            <c:when test="${!empty sessionScope.vitae}">
+                <table>
+                    <tr>
+                        <td>姓名：</td>
+                        <td>${sessionScope.vitae.v_name}</td>
+                        <td>性别：</td>
+                        <td>${sessionScope.vitae.v_sex}</td>
+                    </tr>
+                    <tr>
+                        <td>生日：</td>
+                        <td>${sessionScope.vitae.v_birth}</td>
+                        <td>民族：</td>
+                        <td>${sessionScope.vitae.v_ethnicity}</td>
+                    </tr>
+                    <tr>
+                        <td>籍贯：</td>
+                        <td>${sessionScope.vitae.v_nativePlace}</td>
+                        <td>学历：</td>
+                        <td>${sessionScope.vitae.v_qualification}</td>
+                    </tr>
+                    <tr>
+                        <td>联系电话：</td>
+                        <td>${sessionScope.vitae.v_tel}</td>
+                    </tr>
+                    <tr>
+                        <td>邮箱地址：</td>
+                        <td>${sessionScope.vitae.v_email}</td>
+                        <td>专业：</td>
+                        <td>${sessionScope.vitae.v_specialty}</td>
+                    </tr>
+                    <tr>
+                        <td>工作经验：</td>
+                        <td>${sessionScope.vitae.v_serviceYear}</td>
+                        <td>意向工作地点：</td>
+                        <td>${sessionScope.vitae.v_willSpot}</td>
+                    </tr>
+                    <tr>
+                        <td>到岗时间：</td>
+                        <td>${sessionScope.vitae.v_adsumDate}</td>
+                        <td>希望从事的行业：</td>
+                        <td>${sessionScope.vitae.v_promisingIndustry}</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="in4" type="button" value="修改简历" style="float: left">
+                            <form action="deleteVitae" method="post" style="float: left">
+                                <input type="hidden" value="${sessionScope.vitae.v_id}" name="v_id">
+                                <input type="hidden" value="${sessionScope.vitae.v_g_id}" name="v_g_id">
+                                <input id="in7" type="button" value="删除简历">
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </c:when>
+            <c:otherwise>
+                尚无简历信息，请创建简历
+            </c:otherwise>
+        </c:choose>
     </div>
-    <%--修改我的简历--%><%--这里可以改的更好点--%>
+    <%--修改我的简历--%><%--这个没问题了--%>
     <div style="display: none;" id="div4">
         <form action="changeVitae" method="post">
                 <table>
                     <tr>
                         <td>姓名：</td>
-                        <td><input type="text" name="v_name" value="${vitae.v_name}"></td>
+                        <td><input type="text" name="v_name" value="${sessionScope.vitae.v_name}"></td>
                         <td>性别：</td>
-                        <td><input type="text" name="v_sex" value="${vitae.v_sex}"></td>
+                        <td><input type="text" name="v_sex" value="${sessionScope.vitae.v_sex}"></td>
                     </tr>
                     <tr>
                         <td>生日：</td>
-                        <td><input type="text" name="v_birth" value="${vitae.v_birth}"></td>
+                        <td><input type="text" name="v_birth" value="${sessionScope.vitae.v_birth}"></td>
                         <td>民族：</td>
-                        <td><input type="text" name="v_ethnicity" value="${vitae.v_ethnicity}"></td>
+                        <td><input type="text" name="v_ethnicity" value="${sessionScope.vitae.v_ethnicity}"></td>
                     </tr>
                     <tr>
                         <td>籍贯：</td>
-                        <td><input type="text" name="v_nativePlace" value="${vitae.v_nativePlace}"></td>
+                        <td><input type="text" name="v_nativePlace" value="${sessionScope.vitae.v_nativePlace}"></td>
                         <td>学历：</td>
-                        <td><input type="text" name="v_qualification" value="${vitae.v_qualification}"></td>
+                        <td><input type="text" name="v_qualification" value="${sessionScope.vitae.v_qualification}"></td>
                     </tr>
                     <tr>
                         <td>联系电话：</td>
-                        <td><input type="text" name="v_tel" value="${vitae.v_tel}"></td>
+                        <td><input type="text" name="v_tel" value="${sessionScope.vitae.v_tel}"></td>
                     </tr>
                     <tr>
                         <td>邮箱地址：</td>
-                        <td><input type="text" name="v_email" value="${vitae.v_email}"></td>
+                        <td><input type="text" name="v_email" value="${sessionScope.vitae.v_email}"></td>
                     </tr>
                     <tr>
                         <td>专业：</td>
-                        <td><input type="text" name="v_specialty" value="${vitae.v_specialty}"></td>
+                        <td><input type="text" name="v_specialty" value="${sessionScope.vitae.v_specialty}"></td>
                         <td>工作经验：</td>
-                        <td><input type="text" name="v_serviceYear" value="${vitae.v_serviceYear}"></td>
+                        <td><input type="text" name="v_serviceYear" value="${sessionScope.vitae.v_serviceYear}"></td>
                     </tr>
                     <tr>
                         <td>意向工作地点：</td>
-                        <td><input type="text" name="v_willSpot" value="${vitae.v_willSpot}"></td>
+                        <td><input type="text" name="v_willSpot" value="${sessionScope.vitae.v_willSpot}"></td>
                         <td>到岗时间：</td>
-                        <td><input type="text" name="v_adsumDate" value="${vitae.v_adsumDate}"></td>
+                        <td><input type="text" name="v_adsumDate" value="${sessionScope.vitae.v_adsumDate}"></td>
                     </tr>
                     <tr>
                         <td>希望从事的行业：</td>
-                        <td><input type="text" name="v_promisingIndustry" value="${vitae.v_promisingIndustry}"></td>
+                        <td><input type="text" name="v_promisingIndustry" value="${sessionScope.vitae.v_promisingIndustry}"></td>
                         <td>
-                            <input type="hidden" value="${vitae.v_id}" name="v_id">
+                            <input type="hidden" value="${sessionScope.vitae.v_id}" name="v_id">
+                            <input type="hidden" value="${sessionScope.vitae.v_g_id}" name="v_g_id">
                             <input id="in6" type="button" value="确认修改">
                             <input id="in5" type="button" value="取消修改">
                         </td>
@@ -272,10 +284,15 @@
                     $("#in6").attr("type","submit");
                 }
             });
-
+            $("#in7").click(function () {
+                var v = confirm("确定删除吗")
+                if(v == true){
+                    $("#in7").attr("type","submit");
+                }
+            });
             $("#inp1").click(function () {
                 if(${empty sessionScope.vitae}){
-                    $("#input1").attr("type","submit")
+                    $("#inp1").attr("type","submit")
                 }else {
                     alert("已有简历，不能新建");
                     alert("修改已有简历或删除当前简历再创建")

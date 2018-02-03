@@ -197,7 +197,7 @@ public class Vitae implements Serializable{
                 ", v_willSpot='" + v_willSpot + '\'' +
                 ", v_adsumDate='" + v_adsumDate + '\'' +
                 ", v_promisingIndustry='" + v_promisingIndustry + '\'' +
-                ", v_c_id=" + v_g_id +
+                ", v_g_id=" + v_g_id +
                 '}';
     }
 }

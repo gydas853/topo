@@ -14,7 +14,7 @@
 <html>
 <head>
     <base href="<%=basePath%>"/>
-    <title>标题</title>
+    <title>更新招聘信息</title>
 </head>
 <body>
     <%--修改招聘信息--%>
@@ -41,7 +41,8 @@
         月薪：<input type="text" name="r_money" value="${sessionScope.recruit.r_money}"><br>
         <input type="hidden" name="r_id" value="${sessionScope.recruit.r_id}">
         <input type="submit" value="确认修改">
-        <input type="button" value="取消">
     </form>
+    <%--返回管理员界面--%>
+    <a href="forManagerMain"><input type="button" value="返回"></a>
 </body>
 </html>

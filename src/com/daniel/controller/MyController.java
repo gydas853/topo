@@ -10,6 +10,7 @@ import com.daniel.service.PositionService;
 import com.daniel.service.RecruitService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
@@ -58,12 +59,24 @@ public class MyController {
     }
 
     /*使管理员前往修改招聘信息页面*/
-    @RequestMapping(value = "/forChangeRecruit")
+    @RequestMapping(value = "/forChangeRecruit",method = RequestMethod.POST)
     public String forChangeRecruit(HttpSession session,Recruit recruit) throws Exception{
 
         Recruit recruit1 = recruitService.getRecruitByR_id(recruit);
         session.setAttribute("recruit",recruit1);
 
         return "changeRecruit";
+    }
+
+    /*返回管理员主界面*/
+    @RequestMapping(value = "/forManagerMain")
+    public String forManagerMain() throws Exception{
+        return "managerMain";
+    }
+
+    /*使管理员前往修改公司信息页面*/
+    @RequestMapping(value = "/forChangeCompany")
+    public String forChangeCompany() throws Exception{
+        return "changeCompany";
     }
 }

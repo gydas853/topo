@@ -56,7 +56,7 @@
             <input type="submit" value="确认发布">
         </form>
     </div>
-    <%--查看所有招聘信息--%><%--可以了--%>
+    <%--查看所有招聘信息--%><%--暂未发现问题--%>
     <div style="display: none" id="div2">
         <c:choose>
             <c:when test="${!empty sessionScope.recruits}">
@@ -83,8 +83,14 @@
                             <td>${recruit.company.c_companyScale}</td>
                             <td>${recruit.company.c_phone}</td>
                             <td>
-                                <a href="forChangeRecruit?r_id=${recruit.r_id}"><input type="button" value="修改招聘信息"></a>
-                                <a href="deleteRecruit?r_id=${recruit.r_id}"><input type="button" value="删除招聘信息"></a>
+                                <form action="forChangeRecruit" method="post">
+                                    <input type="hidden" value="${recruit.r_id}" name="r_id">
+                                    <input type="submit" value="修改招聘信息">
+                                </form>
+                                <form action="deleteRecruit" method="post">
+                                    <input type="hidden" value="${recruit.r_id}" name="r_id">
+                                    <input id="delete${recruit.r_id}" type="button" value="删除招聘信息">
+                                </form>
                             </td>
                         </tr>
                     </c:forEach>
@@ -97,7 +103,7 @@
     </div>
     <%--管理公司信息--%><%--尚未完善--%>
     <div style="display: none;" id="div3">
-        <table>
+        <table border="1" cellpadding="10" cellspacing="0">
             <tr>
                 <td>公司名称</td>
                 <td>公司规模</td>
@@ -114,12 +120,46 @@
                     <td>${company.c_address}</td>
                     <td>${company.c_phone}</td>
                     <td>
-                        <input type="button" value="修改信息">
-                        <a><input type="button" value="删除信息"></a>
+                        <form action="forChangeCompany" method="post">
+                            <input type="hidden" value="${company.c_id}" name="c_id">
+                            <input type="submit" value="修改公司信息">
+                        </form>
+                        <form action="" method="post">
+                            <input type="hidden" value="${company.c_id}" name="c_id">
+                            <input  id="d${company.c_id}" type="button" value="删除公司信息">
+                        </form>
                     </td>
                 </tr>
             </c:forEach>
         </table>
+        <input id="i7" type="button" value="添加一个公司信息">
+    </div>
+    <div style="display: none;" id="div7">
+        <form action="addCompany" method="post">
+            <table>
+                <tr>
+                    <td>公司名称：</td>
+                    <td><input type="text" name="c_name"></td>
+                </tr>
+                <tr>
+                    <td>公司规模：</td>
+                    <td><input type="text" name="c_companyScale"></td>
+                </tr>
+                <tr>
+                    <td>公司简介：</td>
+                    <td> <input type="text" name="c_summary"></td>
+                </tr>
+                <tr>
+                    <td>公司地址：</td>
+                    <td><input type="text" name="c_address"></td>
+                </tr>
+                <tr>
+                    <td>公司联系电话：</td>
+                    <td><input type="text" name="c_phone"></td>
+                </tr>
+            </table>
+            <input type="submit" value="添加公司">
+        </form>
     </div>
     <%--管理部门信息--%><%--尚未完善--%>
     <div style="display: none" id="div4">
@@ -237,7 +277,8 @@
                 $("#div3").hide();
                 $("#div4").hide();
                 $("#div5").hide();
-                $("#div6").hide()
+                $("#div6").hide();
+                $("#div7").hide()
             });
             $("#div2").hide();
             $("#i2").click(function () {
@@ -246,7 +287,8 @@
                 $("#div3").hide();
                 $("#div4").hide();
                 $("#div5").hide();
-                $("#div6").hide()
+                $("#div6").hide();
+                $("#div7").hide()
             });
             $("#div3").hide();
             $("#i3").click(function () {
@@ -255,7 +297,8 @@
                 $("#div2").hide();
                 $("#div4").hide();
                 $("#div5").hide();
-                $("#div6").hide()
+                $("#div6").hide();
+                $("#div7").hide()
             });
             $("#div6").hide();
             $("#i6").click(function () {
@@ -264,8 +307,35 @@
                 $("#div2").hide();
                 $("#div3").hide();
                 $("#div4").hide();
-                $("#div5").hide()
+                $("#div5").hide();
+                $("#div7").hide()
             });
+            $("#div7").hide();
+            $("#i7").click(function () {
+                $("#div7").show();
+                $("#div1").hide();
+                $("#div2").hide();
+                $("#div3").hide();
+                $("#div4").hide();
+                $("#div5").hide();
+                $("#div6").hide()
+            });
+            <c:forEach var="re" items="${sessionScope.recruits}">
+                $("#delete${re.r_id}").click(function () {
+                    var v = confirm("确定要删除吗");
+                    if(v == true){
+                        $("#delete${re.r_id}").attr("type","submit");
+                    }
+                });
+            </c:forEach>
+            <c:forEach var="co" items="${sessionScope.companies}">
+                $("#d${co.c_id}").click(function () {
+                    var v = confirm("确定要删除吗");
+                    if(v == true){
+                        $("#d${co.c_id}").attr("type","submit");
+                    }
+                });
+            </c:forEach>
             <c:forEach var="offer" items="${offers}">
                 $("#d${offer.o_id}").hide();
                 $("#show${offer.o_id}").click(function () {
