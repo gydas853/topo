@@ -2,16 +2,13 @@ package com.daniel.controller;
 
 import com.daniel.model.Company;
 import com.daniel.model.Department;
-import com.daniel.model.Position;
 import com.daniel.model.Recruit;
 import com.daniel.service.CompanyService;
 import com.daniel.service.DepartmentService;
-import com.daniel.service.PositionService;
 import com.daniel.service.RecruitService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
@@ -91,7 +88,7 @@ public class MyController {
     }
 
     /*使管理员前往修改公司部门信息界面*/
-    @RequestMapping(value = "/forChangeDepartment")
+    @RequestMapping(value = "/forChangeDepartment",method = RequestMethod.POST)
     public String forChangeDepartment(HttpSession session,Department department) throws Exception{
 
         Department department1 = departmentService.getDepartmentByD_id(department);

@@ -5,12 +5,9 @@ import com.daniel.service.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -72,7 +69,7 @@ public class ManagerController {
         }
     }
 
-    /*管理员发布招聘信息*//*需要优化*/
+    /*管理员发布招聘信息*/
     @RequestMapping(value = "/addRecruit",method = RequestMethod.POST)
     public String addRecruit(HttpSession session,Recruit recruit) throws Exception{
 
@@ -109,7 +106,7 @@ public class ManagerController {
     }
 
     /*管理员增加一个公司*/
-    @RequestMapping(value = "/addCompany")
+    @RequestMapping(value = "/addCompany",method = RequestMethod.POST)
     public String addCompany(HttpSession session,Company company) throws Exception{
 
         companyService.addCompany(company);
@@ -121,7 +118,7 @@ public class ManagerController {
     }
 
     /*管理员更新一个公司信息*/
-    @RequestMapping(value = "/changeCompany")
+    @RequestMapping(value = "/changeCompany",method = RequestMethod.POST)
     public String changeCompany(HttpSession session,Company company) throws Exception{
 
         companyService.updateCompany(company);
@@ -133,13 +130,49 @@ public class ManagerController {
     }
 
     /*管理员删除一个公司信息*/
-    @RequestMapping(value = "/deleteCompany")
+    @RequestMapping(value = "/deleteCompany",method = RequestMethod.POST)
     public String deleteCompany(HttpSession session,Company company) throws Exception{
 
         companyService.deleteCompany(company);
 
         List<Company> companies = companyService.listAll();
         session.setAttribute("companies",companies);
+
+        return "managerMain";
+    }
+
+    /*管理员增加一个部门信息*/
+    @RequestMapping(value = "/addDepartment",method = RequestMethod.POST)
+    public String addDepartment(HttpSession session,Department department) throws Exception{
+
+        departmentService.addDepartment(department);
+
+        List<Department> departments = departmentService.listAll();
+        session.setAttribute("departments",departments);
+
+        return "managerMain";
+    }
+
+    /*管理员更新一个部门信息*/
+    @RequestMapping(value = "/changeDepartment",method = RequestMethod.POST)
+    public String changeDepartment(HttpSession session,Department department) throws Exception{
+
+        departmentService.updateDepartment(department);
+
+        List<Department> departments = departmentService.listAll();
+        session.setAttribute("departments",departments);
+
+        return "managerMain";
+    }
+
+    /*管理员删除一个部门信息*/
+    @RequestMapping(value = "/deleteDepartment",method = RequestMethod.POST)
+    public String deleteDepartment(HttpSession session,Department department) throws Exception{
+
+        departmentService.deleteDepartment(department);
+
+        List<Department> departments = departmentService.listAll();
+        session.setAttribute("departments",departments);
 
         return "managerMain";
     }
