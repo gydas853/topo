@@ -189,11 +189,11 @@
                             <td>
                                 <form action="forChangeDepartment" method="post" style="float: left">
                                     <input type="hidden" name="d_id" value="${department.d_id}">
-                                    <input type="submit" value="修改信息">
+                                    <input type="submit" value="修改部门信息">
                                 </form>
                                 <form action="deleteDepartment" method="post" style="float: left">
                                     <input type="hidden" name="d_id" value="${department.d_id}">
-                                    <input id="de${department.d_id}" type="button" value="删除信息">
+                                    <input id="de${department.d_id}" type="button" value="删除部门信息">
                                 </form>
                             </td>
                         </tr>
@@ -207,7 +207,7 @@
         <input id="i8" type="button" value="添加一个部门信息">
     </div>
 
-    <%--管理员增加一个部门信息--%>
+    <%--管理员增加一个部门信息--%><%--写完，暂未发现bug--%>
     <div style="display: none;" id="div8">
         <form action="addDepartment" method="post">
             <table>
@@ -220,20 +220,50 @@
         </form>
     </div>
 
-    <%--管理职位信息--%><%--尚未完善--%>
+    <%--管理职位信息--%><%--写完--%>
     <div style="display: none;" id="div5">
         <c:choose>
             <c:when test="${!empty sessionScope.positions}">
-                <table>
+                <table border="1" cellpadding="10" cellspacing="0" style="text-align: center">
                     <tr>
-                        <td></td>
+                        <td>职位名称</td>
+                        <td>操作</td>
                     </tr>
+                    <c:forEach var="position" items="${sessionScope.positions}">
+                        <tr>
+                            <td>${position.p_name}</td>
+                            <td>
+                                <form action="forChangePosition" method="post" style="float: left">
+                                    <input type="hidden" name="p_id" value="${position.p_id}">
+                                    <input type="submit" value="修改职位信息">
+                                </form>
+                                <form action="deletePosition" method="post" style="float: left">
+                                    <input type="hidden" name="p_id" value="${position.p_id}">
+                                    <input id="del${position.p_id}" type="button" value="删除职位信息">
+                                </form>
+                            </td>
+                        </tr>
+                    </c:forEach>
                 </table>
             </c:when>
             <c:otherwise>
                 SORRY，暂无职位信息
             </c:otherwise>
         </c:choose>
+        <input id="i9" type="button" value="添加一个职位信息">
+    </div>
+
+    <%--管理员增加一个职位信息--%><%--写完，暂未发现bug--%>
+    <div style="display: none;" id="div9">
+        <form action="addPosition" method="post">
+            <table>
+                <tr>
+                    <td>职位名称：</td>
+                    <td><input type="text" name="p_name"></td>
+                </tr>
+            </table>
+            <input type="submit" value="添加职位">
+        </form>
     </div>
 
     <%--查看应聘信息--%>
@@ -329,7 +359,8 @@
                 $("#div5").hide();
                 $("#div6").hide();
                 $("#div7").hide();
-                $("#div8").hide()
+                $("#div8").hide();
+                $("#div9").hide()
             });
             $("#div2").hide();
             $("#i2").click(function () {
@@ -340,7 +371,8 @@
                 $("#div5").hide();
                 $("#div6").hide();
                 $("#div7").hide();
-                $("#div8").hide()
+                $("#div8").hide();
+                $("#div9").hide()
             });
             $("#div3").hide();
             $("#i3").click(function () {
@@ -351,7 +383,8 @@
                 $("#div5").hide();
                 $("#div6").hide();
                 $("#div7").hide();
-                $("#div8").hide()
+                $("#div8").hide();
+                $("#div9").hide()
             });
             $("#div4").hide();
             $("#i4").click(function () {
@@ -362,7 +395,20 @@
                 $("#div5").hide();
                 $("#div6").hide();
                 $("#div7").hide();
-                $("#div8").hide()
+                $("#div8").hide();
+                $("#div9").hide()
+            });
+            $("#div5").hide();
+            $("#i5").click(function () {
+                $("#div5").show();
+                $("#div1").hide();
+                $("#div2").hide();
+                $("#div3").hide();
+                $("#div4").hide();
+                $("#div6").hide();
+                $("#div7").hide();
+                $("#div8").hide();
+                $("#div9").hide()
             });
             $("#div6").hide();
             $("#i6").click(function () {
@@ -373,7 +419,8 @@
                 $("#div4").hide();
                 $("#div5").hide();
                 $("#div7").hide();
-                $("#div8").hide()
+                $("#div8").hide();
+                $("#div9").hide()
             });
             $("#div7").hide();
             $("#i7").click(function () {
@@ -384,7 +431,8 @@
                 $("#div4").hide();
                 $("#div5").hide();
                 $("#div6").hide();
-                $("#div8").hide()
+                $("#div8").hide();
+                $("#div9").hide()
             });
             $("#div8").hide();
             $("#i8").click(function () {
@@ -395,7 +443,20 @@
                 $("#div4").hide();
                 $("#div5").hide();
                 $("#div6").hide();
-                $("#div7").hide()
+                $("#div7").hide();
+                $("#div9").hide()
+            });
+            $("#div9").hide();
+            $("#i9").click(function () {
+                $("#div9").show();
+                $("#div1").hide();
+                $("#div2").hide();
+                $("#div3").hide();
+                $("#div4").hide();
+                $("#div5").hide();
+                $("#div6").hide();
+                $("#div7").hide();
+                $("#div8").hide()
             });
             <c:forEach var="re" items="${sessionScope.recruits}">
                 $("#delete${re.r_id}").click(function () {
@@ -420,6 +481,14 @@
                         $("#de${de.d_id}").attr("type","submit");
                     }
                 });
+            </c:forEach>
+            <c:forEach var="po" items="${sessionScope.positions}">
+            $("#del${po.p_id}").click(function () {
+                var v = confirm("确定要删除吗");
+                if(v == true){
+                    $("#del${po.p_id}").attr("type","submit");
+                }
+            });
             </c:forEach>
             <%--<c:forEach var="offer" items="${offers}">
                 $("#d${offer.o_id}").hide();

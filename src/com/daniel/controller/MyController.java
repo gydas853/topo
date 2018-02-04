@@ -2,9 +2,11 @@ package com.daniel.controller;
 
 import com.daniel.model.Company;
 import com.daniel.model.Department;
+import com.daniel.model.Position;
 import com.daniel.model.Recruit;
 import com.daniel.service.CompanyService;
 import com.daniel.service.DepartmentService;
+import com.daniel.service.PositionService;
 import com.daniel.service.RecruitService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,6 +31,9 @@ public class MyController {
 
     @Resource
     private DepartmentService departmentService;
+
+    @Resource
+    private PositionService positionService;
 
     /*跳转到系统界面*/
     @RequestMapping(value = "/forSystem")
@@ -78,7 +83,7 @@ public class MyController {
     }
 
     /*使管理员前往修改公司信息页面*/
-    @RequestMapping(value = "/forChangeCompany")
+    @RequestMapping(value = "/forChangeCompany",method = RequestMethod.POST)
     public String forChangeCompany(HttpSession session,Company company) throws Exception{
 
         Company company1 = companyService.getCompanyByC_id(company);
@@ -87,7 +92,7 @@ public class MyController {
         return "changeCompany";
     }
 
-    /*使管理员前往修改公司部门信息界面*/
+    /*使管理员前往修改部门信息界面*/
     @RequestMapping(value = "/forChangeDepartment",method = RequestMethod.POST)
     public String forChangeDepartment(HttpSession session,Department department) throws Exception{
 
@@ -95,5 +100,15 @@ public class MyController {
         session.setAttribute("department",department1);
 
         return "changeDepartment";
+    }
+
+    /*使管理员前往修改职位信息界面*/
+    @RequestMapping(value = "/forChangePosition",method = RequestMethod.POST)
+    public String forChangePosition(HttpSession session, Position position) throws Exception{
+
+        Position position1 = positionService.getPositionByP_Id(position);
+        session.setAttribute("position",position1);
+
+        return "changePosition";
     }
 }

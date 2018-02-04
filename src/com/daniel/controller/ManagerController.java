@@ -176,4 +176,39 @@ public class ManagerController {
 
         return "managerMain";
     }
+
+    /*管理员增加一个职位信息*/
+    @RequestMapping(value = "/addPosition")
+    public String addPosition(HttpSession session,Position position) throws Exception{
+
+        positionService.addPosition(position);
+
+        List<Position> positions = positionService.listAll();
+        session.setAttribute("positions",positions);
+
+        return "managerMain";
+    }
+    /*管理员更新一个职位信息*/
+    @RequestMapping(value = "/changePosition",method = RequestMethod.POST)
+    public String changePosition(HttpSession session,Position position) throws Exception{
+
+        positionService.updatePosition(position);
+
+        List<Position> positions = positionService.listAll();
+        session.setAttribute("positions",positions);
+
+        return "managerMain";
+    }
+
+    /*管理员删除一个职位信息*/
+    @RequestMapping(value = "/deletePosition",method = RequestMethod.POST)
+    public String deletePosition(HttpSession session,Position position) throws Exception{
+
+        positionService.deletePosition(position);
+
+        List<Position> positions = positionService.listAll();
+        session.setAttribute("positions",positions);
+
+        return "managerMain";
+    }
 }
