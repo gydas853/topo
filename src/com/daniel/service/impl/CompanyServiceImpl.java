@@ -18,27 +18,12 @@ public class CompanyServiceImpl implements CompanyService{
     private CompanyMapper companyMapper;
 
     @Override
-    public boolean addCompany(Company company) {
-        return companyMapper.addCompany(company);
-    }
-
-    @Override
     public boolean updateCompany(Company company) {
         return companyMapper.updateCompany(company);
     }
 
     @Override
-    public boolean deleteCompany(Company company) {
-        return companyMapper.deleteCompany(company);
-    }
-
-    @Override
-    public List<Company> listAll() {
-        return companyMapper.listAll();
-    }
-
-    @Override
-    public Company getCompanyByC_id(Company company) {
-        return companyMapper.getCompanyByC_id(company);
+    public Company getCompany() {
+        return companyMapper.getCompany();
     }
 }

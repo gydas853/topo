@@ -18,7 +18,7 @@
     <script src="js/jquery-3.1.0.js"></script>
 </head>
 <body>
-<p>欢迎来到招聘信息网</p>
+<p>公司官网</p>
     <div>
         <table>
             <tr>
@@ -44,13 +44,13 @@
                 <tr>
                     <td colspan="2">
                         <input type="submit" value="登录">
-                        <input id="i3" type="button" value="取消">
+                        <input id="i4" type="button" value="取消">
                     </td>
                 </tr>
             </table>
         </form>
     </div>
-    <%--注册成为会员--%><%--未发现问题--%>
+    <%--注册成为会员--%><%--如果已有他人注册用户名重复暂未解决此外难题--%>
     <div style="display: none;" id="div2">
         <form action="register" method="post">
             <table>
@@ -69,14 +69,14 @@
                 <tr>
                     <td rowspan="2">
                         <input type="submit" value="注册">
-                        <input id="i4" type="button" value="取消">
+                        <input id="i5" type="button" value="取消">
                     </td>
                 </tr>
             </table>
         </form>
     </div>
     <%--显示session里存的所有招聘信息--%><%--目前已实现功能--%>
-    <div style="display: none;" id="div3">
+    <div style="display: none;" id="div4">
         <c:choose>
             <c:when test="${!empty sessionScope.recruits}">
                 <table border="1" cellpadding="10" cellspacing="0">
@@ -115,9 +115,9 @@
         $("#i1").click(function () {
             $("#div1").show();
             $("#div2").hide();
-            $("#div3").hide()
+            $("#div4").hide()
         });
-        $("#i3").click(function () {
+        $("#i4").click(function () {
             $("#div1").hide();
         });
 
@@ -125,14 +125,14 @@
         $("#i2").click(function () {
             $("#div2").show();
             $("#div1").hide();
-            $("#div3").hide()
+            $("#div4").hide()
         });
-        $("#i4").click(function () {
+        $("#i5").click(function () {
             $("#div2").hide();
         });
-        $("#div3").hide();
+        $("#div4").hide();
         $("#in1").click(function () {
-            $("#div3").show();
+            $("#div4").show();
             $("#div1").hide();
             $("#div2").hide()
         })

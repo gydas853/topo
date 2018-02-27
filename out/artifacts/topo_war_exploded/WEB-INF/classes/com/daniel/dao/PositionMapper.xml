@@ -6,22 +6,31 @@
 <mapper namespace="com.daniel.dao.PositionMapper">
 
     <insert id="addPosition">
-        insert into position (p_name) values (#{p_name});
+        insert into position (p_name, p_number, p_createTime,p_d_id) values (#{p_name},#{p_number},#{p_createTime},#{p_d_id});
     </insert>
 
     <update id="updatePosition">
-        update position set p_name = #{p_name} where p_id = #{p_id};
+        update position set p_name = #{p_name},p_number = #{p_number} where p_id = #{p_id} and p_d_id = #{p_d_id};
     </update>
 
     <delete id="deletePosition">
-        delete from position where p_id = #{p_id};
+        delete from position where p_id = #{p_id} and p_d_id = #{p_d_id};
     </delete>
+
+    <select id="listAllByP_d_id" resultType="com.daniel.model.Position">
+        select * from position where p_d_id = #{p_d_id};
+    </select>
+
+    <select id="getPositionByP_Id" resultType="com.daniel.model.Position">
+        select * from position where p_id = #{p_id} and p_d_id = #{p_d_id};
+    </select>
+
+    <select id="getPositionByP_name" resultType="com.daniel.model.Position">
+        select * from position where p_name = #{p_name} and p_d_id = #{p_d_id};
+    </select>
 
     <select id="listAll" resultType="com.daniel.model.Position">
         select * from position;
     </select>
 
-    <select id="getPositionByP_Id" resultType="com.daniel.model.Position">
-        select * from position where p_id = #{p_id};
-    </select>
 </mapper>

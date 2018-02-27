@@ -5,27 +5,14 @@
 
 <mapper namespace="com.daniel.dao.CompanyMapper">
 
-    <insert id="addCompany">
-        insert into company (c_name, c_companyScale, c_summary, c_address, c_phone)
-        values (#{c_name},#{c_companyScale},#{c_summary},#{c_address},#{c_phone});
-    </insert>
-
     <update id="updateCompany">
         update company set
         c_name = #{c_name},c_companyScale=#{c_companyScale},c_summary=#{c_summary},c_address=#{c_address},c_phone=#{c_phone}
         where c_id=#{c_id};
     </update>
 
-    <delete id="deleteCompany">
-        delete from company where c_id=#{c_id};
-    </delete>
-
-    <select id="listAll" resultType="com.daniel.model.Company">
+    <select id="getCompany" resultType="com.daniel.model.Company">
         select * from company;
-    </select>
-
-    <select id="getCompanyByC_id" resultType="com.daniel.model.Company">
-        select * from company where c_id = #{c_id};
     </select>
 
 </mapper>

@@ -8,4 +8,5 @@ import com.daniel.model.Guest;
 public interface GuestService {
     boolean addGuest(Guest guest);//增加一个游客
     Guest getGuest(Guest guest);//找到一个游客
+    Guest getGuestById(Guest guest);
 }

@@ -25,4 +25,9 @@ public class GuestServiceImpl implements GuestService{
     public Guest getGuest(Guest guest) {
         return guestMapper.getGuest(guest);
     }
+
+    @Override
+    public Guest getGuestById(Guest guest) {
+        return guestMapper.getGuestById(guest);
+    }
 }

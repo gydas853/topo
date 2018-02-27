@@ -8,7 +8,7 @@
         $(function () {
             $("#dept").change(function () {
                 var d=$(this).val();
-                alert(d);
+                //alert(d);
                 $.ajax({
                     url:"getPositionByDept",
                     data:{"d":d},
@@ -16,7 +16,7 @@
                     success:function (positions) {
                         $("#position").empty();
                         var p=eval(positions);
-                        alert(JSON.stringify(p));
+                        //alert(JSON.stringify(p));
                         var str="";
                         $.each(positions,function (index,value) {
                             str+="<option value="+value.id +">"+value.name +"</option>"
@@ -43,7 +43,17 @@
 <!--获取系统当前时间-->
 <!--Date date=new Date();
 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-String createtime=sdf.format(date);-->
+String createtime=sdf.format(date);
+ 有时候要把String类型的时间转换为Date类型，通过以下的方式，就可以将你刚得到的时间字符串转换为Date类型了。
+SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+java.util.Date time=null;
+try {
+   time= sdf.parse(sdf.format(new Date()));
+} catch (ParseException e) {
+
+   e.printStackTrace();
+}
+-->
 
 </body>
 </html>

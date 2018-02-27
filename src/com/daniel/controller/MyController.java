@@ -1,16 +1,11 @@
 package com.daniel.controller;
 
-import com.daniel.model.Company;
-import com.daniel.model.Department;
-import com.daniel.model.Position;
-import com.daniel.model.Recruit;
-import com.daniel.service.CompanyService;
-import com.daniel.service.DepartmentService;
-import com.daniel.service.PositionService;
-import com.daniel.service.RecruitService;
+import com.daniel.model.*;
+import com.daniel.service.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
@@ -27,13 +22,13 @@ public class MyController {
     private RecruitService recruitService;
 
     @Resource
-    private CompanyService companyService;
-
-    @Resource
     private DepartmentService departmentService;
 
     @Resource
     private PositionService positionService;
+
+    @Resource
+    private OfferService offerService;
 
     /*跳转到系统界面*/
     @RequestMapping(value = "/forSystem")
@@ -57,13 +52,13 @@ public class MyController {
     @RequestMapping(value = "/forManagerLogin")
     public String forLogin() throws Exception{
         /*进入管理员登录界面*/
-        return "managerLogin";
+        return "manager/managerLogin";
     }
 
     /*员工登录*/
     @RequestMapping(value = "/forEmployeeLogin")
     public String forEmployeeLogin() throws Exception{
-        return "employeeLogin";
+        return "employee/employeeLogin";
     }
 
     /*使管理员前往修改招聘信息页面*/
@@ -73,23 +68,20 @@ public class MyController {
         Recruit recruit1 = recruitService.getRecruitByR_id(recruit);
         session.setAttribute("recruit",recruit1);
 
-        return "changeRecruit";
+        return "manager/changeRecruit";
     }
 
     /*返回管理员主界面*/
     @RequestMapping(value = "/forManagerMain")
     public String forManagerMain() throws Exception{
-        return "managerMain";
+        return "manager/managerMain";
     }
 
     /*使管理员前往修改公司信息页面*/
     @RequestMapping(value = "/forChangeCompany",method = RequestMethod.POST)
-    public String forChangeCompany(HttpSession session,Company company) throws Exception{
+    public String forChangeCompany() throws Exception{
 
-        Company company1 = companyService.getCompanyByC_id(company);
-        session.setAttribute("company",company1);
-
-        return "changeCompany";
+        return "manager/changeCompany";
     }
 
     /*使管理员前往修改部门信息界面*/
@@ -99,7 +91,7 @@ public class MyController {
         Department department1 = departmentService.getDepartmentByD_id(department);
         session.setAttribute("department",department1);
 
-        return "changeDepartment";
+        return "manager/changeDepartment";
     }
 
     /*使管理员前往修改职位信息界面*/
@@ -109,6 +101,35 @@ public class MyController {
         Position position1 = positionService.getPositionByP_Id(position);
         session.setAttribute("position",position1);
 
-        return "changePosition";
+        return "manager/changePosition";
+    }
+
+    /*转到面试邀请界面*/
+    @RequestMapping(value = "/forInterview")
+    public ModelAndView forInterview(Offer offer) throws Exception{
+
+        ModelAndView modelAndView = new ModelAndView();
+
+        Offer offer1 = offerService.getOfferById(offer);
+
+        modelAndView.addObject("offer",offer1);
+        modelAndView.setViewName("manager/doInterview");
+        return modelAndView;
+    }
+
+    /*跳转到显示职位信息界面*/
+    @RequestMapping(value = "/showPosition")
+    public String showPosition(HttpSession session,Position position) throws Exception{
+
+        Department department = new Department();
+        department.setD_id(position.getP_d_id());
+        Department department1 = departmentService.getDepartmentByD_id(department);
+
+        List<Position> positions = positionService.listAllByP_d_id(position);
+        session.setAttribute("positions",positions);
+
+        session.setAttribute("department",department1);
+
+        return "manager/position";
     }
 }

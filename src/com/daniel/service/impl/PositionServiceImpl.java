@@ -33,6 +33,11 @@ public class PositionServiceImpl implements PositionService{
     }
 
     @Override
+    public List<Position> listAllByP_d_id(Position position) {
+        return positionMapper.listAllByP_d_id(position);
+    }
+
+    @Override
     public List<Position> listAll() {
         return positionMapper.listAll();
     }
@@ -40,5 +45,10 @@ public class PositionServiceImpl implements PositionService{
     @Override
     public Position getPositionByP_Id(Position position) {
         return positionMapper.getPositionByP_Id(position);
+    }
+
+    @Override
+    public Position getPositionByP_name(Position position) {
+        return positionMapper.getPositionByP_name(position);
     }
 }

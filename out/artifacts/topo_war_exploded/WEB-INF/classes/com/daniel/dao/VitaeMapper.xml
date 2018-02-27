@@ -7,13 +7,13 @@
 
     <insert id="addVitae">
         insert into vitae
-        (v_name, v_sex, v_birth, v_ethnicity, v_nativePlace, v_qualification, v_tel, v_email, v_specialty, v_serviceYear, v_willSpot, v_adsumDate, v_promisingIndustry, v_g_id)
-        values (#{v_name},#{v_sex},#{v_birth},#{v_ethnicity},#{v_nativePlace},#{v_qualification},#{v_tel},#{v_email},#{v_specialty},#{v_serviceYear},#{v_willSpot},#{v_adsumDate},#{v_promisingIndustry},#{v_g_id});
+        (v_name, v_sex,v_age, v_birth, v_ethnicity, v_nativePlace, v_qualification, v_tel, v_email, v_specialty, v_serviceYear, v_willSpot, v_adsumDate, v_promisingIndustry, v_g_id)
+        values (#{v_name},#{v_sex},#{v_age},#{v_birth},#{v_ethnicity},#{v_nativePlace},#{v_qualification},#{v_tel},#{v_email},#{v_specialty},#{v_serviceYear},#{v_willSpot},#{v_adsumDate},#{v_promisingIndustry},#{v_g_id});
     </insert>
 
     <update id="updateVitae">
         update vitae set
-        v_name = #{v_name},v_sex = #{v_sex},v_birth = #{v_birth},v_ethnicity = #{v_ethnicity},v_nativePlace = #{v_nativePlace},v_qualification = #{v_qualification},v_tel = #{v_tel},v_email = #{v_email},v_specialty = #{v_specialty},v_serviceYear = #{v_serviceYear},v_willSpot = #{v_willSpot},v_adsumDate = #{v_adsumDate},v_promisingIndustry = #{v_promisingIndustry}
+        v_name = #{v_name},v_sex = #{v_sex},v_age = #{v_age},v_birth = #{v_birth},v_ethnicity = #{v_ethnicity},v_nativePlace = #{v_nativePlace},v_qualification = #{v_qualification},v_tel = #{v_tel},v_email = #{v_email},v_specialty = #{v_specialty},v_serviceYear = #{v_serviceYear},v_willSpot = #{v_willSpot},v_adsumDate = #{v_adsumDate},v_promisingIndustry = #{v_promisingIndustry}
         where v_id = #{v_id};
     </update>
 

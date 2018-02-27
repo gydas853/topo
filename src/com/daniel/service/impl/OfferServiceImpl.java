@@ -33,17 +33,17 @@ public class OfferServiceImpl implements OfferService{
     }
 
     @Override
+    public Offer getOneByR_idAndG_id(Offer offer) {
+        return offerMapper.getOneByR_idAndG_id(offer);
+    }
+
+    @Override
     public Offer getOfferById(Offer offer) {
         return offerMapper.getOfferById(offer);
     }
 
     @Override
-    public Offer getOfferByR_V_id(Offer offer) {
-        return offerMapper.getOfferByR_V_id(offer);
-    }
-
-    @Override
-    public List<Offer> listAll() {
-        return offerMapper.listAll();
+    public List<Offer> listAllState_0() {
+        return offerMapper.listAllState_0();
     }
 }

@@ -24,10 +24,15 @@
         <association property="department" javaType="com.daniel.model.Department">
             <id property="d_id" column="d_id"/>
             <result property="d_name" column="d_name"/>
+            <result property="d_number" column="d_number"/>
+            <result property="d_createTime" column="d_createTime"/>
         </association>
         <association property="position" javaType="com.daniel.model.Position">
             <id property="p_id" column="p_id"/>
             <result property="p_name" column="p_name"/>
+            <result property="p_number" column="p_number"/>
+            <result property="p_createTime" column="p_createTime"/>
+            <result property="p_d_id" column="p_d_id"/>
         </association>
     </resultMap>
 

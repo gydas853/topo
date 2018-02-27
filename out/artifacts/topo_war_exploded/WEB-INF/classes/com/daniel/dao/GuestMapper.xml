@@ -13,4 +13,8 @@
         select * from guest where g_name=#{g_name} and g_pass=#{g_pass};
     </select>
 
+    <select id="getGuestById" resultType="com.daniel.model.Guest">
+        select * from guest where g_id = #{g_id};
+    </select>
+
 </mapper>

@@ -42,4 +42,9 @@ public class DepartmentServiceImpl implements DepartmentService{
         return departmentMapper.getDepartmentByD_id(department);
     }
 
+    @Override
+    public Department getDepartmentByD_name(Department department) {
+        return departmentMapper.getDepartmentByD_name(department);
+    }
+
 }

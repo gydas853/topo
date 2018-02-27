@@ -9,6 +9,7 @@ public class Vitae implements Serializable{
     private int v_id;
     private String v_name;
     private String v_sex;
+    private int v_age;
     private String v_birth;
     private String v_ethnicity;
     private String v_nativePlace;
@@ -25,27 +26,11 @@ public class Vitae implements Serializable{
     public Vitae() {
     }
 
-    public Vitae(int v_id, String v_name, String v_sex, String v_birth, String v_ethnicity, String v_nativePlace, String v_qualification, String v_tel, String v_email, String v_specialty, String v_serviceYear, String v_willSpot, String v_adsumDate, String v_promisingIndustry) {
+    public Vitae(int v_id, String v_name, String v_sex, int v_age, String v_birth, String v_ethnicity, String v_nativePlace, String v_qualification, String v_tel, String v_email, String v_specialty, String v_serviceYear, String v_willSpot, String v_adsumDate, String v_promisingIndustry, int v_g_id) {
         this.v_id = v_id;
         this.v_name = v_name;
         this.v_sex = v_sex;
-        this.v_birth = v_birth;
-        this.v_ethnicity = v_ethnicity;
-        this.v_nativePlace = v_nativePlace;
-        this.v_qualification = v_qualification;
-        this.v_tel = v_tel;
-        this.v_email = v_email;
-        this.v_specialty = v_specialty;
-        this.v_serviceYear = v_serviceYear;
-        this.v_willSpot = v_willSpot;
-        this.v_adsumDate = v_adsumDate;
-        this.v_promisingIndustry = v_promisingIndustry;
-    }
-
-    public Vitae(int v_id, String v_name, String v_sex, String v_birth, String v_ethnicity, String v_nativePlace, String v_qualification, String v_tel, String v_email, String v_specialty, String v_serviceYear, String v_willSpot, String v_adsumDate, String v_promisingIndustry, int v_g_id) {
-        this.v_id = v_id;
-        this.v_name = v_name;
-        this.v_sex = v_sex;
+        this.v_age = v_age;
         this.v_birth = v_birth;
         this.v_ethnicity = v_ethnicity;
         this.v_nativePlace = v_nativePlace;
@@ -82,6 +67,14 @@ public class Vitae implements Serializable{
 
     public void setV_sex(String v_sex) {
         this.v_sex = v_sex;
+    }
+
+    public int getV_age() {
+        return v_age;
+    }
+
+    public void setV_age(int v_age) {
+        this.v_age = v_age;
     }
 
     public String getV_birth() {
@@ -186,6 +179,7 @@ public class Vitae implements Serializable{
                 "v_id=" + v_id +
                 ", v_name='" + v_name + '\'' +
                 ", v_sex='" + v_sex + '\'' +
+                ", v_age=" + v_age +
                 ", v_birth='" + v_birth + '\'' +
                 ", v_ethnicity='" + v_ethnicity + '\'' +
                 ", v_nativePlace='" + v_nativePlace + '\'' +

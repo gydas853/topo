@@ -22,13 +22,13 @@
                 <tr>
                     <td>用户名：</td>
                     <td>
-                        <input type="text" name="name" required="" placeholder="username">
+                        <input type="text" name="e_name" required="" placeholder="username">
                     </td>
                 </tr>
                 <tr>
                     <td>密码：</td>
                     <td>
-                        <input type="password" name="pass" required="" placeholder="password">
+                        <input type="password" name="e_pass" required="" placeholder="password">
                     </td>
                 </tr>
                 <tr>

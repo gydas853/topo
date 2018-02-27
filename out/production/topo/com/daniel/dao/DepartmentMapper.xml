@@ -6,22 +6,27 @@
 <mapper namespace="com.daniel.dao.DepartmentMapper">
 
     <insert id="addDepartment">
-        insert into department (d_name) values (#{d_name});
+        insert into department (d_name, d_number, d_createTime) values (#{d_name},#{d_number},#{d_createTime});
     </insert>
 
     <update id="updateDepartment">
-        update department set d_name = #{d_name} where d_id = #{d_id};
+        update department set d_name = #{d_name},d_number = #{d_number} where d_id = #{d_id};
     </update>
 
     <delete id="deleteDepartment">
         delete from department where d_id = #{d_id};
     </delete>
+
     <select id="listAll" resultType="com.daniel.model.Department">
         select * from department;
     </select>
 
     <select id="getDepartmentByD_id" resultType="com.daniel.model.Department">
         select * from department where d_id = #{d_id};
+    </select>
+
+    <select id="getDepartmentByD_name" resultType="com.daniel.model.Department">
+        select * from department where d_name = #{d_name};
     </select>
 
 </mapper>

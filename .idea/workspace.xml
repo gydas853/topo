@@ -1,12 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eca08062-f16f-45e0-94dc-cd1f7b12a4ae" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/changePosition.jsp" />
+    <list default="true" id="eca08062-f16f-45e0-94dc-cd1f7b12a4ae" name="Default" comment="新年快乐">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/daniel/dao/EmployeeMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/daniel/dao/EmployeeMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/daniel/dao/InterviewMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/daniel/dao/InterviewMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/daniel/model/Employee.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/daniel/model/Interview.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/daniel/service/EmployeeService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/daniel/service/InterviewService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/daniel/service/impl/EmployeeServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/daniel/service/impl/InterviewServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/employee/employeeMain.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/manager/doInterview.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/manager/position.jsp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/employeeMain.jsp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/controller/EmployeeController.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/controller/EmployeeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/controller/GuestController.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/controller/GuestController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/controller/ManagerController.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/controller/ManagerController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/controller/MyController.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/controller/MyController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/CompanyMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/CompanyMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/DepartmentMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/DepartmentMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/GuestMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/GuestMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/PositionMapper.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/PositionMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/model/Department.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/model/Department.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/model/Position.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/model/Position.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/model/Vitae.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/model/Vitae.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/service/CompanyService.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/service/CompanyService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/service/DepartmentService.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/service/DepartmentService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/service/GuestService.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/service/GuestService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/service/PositionService.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/service/PositionService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/service/impl/CompanyServiceImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/service/impl/CompanyServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/service/impl/DepartmentServiceImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/service/impl/DepartmentServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/service/impl/GuestServiceImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/service/impl/GuestServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/service/impl/PositionServiceImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/service/impl/PositionServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/controller/EmployeeController.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/controller/EmployeeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/controller/GuestController.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/controller/GuestController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/controller/ManagerController.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/controller/ManagerController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/controller/MyController.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/controller/MyController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/CompanyMapper.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/CompanyMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/DepartmentMapper.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/DepartmentMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/GuestMapper.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/GuestMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/PositionMapper.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/PositionMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/model/Department.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/model/Department.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/model/Position.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/model/Position.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/model/Vitae.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/model/Vitae.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/service/CompanyService.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/service/CompanyService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/service/DepartmentService.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/service/DepartmentService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/service/GuestService.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/service/GuestService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/service/PositionService.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/service/PositionService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/service/impl/CompanyServiceImpl.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/service/impl/CompanyServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/service/impl/DepartmentServiceImpl.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/service/impl/DepartmentServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/service/impl/GuestServiceImpl.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/service/impl/GuestServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/service/impl/PositionServiceImpl.class" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/service/impl/PositionServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/2074382c-9db0-4dc0-b67f-25880c78ef7b.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/2074382c-9db0-4dc0-b67f-25880c78ef7b.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/CompanyMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/CompanyMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/DepartmentMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/DepartmentMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/GuestMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/GuestMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/PositionMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/PositionMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/RecruitMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/RecruitMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/VitaeMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/classes/com/daniel/dao/VitaeMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/pages/employeeLogin.jsp" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/pages/employeeLogin.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/pages/employeeMain.jsp" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/pages/employeeMain.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/pages/guestMain.jsp" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/pages/guestMain.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/pages/main.jsp" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/pages/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/pages/managerMain.jsp" afterPath="$PROJECT_DIR$/out/artifacts/topo_war_exploded/WEB-INF/pages/managerMain.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/CompanyMapper.xml" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/CompanyMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/DepartmentMapper.xml" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/DepartmentMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/GuestMapper.xml" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/GuestMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/PositionMapper.xml" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/PositionMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/RecruitMapper.xml" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/RecruitMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/VitaeMapper.xml" afterPath="$PROJECT_DIR$/out/production/topo/com/daniel/dao/VitaeMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/controller/EmployeeController.java" afterPath="$PROJECT_DIR$/src/com/daniel/controller/EmployeeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/controller/GuestController.java" afterPath="$PROJECT_DIR$/src/com/daniel/controller/GuestController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/controller/ManagerController.java" afterPath="$PROJECT_DIR$/src/com/daniel/controller/ManagerController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/controller/MyController.java" afterPath="$PROJECT_DIR$/src/com/daniel/controller/MyController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/managerMain.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/managerMain.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/CompanyMapper.java" afterPath="$PROJECT_DIR$/src/com/daniel/dao/CompanyMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/CompanyMapper.xml" afterPath="$PROJECT_DIR$/src/com/daniel/dao/CompanyMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/DepartmentMapper.java" afterPath="$PROJECT_DIR$/src/com/daniel/dao/DepartmentMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/DepartmentMapper.xml" afterPath="$PROJECT_DIR$/src/com/daniel/dao/DepartmentMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/GuestMapper.java" afterPath="$PROJECT_DIR$/src/com/daniel/dao/GuestMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/GuestMapper.xml" afterPath="$PROJECT_DIR$/src/com/daniel/dao/GuestMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/OfferMapper.java" afterPath="$PROJECT_DIR$/src/com/daniel/dao/OfferMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/OfferMapper.xml" afterPath="$PROJECT_DIR$/src/com/daniel/dao/OfferMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/PositionMapper.java" afterPath="$PROJECT_DIR$/src/com/daniel/dao/PositionMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/PositionMapper.xml" afterPath="$PROJECT_DIR$/src/com/daniel/dao/PositionMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/RecruitMapper.xml" afterPath="$PROJECT_DIR$/src/com/daniel/dao/RecruitMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/dao/VitaeMapper.xml" afterPath="$PROJECT_DIR$/src/com/daniel/dao/VitaeMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/model/Department.java" afterPath="$PROJECT_DIR$/src/com/daniel/model/Department.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/model/Offer.java" afterPath="$PROJECT_DIR$/src/com/daniel/model/Offer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/model/Position.java" afterPath="$PROJECT_DIR$/src/com/daniel/model/Position.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/model/Vitae.java" afterPath="$PROJECT_DIR$/src/com/daniel/model/Vitae.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/service/CompanyService.java" afterPath="$PROJECT_DIR$/src/com/daniel/service/CompanyService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/service/DepartmentService.java" afterPath="$PROJECT_DIR$/src/com/daniel/service/DepartmentService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/service/GuestService.java" afterPath="$PROJECT_DIR$/src/com/daniel/service/GuestService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/service/OfferService.java" afterPath="$PROJECT_DIR$/src/com/daniel/service/OfferService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/service/PositionService.java" afterPath="$PROJECT_DIR$/src/com/daniel/service/PositionService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/service/impl/CompanyServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/daniel/service/impl/CompanyServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/service/impl/DepartmentServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/daniel/service/impl/DepartmentServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/service/impl/GuestServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/daniel/service/impl/GuestServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/service/impl/OfferServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/daniel/service/impl/OfferServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/daniel/service/impl/PositionServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/daniel/service/impl/PositionServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/main.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/test.html" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/test.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/changeCompany.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/manager/changeCompany.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/changeDepartment.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/manager/changeDepartment.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/changePosition.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/manager/changePosition.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/changeRecruit.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/manager/changeRecruit.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/employeeLogin.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/employee/employeeLogin.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/guestMain.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/guest/guestMain.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/managerLogin.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/manager/managerLogin.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/managerMain.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/manager/managerMain.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,24 +155,6 @@
         <option name="myItemId" value="topo" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="vitae" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="topo@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="topo" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
     </PATH>
     <PATH>
       <PATH_ELEMENT>
@@ -80,7 +170,7 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="department" />
+        <option name="myItemId" value="position" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -98,7 +188,7 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="company" />
+        <option name="myItemId" value="interview" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -107,48 +197,36 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file leaf-file-name="managerMain.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/managerMain.jsp">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/manager/managerMain.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="226" column="93" lean-forward="false" selection-start-line="226" selection-start-column="93" selection-end-line="226" selection-end-column="93" />
+            <state relative-caret-position="221">
+              <caret line="212" column="41" lean-forward="false" selection-start-line="212" selection-start-column="41" selection-end-line="212" selection-end-column="41" />
               <folding>
+                <element signature="n#table#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#table#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#table#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#0;n#td#1;n#tr#1;n#table#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#1;n#td#1;n#tr#1;n#table#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#6;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#7;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#8;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#9;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#c:forEach#2;n#jsp:root#0;n#!!top" expanded="false" />
+                <element signature="n#c:forEach#3;n#jsp:root#0;n#!!top" expanded="false" />
+                <element signature="n#c:forEach#4;n#jsp:root#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ManagerController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/daniel/controller/ManagerController.java">
+      <file leaf-file-name="main.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/main.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1013">
-              <caret line="192" column="27" lean-forward="true" selection-start-line="192" selection-start-column="27" selection-end-line="192" selection-end-column="27" />
-              <folding>
-                <element signature="method#managerLogin#0;class#ManagerController#0" expanded="false" />
-                <element signature="method#addRecruit#0;class#ManagerController#0" expanded="false" />
-                <element signature="method#changeRecruit#0;class#ManagerController#0" expanded="false" />
-                <element signature="method#deleteRecruit#0;class#ManagerController#0" expanded="false" />
-                <element signature="method#addCompany#0;class#ManagerController#0" expanded="false" />
-                <element signature="method#changeCompany#0;class#ManagerController#0" expanded="false" />
-                <element signature="method#deleteCompany#0;class#ManagerController#0" expanded="false" />
-                <element signature="method#addDepartment#0;class#ManagerController#0" expanded="false" />
-                <element signature="method#changeDepartment#0;class#ManagerController#0" expanded="false" />
-                <element signature="method#deleteDepartment#0;class#ManagerController#0" expanded="false" />
-                <element signature="method#addPosition#0;class#ManagerController#0" expanded="false" />
-                <element signature="method#changePosition#0;class#ManagerController#0" expanded="false" />
-                <element signature="method#deletePosition#0;class#ManagerController#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="569">
+              <caret line="54" column="31" lean-forward="false" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -156,57 +234,170 @@
       <file leaf-file-name="MyController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/daniel/controller/MyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="95" column="28" lean-forward="false" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
+            <state relative-caret-position="-45">
+              <caret line="80" column="28" lean-forward="false" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
               <folding>
                 <element signature="method#forSystem#0;class#MyController#0" expanded="false" />
                 <element signature="method#forMain#0;class#MyController#0" expanded="false" />
                 <element signature="method#forLogin#0;class#MyController#0" expanded="false" />
                 <element signature="method#forEmployeeLogin#0;class#MyController#0" expanded="false" />
                 <element signature="method#forChangeRecruit#0;class#MyController#0" expanded="false" />
+                <element signature="method#forManagerMain#0;class#MyController#0" expanded="false" />
                 <element signature="method#forChangeCompany#0;class#MyController#0" expanded="false" />
                 <element signature="method#forChangeDepartment#0;class#MyController#0" expanded="false" />
                 <element signature="method#forChangePosition#0;class#MyController#0" expanded="false" />
+                <element signature="method#forInterview#0;class#MyController#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="changePosition.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/changePosition.jsp">
+      <file leaf-file-name="changeCompany.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/manager/changeCompany.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+            <state relative-caret-position="180">
+              <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="changeDepartment.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/changeDepartment.jsp">
+      <file leaf-file-name="ManagerController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/daniel/controller/ManagerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="36" selection-end-column="13" />
+            <state relative-caret-position="270">
+              <caret line="126" column="28" lean-forward="false" selection-start-line="126" selection-start-column="28" selection-end-line="126" selection-end-column="28" />
+              <folding>
+                <element signature="method#managerLogin#0;class#ManagerController#0" expanded="false" />
+                <element signature="method#addRecruit#0;class#ManagerController#0" expanded="false" />
+                <element signature="method#getPositionByD_name#0;class#ManagerController#0" expanded="false" />
+                <element signature="method#changeRecruit#0;class#ManagerController#0" expanded="false" />
+                <element signature="method#deleteRecruit#0;class#ManagerController#0" expanded="false" />
+                <element signature="method#changeCompany#0;class#ManagerController#0" expanded="false" />
+                <element signature="method#addDepartment#0;class#ManagerController#0" expanded="false" />
+                <element signature="method#deleteDepartment#0;class#ManagerController#0" expanded="false" />
+                <element signature="method#addPosition#0;class#ManagerController#0" expanded="false" />
+                <element signature="method#changePosition#0;class#ManagerController#0" expanded="false" />
+                <element signature="method#deletePosition#0;class#ManagerController#0" expanded="false" />
+                <element signature="method#sendInterview#0;class#ManagerController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InterviewService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/daniel/service/InterviewService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="15" column="56" lean-forward="false" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="employeeMain.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/employeeMain.jsp">
+      <file leaf-file-name="InterviewServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/daniel/service/impl/InterviewServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-              <folding />
+            <state relative-caret-position="941">
+              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+              <folding>
+                <element signature="method#getInterviewByI_g_id#0;class#InterviewServiceImpl#0" expanded="false" />
+                <element signature="method#getIngerviewByR_idAndG_id#0;class#InterviewServiceImpl#0" expanded="false" />
+                <element signature="method#getInterviewByI_d_id#0;class#InterviewServiceImpl#0" expanded="false" />
+                <element signature="method#getInterviewByI_p_id#0;class#InterviewServiceImpl#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="guestMain.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/guestMain.jsp">
+      <file leaf-file-name="Interview.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/daniel/model/Interview.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="32" column="41" lean-forward="false" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+            <state relative-caret-position="252">
+              <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+              <folding>
+                <element signature="e#1128#1129#0" expanded="true" />
+                <element signature="e#1155#1156#0" expanded="true" />
+                <element signature="e#1192#1193#0" expanded="true" />
+                <element signature="e#1224#1225#0" expanded="true" />
+                <element signature="e#1259#1260#0" expanded="true" />
+                <element signature="e#1290#1291#0" expanded="true" />
+                <element signature="e#1338#1339#0" expanded="true" />
+                <element signature="e#1378#1379#0" expanded="true" />
+                <element signature="e#1413#1414#0" expanded="true" />
+                <element signature="e#1444#1445#0" expanded="true" />
+                <element signature="e#1492#1493#0" expanded="true" />
+                <element signature="e#1532#1533#0" expanded="true" />
+                <element signature="e#1567#1568#0" expanded="true" />
+                <element signature="e#1598#1599#0" expanded="true" />
+                <element signature="e#1646#1647#0" expanded="true" />
+                <element signature="e#1686#1687#0" expanded="true" />
+                <element signature="e#1721#1722#0" expanded="true" />
+                <element signature="e#1752#1753#0" expanded="true" />
+                <element signature="e#1800#1801#0" expanded="true" />
+                <element signature="e#1840#1841#0" expanded="true" />
+                <element signature="e#1875#1876#0" expanded="true" />
+                <element signature="e#1906#1907#0" expanded="true" />
+                <element signature="e#1954#1955#0" expanded="true" />
+                <element signature="e#1994#1995#0" expanded="true" />
+                <element signature="e#2036#2037#0" expanded="true" />
+                <element signature="e#2074#2075#0" expanded="true" />
+                <element signature="e#2136#2137#0" expanded="true" />
+                <element signature="e#2190#2191#0" expanded="true" />
+                <element signature="e#2235#2236#0" expanded="true" />
+                <element signature="e#2276#2277#0" expanded="true" />
+                <element signature="e#2344#2345#0" expanded="true" />
+                <element signature="e#2404#2405#0" expanded="true" />
+                <element signature="e#2434#2435#0" expanded="true" />
+                <element signature="e#2463#2464#0" expanded="true" />
+                <element signature="e#2504#2505#0" expanded="true" />
+                <element signature="e#2540#2541#0" expanded="true" />
+                <element signature="e#2570#2571#0" expanded="true" />
+                <element signature="e#2599#2600#0" expanded="true" />
+                <element signature="e#2640#2641#0" expanded="true" />
+                <element signature="e#2676#2677#0" expanded="true" />
+                <element signature="e#2708#2709#0" expanded="true" />
+                <element signature="e#2739#2740#0" expanded="true" />
+                <element signature="e#2784#2785#0" expanded="true" />
+                <element signature="e#2824#2825#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InterviewMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/InterviewMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="7" column="285" lean-forward="false" selection-start-line="7" selection-start-column="285" selection-end-line="7" selection-end-column="285" />
+              <folding>
+                <element signature="n#update#0;n#mapper#0;n#!!top" expanded="false" />
+                <element signature="n#delete#0;n#mapper#0;n#!!top" expanded="false" />
+                <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
+                <element signature="n#select#1;n#mapper#0;n#!!top" expanded="false" />
+                <element signature="n#select#2;n#mapper#0;n#!!top" expanded="false" />
+                <element signature="n#select#3;n#mapper#0;n#!!top" expanded="false" />
+                <element signature="n#select#4;n#mapper#0;n#!!top" expanded="false" />
+                <marker date="1519720094668" expanded="true" signature="257:535" ph="insert into interview... " />
+                <marker date="1519720094668" expanded="true" signature="594:838" ph="update inter... " />
+                <marker date="1519720094668" expanded="true" signature="594:853" ph="update inter... " />
+                <marker date="1519720094668" expanded="true" signature="912:954" ph="delete from " />
+                <marker date="1519720094668" expanded="true" signature="1055:1099" ph="select * fro... interview" />
+                <marker date="1519720094668" expanded="true" signature="1203:1251" ph="select * fro... interview" />
+                <marker date="1519720094668" expanded="true" signature="1203:1268" ph="select * fro... interview" />
+                <marker date="1519720094668" expanded="true" signature="1377:1448" ph="select * fro... interview" />
+                <marker date="1519720094668" expanded="true" signature="1552:1600" ph="select * fro... interview" />
+                <marker date="1519720094668" expanded="true" signature="1704:1752" ph="select * fro... interview" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Guest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/daniel/model/Guest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -219,28 +410,72 @@
       <list>
         <option value="spring-beans.schema" />
         <option value="mybatis-config" />
-        <option value="Interface" />
-        <option value="Mybatis Mapper" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Mybatis Mapper" />
+        <option value="Interface" />
+        <option value="Class" />
         <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>in6</find>
-      <find>div3</find>
-      <find>i3</find>
-      <find>guest</find>
-      <find>input1</find>
-      <find>i6</find>
-      <find>div6</find>
-      <find>delete</find>
-      <find>d</find>
-      <find>i7</find>
+      <find>changeposito</find>
+      <find>changeposit</find>
+      <find>changeposititon</find>
+      <find>changepositito</find>
+      <find>changepositit</find>
+      <find>changepositi</find>
+      <find>changepositio</find>
+      <find>changeposition</find>
       <find>del</find>
+      <find>di</find>
+      <find>div3</find>
+      <find>div6</find>
+      <find>div5</find>
+      <find>div4</find>
+      <find>div10</find>
+      <find>i8</find>
+      <find>i5</find>
+      <find>i4</find>
+      <find>i3</find>
+      <find>i6</find>
+      <find>i7</find>
+      <find>i9</find>
+      <find>i10</find>
+      <find>i1</find>
+      <find>i</find>
+      <find>div9</find>
+      <find>d</find>
+      <find>div7</find>
+      <find>div</find>
+      <find>div8</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>in9</replace>
+      <replace>in8</replace>
+      <replace>in7</replace>
+      <replace>in6</replace>
+      <replace>in5</replace>
+      <replace>in4</replace>
+      <replace>div9</replace>
+      <replace>div10</replace>
+      <replace>div3</replace>
+      <replace>div8</replace>
+      <replace>div5</replace>
+      <replace>div4</replace>
+      <replace>i10</replace>
+      <replace>i5</replace>
+      <replace>i4</replace>
+      <replace>i3</replace>
+      <replace>div6</replace>
+      <replace>i6</replace>
+      <replace>i</replace>
+      <replace>i7</replace>
+      <replace>i8</replace>
+      <replace>div7</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -250,60 +485,63 @@
       <projects_view />
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/web/WEB-INF/pages/manager/managerMain.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/daniel/dao/PageMapper.xml" />
-        <option value="$PROJECT_DIR$/src/com/daniel/controller/EmployeeController.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/model/Page.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/dao/ManagerMapper.xml" />
-        <option value="$PROJECT_DIR$/src/com/daniel/dao/GuestMapper.xml" />
-        <option value="$PROJECT_DIR$/src/com/daniel/dao/GuestMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/dao/ManagerMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/service/ManagerService.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/service/GuestService.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/pages/changeCompany.jsp" />
         <option value="$PROJECT_DIR$/src/com/daniel/model/Offer.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/dao/OfferMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/dao/OfferMapper.xml" />
         <option value="$PROJECT_DIR$/src/com/daniel/service/OfferService.java" />
         <option value="$PROJECT_DIR$/src/com/daniel/service/impl/OfferServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/model/Position.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/dao/RecruitMapper.java" />
         <option value="$PROJECT_DIR$/src/com/daniel/dao/CompanyMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/dao/DepartmentMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/dao/PositionMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/dao/PositionMapper.xml" />
-        <option value="$PROJECT_DIR$/src/com/daniel/service/RecruitService.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/service/PositionService.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/service/DepartmentService.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/service/CompanyService.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/service/impl/PositionServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/service/impl/DepartmentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/service/impl/CompanyServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/service/impl/RecruitServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/com/daniel/dao/CompanyMapper.xml" />
-        <option value="$PROJECT_DIR$/src/com/daniel/dao/DepartmentMapper.xml" />
-        <option value="$PROJECT_DIR$/src/com/daniel/model/Recruit.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/model/Company.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/model/Department.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/pages/managerLogin.jsp" />
-        <option value="$PROJECT_DIR$/src/com/daniel/dao/RecruitMapper.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/pages/main.jsp" />
-        <option value="$PROJECT_DIR$/src/com/daniel/dao/VitaeMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/dao/VitaeMapper.xml" />
-        <option value="$PROJECT_DIR$/src/com/daniel/service/VitaeService.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/service/impl/VitaeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/daniel/model/Vitae.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/pages/guestMain.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/pages/changeRecruit.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/pages/changeCompany.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/pages/test.html" />
+        <option value="$PROJECT_DIR$/src/com/daniel/service/CompanyService.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/service/impl/CompanyServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/dao/OfferMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/dao/GuestMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/service/GuestService.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/service/impl/GuestServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/dao/EmployeeMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/service/EmployeeService.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/service/impl/EmployeeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/controller/EmployeeController.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/pages/employeeLogin.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/pages/changeDepartment.jsp" />
-        <option value="$PROJECT_DIR$/src/com/daniel/controller/GuestController.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/pages/changePosition.jsp" />
+        <option value="$PROJECT_DIR$/src/com/daniel/model/Vitae.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/dao/VitaeMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/daniel/dao/OfferMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/daniel/dao/GuestMapper.xml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/pages/employeeMain.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/pages/main.jsp" />
+        <option value="$PROJECT_DIR$/src/com/daniel/model/Position.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/dao/RecruitMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/daniel/service/PositionService.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/dao/DepartmentMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/service/impl/DepartmentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/service/DepartmentService.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/model/Department.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/pages/test.html" />
         <option value="$PROJECT_DIR$/src/com/daniel/controller/MyController.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/pages/position.jsp" />
+        <option value="$PROJECT_DIR$/src/com/daniel/service/impl/PositionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/dao/PositionMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/model/Employee.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/dao/EmployeeMapper.xml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/pages/guestMain.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/pages/managerMain.jsp" />
+        <option value="$PROJECT_DIR$/src/com/daniel/controller/GuestController.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/dao/DepartmentMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/daniel/dao/PositionMapper.xml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/pages/changePosition.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/pages/doInterview.jsp" />
+        <option value="$PROJECT_DIR$/src/com/daniel/dao/InterviewMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/service/InterviewService.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/service/impl/InterviewServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/com/daniel/controller/ManagerController.java" />
+        <option value="$PROJECT_DIR$/src/com/daniel/dao/InterviewMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/daniel/model/Interview.java" />
       </list>
     </option>
   </component>
@@ -344,6 +582,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -420,6 +660,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="topo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="topo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -439,6 +705,80 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="daniel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="topo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="topo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="daniel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="topo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="topo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="daniel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="topo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="topo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="daniel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -466,8 +806,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -475,7 +813,7 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/workspace/jingmaoV4" />
+    <property name="last_opened_file_path" value="D:/workspace/amodel/project" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -483,15 +821,18 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\myGitHub\topo\web\js" />
-      <recent name="D:\myGitHub\topo\web" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\myGitHub\topo\web\WEB-INF\pages" />
       <recent name="D:\myGitHub\topo\web\js" />
       <recent name="D:\myGitHub\topo\web\WEB-INF\lib" />
       <recent name="D:\myGitHub\topo\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\myGitHub\topo\web\WEB-INF\pages\manager" />
+      <recent name="D:\myGitHub\topo\web\WEB-INF\pages\guest" />
+      <recent name="D:\myGitHub\topo\web\WEB-INF\pages\employee" />
+      <recent name="D:\myGitHub\topo\web\js" />
+      <recent name="D:\myGitHub\topo\web" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1011,7 +1352,35 @@
       <workItem from="1517579116335" duration="9838000" />
       <workItem from="1517620771491" duration="16148000" />
       <workItem from="1517661912440" duration="8478000" />
-      <workItem from="1517707665667" duration="7611000" />
+      <workItem from="1517707665667" duration="8339000" />
+      <workItem from="1517753505313" duration="1543000" />
+      <workItem from="1517795120159" duration="4724000" />
+      <workItem from="1517843497072" duration="361000" />
+      <workItem from="1517884611742" duration="3661000" />
+      <workItem from="1518062204293" duration="18452000" />
+      <workItem from="1518148627627" duration="17769000" />
+      <workItem from="1518273587362" duration="612000" />
+      <workItem from="1518274617227" duration="1093000" />
+      <workItem from="1518331890578" duration="6219000" />
+      <workItem from="1518406398222" duration="7430000" />
+      <workItem from="1518491840793" duration="10457000" />
+      <workItem from="1518528291361" duration="1794000" />
+      <workItem from="1518532345937" duration="4936000" />
+      <workItem from="1518584880146" duration="2821000" />
+      <workItem from="1518592275075" duration="4629000" />
+      <workItem from="1518841679885" duration="598000" />
+      <workItem from="1518969897997" duration="818000" />
+      <workItem from="1519011085818" duration="3229000" />
+      <workItem from="1519135371029" duration="3641000" />
+      <workItem from="1519218819784" duration="1249000" />
+      <workItem from="1519224220594" duration="3860000" />
+      <workItem from="1519271076104" duration="16851000" />
+      <workItem from="1519368579248" duration="14314000" />
+      <workItem from="1519434582552" duration="415000" />
+      <workItem from="1519435313783" duration="20346000" />
+      <workItem from="1519480998850" duration="597000" />
+      <workItem from="1519607537832" duration="24639000" />
+      <workItem from="1519692831480" duration="26276000" />
     </task>
     <task id="LOCAL-00001" summary="开发环境搭建 基本完成 经过测试暂未发现问题">
       <created>1516896722487</created>
@@ -1139,11 +1508,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517707764574</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="写的很慢 正在写员工">
+      <created>1517734609072</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1517734609072</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="228269000" />
+    <option name="totallyTimeSpent" value="432331000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1155,7 +1531,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1098" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1165,31 +1542,31 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17764579" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17224622" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.73170733" sideWeight="0.49784017" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25431967" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.49784017" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26241902" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1214,11 +1591,12 @@
     <MESSAGE value="正在写管理员" />
     <MESSAGE value="管理员部分写的差不多了 接着写员工" />
     <MESSAGE value="今天写员工" />
-    <option name="LAST_COMMIT_MESSAGE" value="今天写员工" />
+    <MESSAGE value="写的很慢 正在写员工" />
+    <option name="LAST_COMMIT_MESSAGE" value="写的很慢 正在写员工" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="41" />
+      <option name="time" value="65" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1227,218 +1605,625 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/service/PositionService.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/manager/changeRecruit.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="13" column="37" lean-forward="true" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/service/impl/PositionServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="41" column="56" lean-forward="false" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/service/impl/ManagerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/service/impl/DepartmentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="41" column="62" lean-forward="false" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/service/impl/CompanyServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/model/Page.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="13" column="5" lean-forward="false" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/model/Offer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/model/Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-298">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/model/Company.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/employee/employeeLogin.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="252">
+          <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/model/Department.java">
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/model/Vitae.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        <state relative-caret-position="668">
+          <caret line="28" column="301" lean-forward="false" selection-start-line="28" selection-start-column="301" selection-end-line="28" selection-end-column="301" />
+          <folding>
+            <element signature="e#1566#1567#0" expanded="false" />
+            <element signature="e#1593#1594#0" expanded="false" />
+            <element signature="e#1630#1631#0" expanded="false" />
+            <element signature="e#1662#1663#0" expanded="false" />
+            <element signature="e#1695#1696#0" expanded="false" />
+            <element signature="e#1724#1725#0" expanded="false" />
+            <element signature="e#1768#1769#0" expanded="false" />
+            <element signature="e#1804#1805#0" expanded="false" />
+            <element signature="e#1836#1837#0" expanded="false" />
+            <element signature="e#1864#1865#0" expanded="false" />
+            <element signature="e#1906#1907#0" expanded="false" />
+            <element signature="e#1940#1941#0" expanded="false" />
+            <element signature="e#1969#1970#0" expanded="false" />
+            <element signature="e#1997#1998#0" expanded="false" />
+            <element signature="e#2036#2037#0" expanded="false" />
+            <element signature="e#2070#2071#0" expanded="false" />
+            <element signature="e#2104#2105#0" expanded="false" />
+            <element signature="e#2134#2135#0" expanded="false" />
+            <element signature="e#2180#2181#0" expanded="false" />
+            <element signature="e#2218#2219#0" expanded="false" />
+            <element signature="e#2256#2257#0" expanded="false" />
+            <element signature="e#2290#2291#0" expanded="false" />
+            <element signature="e#2344#2345#0" expanded="false" />
+            <element signature="e#2390#2391#0" expanded="false" />
+            <element signature="e#2430#2431#0" expanded="false" />
+            <element signature="e#2466#2467#0" expanded="false" />
+            <element signature="e#2524#2525#0" expanded="false" />
+            <element signature="e#2574#2575#0" expanded="false" />
+            <element signature="e#2616#2617#0" expanded="false" />
+            <element signature="e#2654#2655#0" expanded="false" />
+            <element signature="e#2716#2717#0" expanded="false" />
+            <element signature="e#2770#2771#0" expanded="false" />
+            <element signature="e#2802#2803#0" expanded="false" />
+            <element signature="e#2830#2831#0" expanded="false" />
+            <element signature="e#2872#2873#0" expanded="false" />
+            <element signature="e#2906#2907#0" expanded="false" />
+            <element signature="e#2940#2941#0" expanded="false" />
+            <element signature="e#2970#2971#0" expanded="false" />
+            <element signature="e#3016#3017#0" expanded="false" />
+            <element signature="e#3054#3055#0" expanded="false" />
+            <element signature="e#3092#3093#0" expanded="false" />
+            <element signature="e#3126#3127#0" expanded="false" />
+            <element signature="e#3180#3181#0" expanded="false" />
+            <element signature="e#3226#3227#0" expanded="false" />
+            <element signature="e#3266#3267#0" expanded="false" />
+            <element signature="e#3302#3303#0" expanded="false" />
+            <element signature="e#3360#3361#0" expanded="false" />
+            <element signature="e#3410#3411#0" expanded="false" />
+            <element signature="e#3447#3448#0" expanded="false" />
+            <element signature="e#3480#3481#0" expanded="false" />
+            <element signature="e#3532#3533#0" expanded="false" />
+            <element signature="e#3576#3577#0" expanded="false" />
+            <element signature="e#3614#3615#0" expanded="false" />
+            <element signature="e#3648#3649#0" expanded="false" />
+            <element signature="e#3702#3703#0" expanded="false" />
+            <element signature="e#3748#3749#0" expanded="false" />
+            <element signature="e#3794#3795#0" expanded="false" />
+            <element signature="e#3836#3837#0" expanded="false" />
+            <element signature="e#3906#3907#0" expanded="false" />
+            <element signature="e#3968#3969#0" expanded="false" />
+            <element signature="e#3998#3999#0" expanded="false" />
+            <element signature="e#4027#4028#0" expanded="false" />
+            <element signature="e#4068#4069#0" expanded="false" />
+            <element signature="e#4104#4105#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/GuestMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/OfferMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="n#resultMap#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#delete#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#1;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" expanded="false" />
+            <marker date="1519615893069" expanded="true" signature="1718:1823" ph="insert into offer... " />
+            <marker date="1519615893069" expanded="true" signature="1878:1997" ph="update offer... " />
+            <marker date="1519615893069" expanded="true" signature="2052:2090" ph="delete from " />
+            <marker date="1519615893069" expanded="true" signature="2167:2341" ph="select * fro... offer" />
+            <marker date="1519615893069" expanded="true" signature="2420:2499" ph="select * fro... offer" />
+            <marker date="1519615893069" expanded="true" signature="2420:2591" ph="select * fro... offer" />
+            <marker date="1519615893069" expanded="true" signature="2690:2774" ph="select * fro... offer" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/ManagerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
+            <marker date="1517317820377" expanded="true" signature="290:359" ph="select * fro... manager" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/GuestMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding>
+            <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#1;n#mapper#0;n#!!top" expanded="false" />
+            <marker date="1519615893161" expanded="true" signature="248:310" ph="insert into guest... " />
+            <marker date="1519615893161" expanded="true" signature="398:461" ph="select * fro... guest" />
+            <marker date="1519615893161" expanded="true" signature="553:593" ph="select * fro... guest" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/daniel/model/Position.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/CompanyMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="26" column="71" lean-forward="true" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
+        <state relative-caret-position="494">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding>
-            <marker date="1517416603283" expanded="true" signature="254:411" ph="insert into company... " />
-            <marker date="1517416603283" expanded="true" signature="468:638" ph="update compa... " />
-            <marker date="1517416603283" expanded="true" signature="695:733" ph="delete from " />
-            <marker date="1517416603283" expanded="true" signature="822:843" ph="select * fro... company" />
-            <marker date="1517416603283" expanded="true" signature="941:983" ph="select * fro... company" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/RecruitMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/PositionMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="23" column="73" lean-forward="true" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
-          <folding>
-            <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#update#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#delete#0;n#mapper#0;n#!!top" expanded="false" />
-            <marker date="1517383957138" expanded="true" signature="256:304" ph="insert into position... " />
-            <marker date="1517383957138" expanded="true" signature="362:421" ph="update posit... " />
-            <marker date="1517383957138" expanded="true" signature="479:520" ph="delete from " />
-            <marker date="1517383957138" expanded="true" signature="610:632" ph="select * fro... position" />
-            <marker date="1517383957138" expanded="true" signature="732:775" ph="select * fro... position" />
+            <element signature="e#599#600#0" expanded="false" />
+            <element signature="e#626#627#0" expanded="false" />
+            <element signature="e#663#664#0" expanded="false" />
+            <element signature="e#695#696#0" expanded="false" />
+            <element signature="e#728#729#0" expanded="false" />
+            <element signature="e#757#758#0" expanded="false" />
+            <element signature="e#801#802#0" expanded="false" />
+            <element signature="e#837#838#0" expanded="false" />
+            <element signature="e#869#870#0" expanded="false" />
+            <element signature="e#900#901#0" expanded="false" />
+            <element signature="e#945#946#0" expanded="false" />
+            <element signature="e#985#986#0" expanded="false" />
+            <element signature="e#1024#1025#0" expanded="false" />
+            <element signature="e#1059#1060#0" expanded="false" />
+            <element signature="e#1115#1116#0" expanded="false" />
+            <element signature="e#1163#1164#0" expanded="false" />
+            <element signature="e#1193#1194#0" expanded="false" />
+            <element signature="e#1222#1223#0" expanded="false" />
+            <element signature="e#1263#1264#0" expanded="false" />
+            <element signature="e#1299#1300#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/daniel/model/Recruit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+        <state relative-caret-position="252">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/EmployeeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/RecruitMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="53" column="47" lean-forward="false" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
           <folding>
-            <element signature="e#461#462#0" expanded="false" />
-            <element signature="e#488#489#0" expanded="false" />
-            <element signature="e#525#526#0" expanded="false" />
-            <element signature="e#557#558#0" expanded="false" />
-            <element signature="e#663#664#0" expanded="false" />
-            <element signature="e#699#700#0" expanded="false" />
-            <element signature="e#733#734#0" expanded="false" />
-            <element signature="e#763#764#0" expanded="false" />
-            <element signature="e#809#810#0" expanded="false" />
-            <element signature="e#847#848#0" expanded="false" />
-            <element signature="e#877#878#0" expanded="false" />
-            <element signature="e#906#907#0" expanded="false" />
-            <element signature="e#947#948#0" expanded="false" />
-            <element signature="e#983#984#0" expanded="false" />
-            <element signature="e#1013#1014#0" expanded="false" />
-            <element signature="e#1042#1043#0" expanded="false" />
-            <element signature="e#1083#1084#0" expanded="false" />
-            <element signature="e#1119#1120#0" expanded="false" />
-            <element signature="e#1149#1150#0" expanded="false" />
-            <element signature="e#1178#1179#0" expanded="false" />
-            <element signature="e#1219#1220#0" expanded="false" />
-            <element signature="e#1255#1256#0" expanded="false" />
-            <element signature="e#1290#1291#0" expanded="false" />
-            <element signature="e#1320#1321#0" expanded="false" />
-            <element signature="e#1367#1368#0" expanded="false" />
-            <element signature="e#1405#1406#0" expanded="false" />
-            <element signature="e#1446#1447#0" expanded="false" />
-            <element signature="e#1479#1480#0" expanded="false" />
-            <element signature="e#1535#1536#0" expanded="false" />
-            <element signature="e#1579#1580#0" expanded="false" />
-            <element signature="e#1616#1617#0" expanded="false" />
-            <element signature="e#1647#1648#0" expanded="false" />
-            <element signature="e#1697#1698#0" expanded="false" />
-            <element signature="e#1737#1738#0" expanded="false" />
+            <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#delete#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#1;n#mapper#0;n#!!top" expanded="false" />
+            <marker date="1519628523403" expanded="true" signature="1882:2011" ph="insert into recruit... " />
+            <marker date="1519628523403" expanded="true" signature="2068:2220" ph="update recru... " />
+            <marker date="1519628523403" expanded="true" signature="2277:2317" ph="delete from " />
+            <marker date="1519628523403" expanded="true" signature="2391:2496" ph="select * fro... recruit" />
+            <marker date="1519628523403" expanded="true" signature="2579:2703" ph="select * fro... recruit" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/service/impl/RecruitServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/CompanyMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#499#500#0" expanded="false" />
-            <element signature="e#555#556#0" expanded="false" />
-            <element signature="e#622#623#0" expanded="false" />
-            <element signature="e#681#682#0" expanded="false" />
-            <element signature="e#748#749#0" expanded="false" />
-            <element signature="e#807#808#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="252">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/service/GuestService.java">
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/CompanyMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        <state relative-caret-position="288">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="n#update#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
+            <marker date="1519288730222" expanded="true" signature="257:427" ph="update compa... " />
+            <marker date="1519288730222" expanded="true" signature="519:540" ph="select * fro... company" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/daniel/service/impl/GuestServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        <state relative-caret-position="578">
+          <caret line="30" column="45" lean-forward="false" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/GuestMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/model/Department.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="576">
+          <caret line="16" column="83" lean-forward="false" selection-start-line="16" selection-start-column="83" selection-end-line="16" selection-end-column="83" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/GuestMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/DepartmentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/service/DepartmentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="12" column="43" lean-forward="false" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/springMVC-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/system.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-298">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/manager/changeDepartment.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/service/impl/DepartmentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="method#getDepartmentByD_id#0;class#DepartmentServiceImpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/manager/position.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="59" column="51" lean-forward="false" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
+          <folding>
+            <element signature="n#c:forEach#0;n#jsp:root#0;n#!!top" expanded="false" />
+            <element signature="n#c:forEach#1;n#jsp:root#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
-          <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <caret line="17" column="46" lean-forward="true" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/manager/managerLogin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/model/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1692">
+          <caret line="28" column="37" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+          <folding>
+            <element signature="e#1165#1166#0" expanded="true" />
+            <element signature="e#1192#1193#0" expanded="true" />
+            <element signature="e#1229#1230#0" expanded="true" />
+            <element signature="e#1261#1262#0" expanded="true" />
+            <element signature="e#1294#1295#0" expanded="true" />
+            <element signature="e#1323#1324#0" expanded="true" />
+            <element signature="e#1367#1368#0" expanded="true" />
+            <element signature="e#1403#1404#0" expanded="true" />
+            <element signature="e#1436#1437#0" expanded="true" />
+            <element signature="e#1465#1466#0" expanded="true" />
+            <element signature="e#1509#1510#0" expanded="true" />
+            <element signature="e#1545#1546#0" expanded="true" />
+            <element signature="e#1582#1583#0" expanded="true" />
+            <element signature="e#1615#1616#0" expanded="true" />
+            <element signature="e#1667#1668#0" expanded="true" />
+            <element signature="e#1711#1712#0" expanded="true" />
+            <element signature="e#1740#1741#0" expanded="true" />
+            <element signature="e#1768#1769#0" expanded="true" />
+            <element signature="e#1807#1808#0" expanded="true" />
+            <element signature="e#1841#1842#0" expanded="true" />
+            <element signature="e#1875#1876#0" expanded="true" />
+            <element signature="e#1905#1906#0" expanded="true" />
+            <element signature="e#1951#1952#0" expanded="true" />
+            <element signature="e#1989#1990#0" expanded="true" />
+            <element signature="e#2023#2024#0" expanded="true" />
+            <element signature="e#2053#2054#0" expanded="true" />
+            <element signature="e#2099#2100#0" expanded="true" />
+            <element signature="e#2137#2138#0" expanded="true" />
+            <element signature="e#2172#2173#0" expanded="true" />
+            <element signature="e#2203#2204#0" expanded="true" />
+            <element signature="e#2251#2252#0" expanded="true" />
+            <element signature="e#2291#2292#0" expanded="true" />
+            <element signature="e#2330#2331#0" expanded="true" />
+            <element signature="e#2365#2366#0" expanded="true" />
+            <element signature="e#2421#2422#0" expanded="true" />
+            <element signature="e#2469#2470#0" expanded="true" />
+            <element signature="e#2506#2507#0" expanded="true" />
+            <element signature="e#2539#2540#0" expanded="true" />
+            <element signature="e#2591#2592#0" expanded="true" />
+            <element signature="e#2635#2636#0" expanded="true" />
+            <element signature="e#2672#2673#0" expanded="true" />
+            <element signature="e#2705#2706#0" expanded="true" />
+            <element signature="e#2757#2758#0" expanded="true" />
+            <element signature="e#2801#2802#0" expanded="true" />
+            <element signature="e#2835#2836#0" expanded="true" />
+            <element signature="e#2865#2866#0" expanded="true" />
+            <element signature="e#2911#2912#0" expanded="true" />
+            <element signature="e#2949#2950#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/controller/EmployeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="20" column="67" lean-forward="true" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/guest/guestMain.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="227" column="33" lean-forward="false" selection-start-line="227" selection-start-column="33" selection-end-line="227" selection-end-column="33" />
+          <folding>
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/VitaeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="27" column="67" lean-forward="false" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
           <folding>
             <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
-            <marker date="1517317820408" expanded="true" signature="248:310" ph="insert into guest... " />
-            <marker date="1517317820408" expanded="true" signature="398:461" ph="select * fro... guest" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#delete#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#1;n#mapper#0;n#!!top" expanded="false" />
+            <marker date="1519615505278" expanded="true" signature="250:670" ph="insert into vitae... " />
+            <marker date="1519615505278" expanded="true" signature="725:1152" ph="update vitae... " />
+            <marker date="1519615505278" expanded="true" signature="1207:1245" ph="delete from " />
+            <marker date="1519615505278" expanded="true" signature="1339:1379" ph="select * fro... vitae" />
+            <marker date="1519615505278" expanded="true" signature="1473:1517" ph="select * fro... vitae" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/EmployeeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="27" column="63" lean-forward="false" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
+          <folding>
+            <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#1;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#4;n#mapper#0;n#!!top" expanded="false" />
+            <marker date="1519713721107" expanded="true" signature="256:528" ph="insert into employee... " />
+            <marker date="1519713721107" expanded="true" signature="586:879" ph="update emplo... " />
+            <marker date="1519713721107" expanded="true" signature="978:1037" ph="select * fro... employee" />
+            <marker date="1519713721107" expanded="true" signature="1134:1188" ph="select * fro... employee" />
+            <marker date="1519713721107" expanded="true" signature="1283:1326" ph="select * fro... employee" />
+            <marker date="1519713721107" expanded="true" signature="1416:1438" ph="select * fro... employee" />
+            <marker date="1519713721107" expanded="true" signature="1527:1597" ph="select * fro... employee" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/service/PositionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/service/impl/PositionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="26" column="34" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <folding>
+            <element signature="e#639#640#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/PositionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/service/impl/EmployeeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="e#569#570#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/DepartmentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="12" column="71" lean-forward="false" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
+          <folding>
+            <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#delete#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#1;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" expanded="false" />
+            <marker date="1519717212452" expanded="true" signature="260:362" ph="insert into department... " />
+            <marker date="1519717212452" expanded="true" signature="422:506" ph="update depar... " />
+            <marker date="1519717212452" expanded="true" signature="566:609" ph="delete from " />
+            <marker date="1519717212452" expanded="true" signature="701:725" ph="select * fro... department" />
+            <marker date="1519717212452" expanded="true" signature="829:874" ph="select * fro... department" />
+            <marker date="1519717212452" expanded="true" signature="980:1029" ph="select * fro... department" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/employee/employeeMain.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/manager/changePosition.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="22" column="80" lean-forward="false" selection-start-line="22" selection-start-column="80" selection-end-line="22" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/PositionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="27" column="75" lean-forward="false" selection-start-line="27" selection-start-column="75" selection-end-line="27" selection-end-column="75" />
+          <folding>
+            <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#delete#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#1;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#3;n#mapper#0;n#!!top" expanded="false" />
+            <marker date="1519717376206" expanded="true" signature="256:373" ph="insert into position... " />
+            <marker date="1519717376206" expanded="true" signature="431:513" ph="update posit... " />
+            <marker date="1519717376206" expanded="true" signature="431:536" ph="update posit... " />
+            <marker date="1519717376206" expanded="true" signature="594:635" ph="delete from " />
+            <marker date="1519717376206" expanded="true" signature="594:658" ph="delete from " />
+            <marker date="1519717376206" expanded="true" signature="756:803" ph="select * fro... position" />
+            <marker date="1519717376206" expanded="true" signature="903:946" ph="select * fro... position" />
+            <marker date="1519717376206" expanded="true" signature="903:969" ph="select * fro... position" />
+            <marker date="1519717376206" expanded="true" signature="1071:1118" ph="select * fro... position" />
+            <marker date="1519717376206" expanded="true" signature="1071:1141" ph="select * fro... position" />
+            <marker date="1519717376206" expanded="true" signature="1231:1253" ph="select * fro... position" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/controller/GuestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="188" column="0" lean-forward="false" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
+          <folding>
+            <element signature="method#guestLogin#0;class#GuestController#0" expanded="false" />
+            <element signature="method#register#0;class#GuestController#0" expanded="false" />
+            <element signature="method#addVitae#0;class#GuestController#0" expanded="false" />
+            <element signature="method#changeVitae#0;class#GuestController#0" expanded="false" />
+            <element signature="method#deleteVitae#0;class#GuestController#0" expanded="false" />
+            <element signature="method#offerJob#0;class#GuestController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/manager/doInterview.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="33" column="44" lean-forward="true" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/InterviewMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/service/InterviewService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="15" column="56" lean-forward="false" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/service/impl/InterviewServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="941">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="method#getInterviewByI_g_id#0;class#InterviewServiceImpl#0" expanded="false" />
+            <element signature="method#getIngerviewByR_idAndG_id#0;class#InterviewServiceImpl#0" expanded="false" />
+            <element signature="method#getInterviewByI_d_id#0;class#InterviewServiceImpl#0" expanded="false" />
+            <element signature="method#getInterviewByI_p_id#0;class#InterviewServiceImpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/InterviewMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="7" column="285" lean-forward="false" selection-start-line="7" selection-start-column="285" selection-end-line="7" selection-end-column="285" />
+          <folding>
+            <element signature="n#update#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#delete#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#1;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#4;n#mapper#0;n#!!top" expanded="false" />
+            <marker date="1519720094668" expanded="true" signature="257:535" ph="insert into interview... " />
+            <marker date="1519720094668" expanded="true" signature="594:838" ph="update inter... " />
+            <marker date="1519720094668" expanded="true" signature="594:853" ph="update inter... " />
+            <marker date="1519720094668" expanded="true" signature="912:954" ph="delete from " />
+            <marker date="1519720094668" expanded="true" signature="1055:1099" ph="select * fro... interview" />
+            <marker date="1519720094668" expanded="true" signature="1203:1251" ph="select * fro... interview" />
+            <marker date="1519720094668" expanded="true" signature="1203:1268" ph="select * fro... interview" />
+            <marker date="1519720094668" expanded="true" signature="1377:1448" ph="select * fro... interview" />
+            <marker date="1519720094668" expanded="true" signature="1552:1600" ph="select * fro... interview" />
+            <marker date="1519720094668" expanded="true" signature="1704:1752" ph="select * fro... interview" />
           </folding>
         </state>
       </provider>
@@ -1451,321 +2236,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/RecruitMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/model/Interview.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="55" column="9" lean-forward="false" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+        <state relative-caret-position="252">
+          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
           <folding>
-            <element signature="n#resultMap#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#association#0;n#resultMap#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#association#1;n#resultMap#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#association#2;n#resultMap#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#update#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#delete#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#select#1;n#mapper#0;n#!!top" expanded="false" />
-            <marker date="1517556659412" expanded="true" signature="1570:1699" ph="insert into recruit... " />
-            <marker date="1517556659412" expanded="true" signature="1756:1908" ph="update recru... " />
-            <marker date="1517556659412" expanded="true" signature="1965:2005" ph="delete from " />
-            <marker date="1517556659412" expanded="true" signature="2079:2184" ph="select * fro... recruit" />
-            <marker date="1517556659412" expanded="true" signature="2267:2391" ph="select * fro... recruit" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/VitaeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="12" column="57" lean-forward="false" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/service/VitaeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="14" column="57" lean-forward="false" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/VitaeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="23" column="67" lean-forward="false" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
-          <folding>
-            <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#delete#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#select#1;n#mapper#0;n#!!top" expanded="false" />
-            <marker date="1517582938780" expanded="true" signature="250:655" ph="insert into vitae... " />
-            <marker date="1517582938780" expanded="true" signature="710:1120" ph="update vitae... " />
-            <marker date="1517582938780" expanded="true" signature="1175:1213" ph="delete from " />
-            <marker date="1517582938780" expanded="true" signature="1307:1347" ph="select * fro... vitae" />
-            <marker date="1517582938780" expanded="true" signature="1441:1485" ph="select * fro... vitae" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/model/Vitae.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="200" column="20" lean-forward="true" selection-start-line="200" selection-start-column="20" selection-end-line="200" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/service/impl/VitaeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#477#478#0" expanded="false" />
-            <element signature="e#527#528#0" expanded="false" />
-            <element signature="e#588#589#0" expanded="false" />
-            <element signature="e#641#642#0" expanded="false" />
-            <element signature="e#702#703#0" expanded="false" />
-            <element signature="e#755#756#0" expanded="false" />
-            <element signature="e#817#818#0" expanded="false" />
-            <element signature="e#873#874#0" expanded="false" />
-            <element signature="e#935#936#0" expanded="false" />
-            <element signature="e#991#992#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/service/impl/OfferServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="794">
-          <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/springMVC-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/system.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="20" column="73" lean-forward="false" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bean.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1656">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/jquery-3.1.0.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="10054" column="8" lean-forward="false" selection-start-line="10054" selection-start-column="8" selection-end-line="10054" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/DepartmentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-          <folding>
-            <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#delete#0;n#mapper#0;n#!!top" expanded="false" />
-            <marker date="1517417435618" expanded="true" signature="260:310" ph="insert into department... " />
-            <marker date="1517417435618" expanded="true" signature="370:431" ph="update depar... " />
-            <marker date="1517417435618" expanded="true" signature="491:534" ph="delete from " />
-            <marker date="1517417435618" expanded="true" signature="625:649" ph="select * fro... department" />
-            <marker date="1517417435618" expanded="true" signature="753:798" ph="select * fro... department" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/changeCompany.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/changeRecruit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/employeeLogin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="140" column="7" lean-forward="false" selection-start-line="140" selection-start-column="7" selection-end-line="140" selection-end-column="7" />
-          <folding>
-            <element signature="e#4026#4698#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/managerLogin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="43" column="10" lean-forward="true" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/controller/GuestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="method#guestLogin#0;class#GuestController#0" expanded="false" />
-            <element signature="method#register#0;class#GuestController#0" expanded="false" />
-            <element signature="method#addVitae#0;class#GuestController#0" expanded="false" />
-            <element signature="method#changeVitae#0;class#GuestController#0" expanded="false" />
-            <element signature="method#deleteVitae#0;class#GuestController#0" expanded="false" />
-            <element signature="method#offerJob#0;class#GuestController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/controller/EmployeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/CompanyMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/dao/DepartmentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/employeeMain.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/guestMain.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="32" column="41" lean-forward="false" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/changeDepartment.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="36" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/changePosition.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/managerMain.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="226" column="93" lean-forward="false" selection-start-line="226" selection-start-column="93" selection-end-line="226" selection-end-column="93" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#table#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#table#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#td#1;n#tr#1;n#table#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#1;n#td#1;n#tr#1;n#table#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#7;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#8;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daniel/controller/MyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="95" column="28" lean-forward="false" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
-          <folding>
-            <element signature="method#forSystem#0;class#MyController#0" expanded="false" />
-            <element signature="method#forMain#0;class#MyController#0" expanded="false" />
-            <element signature="method#forLogin#0;class#MyController#0" expanded="false" />
-            <element signature="method#forEmployeeLogin#0;class#MyController#0" expanded="false" />
-            <element signature="method#forChangeRecruit#0;class#MyController#0" expanded="false" />
-            <element signature="method#forChangeCompany#0;class#MyController#0" expanded="false" />
-            <element signature="method#forChangeDepartment#0;class#MyController#0" expanded="false" />
-            <element signature="method#forChangePosition#0;class#MyController#0" expanded="false" />
+            <element signature="e#1128#1129#0" expanded="true" />
+            <element signature="e#1155#1156#0" expanded="true" />
+            <element signature="e#1192#1193#0" expanded="true" />
+            <element signature="e#1224#1225#0" expanded="true" />
+            <element signature="e#1259#1260#0" expanded="true" />
+            <element signature="e#1290#1291#0" expanded="true" />
+            <element signature="e#1338#1339#0" expanded="true" />
+            <element signature="e#1378#1379#0" expanded="true" />
+            <element signature="e#1413#1414#0" expanded="true" />
+            <element signature="e#1444#1445#0" expanded="true" />
+            <element signature="e#1492#1493#0" expanded="true" />
+            <element signature="e#1532#1533#0" expanded="true" />
+            <element signature="e#1567#1568#0" expanded="true" />
+            <element signature="e#1598#1599#0" expanded="true" />
+            <element signature="e#1646#1647#0" expanded="true" />
+            <element signature="e#1686#1687#0" expanded="true" />
+            <element signature="e#1721#1722#0" expanded="true" />
+            <element signature="e#1752#1753#0" expanded="true" />
+            <element signature="e#1800#1801#0" expanded="true" />
+            <element signature="e#1840#1841#0" expanded="true" />
+            <element signature="e#1875#1876#0" expanded="true" />
+            <element signature="e#1906#1907#0" expanded="true" />
+            <element signature="e#1954#1955#0" expanded="true" />
+            <element signature="e#1994#1995#0" expanded="true" />
+            <element signature="e#2036#2037#0" expanded="true" />
+            <element signature="e#2074#2075#0" expanded="true" />
+            <element signature="e#2136#2137#0" expanded="true" />
+            <element signature="e#2190#2191#0" expanded="true" />
+            <element signature="e#2235#2236#0" expanded="true" />
+            <element signature="e#2276#2277#0" expanded="true" />
+            <element signature="e#2344#2345#0" expanded="true" />
+            <element signature="e#2404#2405#0" expanded="true" />
+            <element signature="e#2434#2435#0" expanded="true" />
+            <element signature="e#2463#2464#0" expanded="true" />
+            <element signature="e#2504#2505#0" expanded="true" />
+            <element signature="e#2540#2541#0" expanded="true" />
+            <element signature="e#2570#2571#0" expanded="true" />
+            <element signature="e#2599#2600#0" expanded="true" />
+            <element signature="e#2640#2641#0" expanded="true" />
+            <element signature="e#2676#2677#0" expanded="true" />
+            <element signature="e#2708#2709#0" expanded="true" />
+            <element signature="e#2739#2740#0" expanded="true" />
+            <element signature="e#2784#2785#0" expanded="true" />
+            <element signature="e#2824#2825#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/daniel/controller/ManagerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1013">
-          <caret line="192" column="27" lean-forward="true" selection-start-line="192" selection-start-column="27" selection-end-line="192" selection-end-column="27" />
+        <state relative-caret-position="270">
+          <caret line="126" column="28" lean-forward="false" selection-start-line="126" selection-start-column="28" selection-end-line="126" selection-end-column="28" />
           <folding>
             <element signature="method#managerLogin#0;class#ManagerController#0" expanded="false" />
             <element signature="method#addRecruit#0;class#ManagerController#0" expanded="false" />
+            <element signature="method#getPositionByD_name#0;class#ManagerController#0" expanded="false" />
             <element signature="method#changeRecruit#0;class#ManagerController#0" expanded="false" />
             <element signature="method#deleteRecruit#0;class#ManagerController#0" expanded="false" />
-            <element signature="method#addCompany#0;class#ManagerController#0" expanded="false" />
             <element signature="method#changeCompany#0;class#ManagerController#0" expanded="false" />
-            <element signature="method#deleteCompany#0;class#ManagerController#0" expanded="false" />
             <element signature="method#addDepartment#0;class#ManagerController#0" expanded="false" />
-            <element signature="method#changeDepartment#0;class#ManagerController#0" expanded="false" />
             <element signature="method#deleteDepartment#0;class#ManagerController#0" expanded="false" />
             <element signature="method#addPosition#0;class#ManagerController#0" expanded="false" />
             <element signature="method#changePosition#0;class#ManagerController#0" expanded="false" />
             <element signature="method#deletePosition#0;class#ManagerController#0" expanded="false" />
+            <element signature="method#sendInterview#0;class#ManagerController#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/manager/changeCompany.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/web-forms2.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="347" column="22" lean-forward="false" selection-start-line="347" selection-start-column="22" selection-end-line="347" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daniel/controller/MyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45">
+          <caret line="80" column="28" lean-forward="false" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
+          <folding>
+            <element signature="method#forSystem#0;class#MyController#0" expanded="false" />
+            <element signature="method#forMain#0;class#MyController#0" expanded="false" />
+            <element signature="method#forLogin#0;class#MyController#0" expanded="false" />
+            <element signature="method#forEmployeeLogin#0;class#MyController#0" expanded="false" />
+            <element signature="method#forChangeRecruit#0;class#MyController#0" expanded="false" />
+            <element signature="method#forManagerMain#0;class#MyController#0" expanded="false" />
+            <element signature="method#forChangeCompany#0;class#MyController#0" expanded="false" />
+            <element signature="method#forChangeDepartment#0;class#MyController#0" expanded="false" />
+            <element signature="method#forChangePosition#0;class#MyController#0" expanded="false" />
+            <element signature="method#forInterview#0;class#MyController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/manager/managerMain.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="212" column="41" lean-forward="false" selection-start-line="212" selection-start-column="41" selection-end-line="212" selection-end-column="41" />
+          <folding>
+            <element signature="n#table#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#6;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#7;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#8;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#9;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#c:forEach#2;n#jsp:root#0;n#!!top" expanded="false" />
+            <element signature="n#c:forEach#3;n#jsp:root#0;n#!!top" expanded="false" />
+            <element signature="n#c:forEach#4;n#jsp:root#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="54" column="31" lean-forward="false" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>

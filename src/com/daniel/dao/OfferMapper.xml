@@ -5,22 +5,54 @@
 
 <mapper namespace="com.daniel.dao.OfferMapper">
 
+    <resultMap id="o_r_vMap" type="com.daniel.model.Offer">
+        <id property="o_id" column="o_id"/>
+        <result property="o_v_name" column="o_v_name"/>
+        <result property="o_r_id" column="o_r_id"/>
+        <result property="o_g_id" column="o_g_id"/>
+        <association property="recruit" resultMap="com.daniel.dao.RecruitMapper.r_c_d_pMap"/>
+        <association property="vitae" javaType="com.daniel.model.Vitae">
+            <id property="v_id" column="v_id"/>
+            <result property="v_name" column="v_name"/>
+            <result property="v_sex" column="v_sex"/>
+            <result property="v_age" column="v_age"/>
+            <result property="v_birth" column="v_birth"/>
+            <result property="v_ethnicity" column="v_ethnicity"/>
+            <result property="v_nativePlace" column="v_nativePlace"/>
+            <result property="v_qualification" column="v_qualification"/>
+            <result property="v_tel" column="v_tel"/>
+            <result property="v_email" column="v_email"/>
+            <result property="v_specialty" column="v_specialty"/>
+            <result property="v_serviceYear" column="v_serviceYear"/>
+            <result property="v_willSpot" column="v_willSpot"/>
+            <result property="v_adsumDate" column="v_adsumDate"/>
+            <result property="v_promisingIndustry" column="v_promisingIndustry"/>
+            <result property="v_g_id" column="v_g_id"/>
+        </association>
+    </resultMap>
+
     <insert id="addOffer">
-        insert into offer (o_r_id, o_v_id) values (#{o_r_id},#{o_v_id});
+        insert into offer (o_v_name, o_r_id, o_g_id, o_state) values (#{o_v_name},#{o_r_id},#{o_g_id},#{o_state});
     </insert>
+
     <update id="updateOffer">
-        update offer set o_r_id = #{o_r_id},o_v_id = #{o_v_id} where o_id = #{o_id};
+        update offer set o_v_name = #{o_v_name},o_r_id = #{o_r_id},o_g_id = #{o_g_id},o_state = #{o_state} where o_id = #{o_id};
     </update>
+
     <delete id="deleteOffer">
         delete from offer where o_id = #{o_id};
     </delete>
-    <select id="getOfferById" resultType="com.daniel.model.Offer">
-        select * from offer where o_id = #{o_id};
+
+    <select id="getOfferById" resultMap="o_r_vMap">
+        select * from offer,recruit,company,department,position,vitae where o_id = #{o_id} and r_c_id = c_id and r_d_id = d_id and r_p_id = p_id and o_r_id = r_id and o_g_id = v_g_id;
     </select>
-    <select id="getOfferByR_V_id" resultType="com.daniel.model.Offer">
-        select * from offer where o_r_id = #{o_r_id} and o_v_id = #{o_v_id};
+
+    <select id="listAllState_0" resultMap="o_r_vMap">
+        select * from offer,recruit,company,department,position,vitae where o_state = 0 and r_c_id = c_id and r_d_id = d_id and r_p_id = p_id and o_r_id = r_id and o_g_id = v_g_id;
     </select>
-    <select id="listAll" resultType="com.daniel.model.Offer">
-        select * from offer;
+
+    <select id="getOneByR_idAndG_id" resultType="com.daniel.model.Offer">
+        select * from offer where  o_state = 0 and o_r_id = #{o_r_id} and o_g_id = #{o_g_id};
     </select>
+
 </mapper>

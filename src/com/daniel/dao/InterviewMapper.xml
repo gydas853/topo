@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.daniel.dao.InterviewMapper">
+
+    <insert id="addInterview">
+        insert into interview (i_r_name, i_v_name, i_c_name, i_d_name, i_p_name, i_interviewTime, i_interviewAddress, i_r_id,  i_g_id, i_result) values (#{i_r_name},#{i_v_name},#{i_c_name},#{i_d_name},#{i_p_name},#{i_interviewTime},#{i_interviewAddress},#{i_r_id},#{i_g_id},#{i_result});
+    </insert>
+
+    <update id="updateInterview">
+        update interview set i_r_name = #{i_r_name},i_v_name = #{i_v_name},i_c_name = #{i_c_name},i_interviewTime = #{i_interviewTime},i_interviewAddress = #{i_interviewAddress},i_result = #{i_result} where i_r_id = #{i_r_id} and i_g_id = #{i_g_id} and i_id = #{i_id};
+    </update>
+
+    <delete id="deleteInterview">
+        delete from interview where i_id = #{i_id}
+    </delete>
+
+    <select id="getInterviewByI_id" resultType="com.daniel.model.Interview">
+        select * from interview where i_id = #{i_id};
+    </select>
+
+    <select id="getInterviewByI_g_id" resultType="com.daniel.model.Interview">
+        select * from interview where i_g_id = #{i_g_id} and i_result = 0;
+    </select>
+
+    <select id="getIngerviewByR_idAndG_id" resultType="com.daniel.model.Interview">
+        select * from interview where i_r_id = #{i_r_id} and i_g_id = #{i_g_id};
+    </select>
+
+    <select id="getInterviewByI_d_id" resultType="com.daniel.model.Interview">
+        select * from interview where i_d_id = #{i_d_id};
+    </select>
+
+    <select id="getInterviewByI_p_id" resultType="com.daniel.model.Interview">
+        select * from interview where i_p_id = #{i_p_id};
+    </select>
+</mapper>

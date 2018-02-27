@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.daniel.dao.EmployeeMapper">
+
+    <insert id="addEmployee">
+        insert into employee (e_name, e_pass, e_trueName, e_age, e_phone, e_email, e_salary, e_department, e_position, e_training, e_state) values (#{e_name},#{e_pass},#{e_trueName},#{e_age},#{e_phone},#{e_email},#{e_salary},#{e_department},#{e_position},#{e_training},#{e_state});
+    </insert>
+
+    <update id="updateEmployee">
+        update employee set e_name = #{e_name},e_pass = #{e_pass},e_trueName = #{e_trueName},e_age = #{e_age},e_phone = #{e_phone},e_email = #{e_email},e_salary = #{e_salary},e_department = #{e_department},e_position = #{e_position},e_training = #{e_training},e_state = #{e_state} where e_id = #{e_id};
+    </update>
+
+    <select id="listByDepartment" resultType="com.daniel.model.Employee">
+        select * from employee where e_department = #{e_department};
+    </select>
+
+    <select id="listByPosition" resultType="com.daniel.model.Employee">
+        select * from employee where e_positon = #{e_position};
+    </select>
+
+    <select id="getOneByE_id" resultType="com.daniel.model.Employee">
+        select * from employee where e_id = #{e_id};
+    </select>
+
+    <select id="listAll" resultType="com.daniel.model.Employee">
+        select * from employee;
+    </select>
+
+    <select id="getOne" resultType="com.daniel.model.Employee">
+        select * from employee where e_name = #{e_name} and e_pass = #{e_pass};
+    </select>
+</mapper>
